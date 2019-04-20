@@ -1,16 +1,20 @@
 *{
 	margin: 0;
-	padding: 0
+	padding: 0;
 }
 body{
 	background-color:lightblue;
-    /*font-family: Arial, Helvetica, sans-serif;*/
+	font-family: Arial, Helvetica, sans-serif;
 }
 .header{
-	height: 100px;
+	height: 50px;
 	width: 100%;
 	background-color: red;
 
+}
+
+.fa-clock{
+	font-size: 17px;
 }
 .navigation{
 	margin: 5px;
@@ -19,25 +23,28 @@ body{
 	background-color: #333333;
 	box-shadow:  4px 4px 5px 1px rgba(50, 50, 50, 0.47);
 }
+.navigation li{
+	background-color: #333333;
+	float: left; 
+	text-align: center;
+	height: 50px;
+	width: 130px; 
+	line-height: 50px; /*dung de text o chinh giua*/
+}
 .navigation a{
-
-	float: left;
-    color: #f2f2f2;
-    text-align: center;
-    height: 50px;
-    width: 130px;
-    text-decoration: none;  
-    font-weight: bold;
+	color: #f2f2f2;
+	text-decoration: none;  
+	font-weight: bold;
 }
-.navigation a:hover {
-    background-color: #D94642;
-    color: #FFFF;
+.navigation li:hover {
+	background-color: #D94642;
+	color: #FFFF;
 
 }
- 
-.navigation a.active {
-    background-color: #D94642;
-    color: white;
+
+.navigation li.active {
+	background-color: #D94642;
+	color: white;
 }
 .fa-home{
 	font-size: 17px;
@@ -49,9 +56,9 @@ div.search-right{
 	
 	width: 250px;
 	float: right;
-    text-decoration: none;
-   
-    font-weight: bold;
+	text-decoration: none;
+
+	font-weight: bold;
 }
 .fa-search{
 	color: white;
@@ -59,13 +66,30 @@ div.search-right{
 	padding: 14px;
 }
 .btn-submit-search{
-	color: #3333;
+	background-color: #6D6E6A;
 	height: 50px;
 	width: 50px;
 }
 nav{
-	display: block;
+	
 }
 ul{
-	list-style-type: none;
+	list-style: none;
+}
+input.search-text{
+	height: 30px;
+	margin: 8px 0px;
+	box-sizing: border-box;
+	font-size: 12px;
+
+}
+
+div.navigation nav ul ul{
+	display: none;
+	background-color: #333333;
+
+}
+
+div.navigation nav ul li:hover > ul{
+	display: block;
 }
