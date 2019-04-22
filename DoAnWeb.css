@@ -98,6 +98,7 @@ div.navigation nav ul li:hover > ul{
 	width: 100%;
 	background-color: #282923;
 	color:white;
+	box-shadow: 4px 4px 5px 1px rgba(50, 50, 50, 0.47);
 
 }
 .icon-footer{
@@ -131,4 +132,131 @@ div.navigation nav ul li:hover > ul{
 }
 .fa-google{
 	color:#EA4335;
+}
+div.foot{
+	margin-left: 20px;
+	line-height: 20px;
+}
+.TinNoiBat{
+	background-color: #80BEAF;
+	width: 1100px;
+	height: 500px;
+	margin: auto;
+
+}
+div.TinNoiBatDiv{
+	width: 1100px;
+	height: 500px;
+}
+
+article.TinNoiBat1{
+
+	float: left;
+	background-image: url("images/hinh1.jpg");
+	background-size: cover; /*lam cho hinh dan ra*/
+	height: 500px;
+	width: 750px;
+	position: relative;
+}
+article.TinNoiBat1 a{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	background: #64204F;
+	text-decoration: none;
+	color:white;
+
+}
+article.TinNoiBat1 div{
+	background-color: rgba(40, 41, 35,0.5);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	margin: 0px;
+}
+
+article.TinNoiBat1 div p{
+	
+	color:white;
+	font-size: 20px;
+}
+article.TinNoiBat1 div time{
+	color:white;
+	font-size: 15px;
+}
+
+/*Tin Noi Bat thu 2*/
+article.TinNoiBat2{
+	float: left;
+	background-image: url("images/hinh2.jpg");
+	background-size: cover; /*lam cho hinh dan ra*/
+	height: 250px;
+	width: 350px;
+	position: relative;
+}
+article.TinNoiBat2 a{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	background: #1BA160;
+	text-decoration: none;
+	color:white;
+
+}
+article.TinNoiBat2 div{
+	background-color: rgba(40, 41, 35,0.5);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	margin: 0px;
+}
+
+article.TinNoiBat2 div p{
+	
+	color:white;
+	font-size: 15px;
+}
+article.TinNoiBat2 div time{
+	color:white;
+	font-size: 10px;
+}
+
+/*Tin Noi Bat Thu 3*/
+
+article.TinNoiBat3{
+	float: left;
+	background-image: url("images/hinh3.jpg");
+	background-size: cover; /*lam cho hinh dan ra*/
+	height: 250px;
+	width: 350px;
+	position: relative;
+}
+article.TinNoiBat3 a{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	background: #1BA160;
+	text-decoration: none;
+	color:white;
+
+}
+article.TinNoiBat3 div{
+	background-color: rgba(40, 41, 35,0.5);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	margin: 0px;
+}
+
+article.TinNoiBat3 div p{
+	
+	color:white;
+	font-size: 15px;
+}
+article.TinNoiBat3 div time{
+	color:white;
+	font-size: 10px;
 }
