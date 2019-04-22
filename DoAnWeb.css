@@ -24,6 +24,8 @@ body{
 	box-shadow:  4px 4px 5px 1px rgba(50, 50, 50, 0.47);
 }
 .navigation li{
+
+
 	background-color: #333333;
 	float: left; 
 	text-align: center;
@@ -36,6 +38,7 @@ body{
 	text-decoration: none;  
 	font-weight: bold;
 }
+
 .navigation li:hover {
 	background-color: #D94642;
 	color: #FFFF;
@@ -138,22 +141,24 @@ div.foot{
 	line-height: 20px;
 }
 .TinNoiBat{
-	background-color: #80BEAF;
-	width: 1100px;
-	height: 500px;
+	background-color: white;
+	width: 1110px;
+	height: 510px;
 	margin: auto;
 
 }
 div.TinNoiBatDiv{
-	width: 1100px;
-	height: 500px;
+	width: 1110px;
+	height: 510px;
 }
 
 article.TinNoiBat1{
-
+	overflow: hidden; /*them de hinh ko bi chan ra ngoai*/
+	margin-top: 5px;
+	margin-left: 5px;
 	float: left;
-	background-image: url("images/hinh1.jpg");
-	background-size: cover; /*lam cho hinh dan ra*/
+	/*background-image: url("images/hinh1.jpg");
+	background-size: cover; /*lam cho hinh dan ra*/*/
 	height: 500px;
 	width: 750px;
 	position: relative;
@@ -166,13 +171,16 @@ article.TinNoiBat1 a{
 	background: #64204F;
 	text-decoration: none;
 	color:white;
+	z-index: 2;
 
 }
 article.TinNoiBat1 div{
+
 	background-color: rgba(40, 41, 35,0.5);
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
+	right: 0px;
 	margin: 0px;
 }
 
@@ -185,15 +193,27 @@ article.TinNoiBat1 div time{
 	color:white;
 	font-size: 15px;
 }
+article.TinNoiBat1 img{
+	
+	transition: transform 1.5s;
+	height: 500px;
+	width: 750px;
 
+}
+article.TinNoiBat1:hover img{
+	transform: scale(1.2);
+	cursor: pointer;
+}
 /*Tin Noi Bat thu 2*/
 article.TinNoiBat2{
+	margin-top: 5px;
+	margin-left: 5px;
 	float: left;
-	background-image: url("images/hinh2.jpg");
 	background-size: cover; /*lam cho hinh dan ra*/
-	height: 250px;
-	width: 350px;
+	height: 245px;
+	width: 345px;
 	position: relative;
+	overflow: hidden; /*them de hinh ko bi chan ra ngoai*/
 }
 article.TinNoiBat2 a{
 	position: absolute;
@@ -222,15 +242,28 @@ article.TinNoiBat2 div time{
 	color:white;
 	font-size: 10px;
 }
+article.TinNoiBat2 img{
+	
+	transition: transform 1.5s;
+	height: 245px;
+	width: 345px;
+
+}
+article.TinNoiBat2:hover img{
+	transform: scale(1.1);
+	cursor: pointer;
+}
 
 /*Tin Noi Bat Thu 3*/
 
 article.TinNoiBat3{
+	overflow: hidden; /*them de hinh ko bi chan ra ngoai*/
+	margin-top: 5px;
+	margin-left: 5px;
 	float: left;
-	background-image: url("images/hinh3.jpg");
 	background-size: cover; /*lam cho hinh dan ra*/
-	height: 250px;
-	width: 350px;
+	height: 245px;
+	width: 345px;
 	position: relative;
 }
 article.TinNoiBat3 a{
@@ -259,4 +292,15 @@ article.TinNoiBat3 div p{
 article.TinNoiBat3 div time{
 	color:white;
 	font-size: 10px;
+}
+article.TinNoiBat3 img{
+	
+	transition: transform 1.5s;
+	height: 245px;
+	width: 345px;
+
+}
+article.TinNoiBat3:hover img{
+	transform: scale(1.1);
+	cursor: pointer;
 }
