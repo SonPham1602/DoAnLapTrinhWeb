@@ -16,6 +16,9 @@ body{
 .fa-clock{
 	font-size: 17px;
 }
+.fa-comment{
+	font-size: 17px;
+}
 .navigation{
 	margin: 5px;
 	height: 50px;
@@ -100,7 +103,7 @@ div.navigation nav ul li:hover > ul{
 	height: 200px;
 	width: 100%;
 	background-color: #282923;
-	color:white;
+	color :white;
 	box-shadow: 4px 4px 5px 1px rgba(50, 50, 50, 0.47);
 
 }
@@ -143,9 +146,13 @@ div.foot{
 .TinNoiBat{
 	background-color: white;
 	width: 1110px;
-	height: 510px;
+	height:600px;
 	margin: auto;
 
+}
+.TinNoiBat p{
+	font-size: 17px;
+	font-weight: bold;
 }
 div.TinNoiBatDiv{
 	width: 1110px;
@@ -175,6 +182,7 @@ article.TinNoiBat1 a{
 
 }
 article.TinNoiBat1 div{
+	height: 75px;
 
 	background-color: rgba(40, 41, 35,0.5);
 	position: absolute;
@@ -223,6 +231,7 @@ article.TinNoiBat2 a{
 	background: #1BA160;
 	text-decoration: none;
 	color:white;
+	z-index: 2;
 
 }
 article.TinNoiBat2 div{
@@ -274,6 +283,7 @@ article.TinNoiBat3 a{
 	background: #1BA160;
 	text-decoration: none;
 	color:white;
+	z-index: 2;
 
 }
 article.TinNoiBat3 div{
@@ -304,3 +314,64 @@ article.TinNoiBat3:hover img{
 	transform: scale(1.1);
 	cursor: pointer;
 }
+
+/*Noi Dung Trang Web*/
+.content-right{
+	width: 1110px;
+	height: 1000px;
+	margin: auto;
+	background-color: white;
+}
+
+.TinXemNhieuNhat{
+	display: inline-block;
+	width: 100%;
+	margin-top: 30px;
+
+}
+.TinXemNhieuNhat a{
+	text-decoration: none;
+}
+.TinXemNhieuNhat a:hover{
+	
+}
+.TinXemNhieuNhat p{
+	display: inline-block;
+	font-size: 10px;
+	font-weight:700;
+	margin-bottom: 10px;
+}
+.TinXemNhieuNhat article{
+	margin: 4px;
+	width: 250px;
+	height: 275px;
+	float: left;
+	background-color: #fff;
+	padding: 5px;
+	box-shadow:  2px 2px 5px 1px rgba(50, 50, 50, 0.47);
+}
+.TinXemNhieuNhat article img{
+
+	width: 250px;
+	height: 150px;
+}
+.TinXemNhieuNhat p{
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+	padding: 3px;
+	line-height: 24px;
+}
+.TinXemNhieuNhat .SliderTinXemNhieuNhat{
+	display: flex;
+	justify-content: center;
+}
+ .SliderTinXemNhieuNhat div{
+
+ }
+.ThongTinGioDang {
+	
+}
+
+
+
