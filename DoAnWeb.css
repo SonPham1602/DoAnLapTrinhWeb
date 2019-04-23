@@ -1,6 +1,10 @@
+
 *{
 	margin: 0;
 	padding: 0;
+}
+html{
+	scroll-behavior: smooth;
 }
 body{
 	background-color:lightblue;
@@ -20,11 +24,14 @@ body{
 	font-size: 17px;
 }
 .navigation{
-	margin: 5px;
+	position: relative;
+	z-index: 10; 
+	margin-bottom: 10px;
+	/*margin: 5px;*/
 	height: 50px;
 	width: 100%;
 	background-color: #333333;
-	box-shadow:  4px 4px 5px 1px rgba(50, 50, 50, 0.47);
+	box-shadow:  0px 4px 5px 1px rgba(50, 50, 50, 0.47);
 }
 .navigation li{
 
@@ -104,7 +111,7 @@ div.navigation nav ul li:hover > ul{
 	width: 100%;
 	background-color: #282923;
 	color :white;
-	box-shadow: 4px 4px 5px 1px rgba(50, 50, 50, 0.47);
+	box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.47);
 
 }
 .icon-footer{
@@ -117,19 +124,71 @@ div.navigation nav ul li:hover > ul{
 	padding: 0px;
 	text-align: center;
 }
-.icon-footer ul li{
-	display:  inline-block;
-	width: 50px;
-	height:50px;
-	margin: 20px 10px;
-	border-radius: 100%;
-	background: white;
-}
+
 .icon-footer ul li a{
 	font-size: 30px;
 	line-height: 50px;
 
 }
+
+#icon-footer-facebook{
+	display:  inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 20px 10px;
+	border-radius: 100%;
+	background: white;
+	border: 4px solid #6D6E6A;
+}
+#icon-footer-twitter{
+	display:  inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 20px 10px;
+	border-radius: 100%;
+	background: white;
+	border: 4px solid #6D6E6A;
+}
+#icon-footer-twitter{
+	transition: 0.4s;
+}
+#icon-footer-twitter:hover{
+	background:#1DA1F2;
+}
+#icon-footer-twitter:hover .fa-twitter{
+	color: white;
+}
+
+#icon-footer-google{
+	display:  inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 20px 10px;
+	border-radius: 100%;
+	background: white;
+	border: 4px solid #6D6E6A;
+}
+#icon-footer-google{
+	transition: 0.4s;
+}
+#icon-footer-google:hover{
+	background: #EA4335;
+}
+#icon-footer-google:hover .fa-google{
+	color: white;
+}
+
+
+#icon-footer-facebook{
+	transition: 0.4s;
+}
+#icon-footer-facebook:hover{
+	background: #4267B2;
+}
+#icon-footer-facebook:hover .fa-facebook{
+	color: white;
+}
+
 .fa-facebook{
 	color: #4267B2;
 }
@@ -151,8 +210,11 @@ div.foot{
 
 }
 .TinNoiBat p{
-	font-size: 17px;
-	font-weight: bold;
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+	padding: 3px;
+	line-height: 24px;
 }
 div.TinNoiBatDiv{
 	width: 1110px;
@@ -183,7 +245,6 @@ article.TinNoiBat1 a{
 }
 article.TinNoiBat1 div{
 	height: 75px;
-
 	background-color: rgba(40, 41, 35,0.5);
 	position: absolute;
 	bottom: 0px;
@@ -366,11 +427,85 @@ article.TinNoiBat3:hover img{
 	display: flex;
 	justify-content: center;
 }
- .SliderTinXemNhieuNhat div{
+.SliderTinXemNhieuNhat div{
 
- }
+}
 .ThongTinGioDang {
 	
+}
+
+.TopChuyenMuc{
+	display: inline-block;
+	width: 100%;
+	margin-top: 30px;
+
+}
+.TopChuyenMuc a{
+	text-decoration: none;
+}
+.TopChuyenMuc a:hover{
+	
+}
+.TopChuyenMuc p{
+	display: inline-block;
+	font-size: 10px;
+	font-weight:700;
+	margin-bottom: 10px;
+}
+.TopChuyenMuc article{
+	margin: 4px;
+	width: 250px;
+	height: 275px;
+	float: left;
+	background-color: #fff;
+	padding: 5px;
+	box-shadow:  2px 2px 5px 1px rgba(50, 50, 50, 0.47);
+}
+.TopChuyenMuc article img{
+
+	width: 250px;
+	height: 150px;
+}
+.TopChuyenMuc p{
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+	padding: 3px;
+	line-height: 24px;
+}
+.TopChuyenMuc .SliderTinXemNhieuNhat{
+	display: flex;
+	justify-content: center;
+}
+.SliderTinXemNhieuNhat div{
+
+}
+.ThongTinGioDang {
+	
+}
+
+/*Button Back To Top*/
+#back-to-top{
+	display: block;
+	position: fixed;
+	bottom: 16px;
+	right: 30px;
+}
+#back-to-top a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #228AE6;
+	text-align: center;
+	line-height: 40px;
+}
+#back-to-top a:hover{
+	background-color:#165C99; 
+}
+#back-to-top .fa-arrow-up{
+	font-size: 20px;
+	color: white;
 }
 
 
