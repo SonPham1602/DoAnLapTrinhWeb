@@ -9,20 +9,30 @@ html{
 body{
 	/*background-color:lightblue;*/
 	background-color: #F0F1F4;
+	/*Tao hinh nen fullscreen cho website*/
+	background-image: url("images/Background/bg.jpg");/* Duong dan hinh*/
+	/*Thuoc tinh de lam background*/
+	background-size: cover;
+	background-attachment: fixed;
 	font-family: Arial, Helvetica, sans-serif;
 }
 .header{
-	height: 100px;
+	height: 75px;
 	width: 100%;
 	/*background-color: red;*/
 	display: flex;
 	justify-content: center;
+	position: relative;
 
+}
+.header div{
+	position: absolute;
+	left: 0;
 }
 #LogoWeb{
 	margin: auto;
-	height: 100px;
-	width: 150px;
+	height:auto;
+	width: auto;
 }
 
 .fa-clock{
