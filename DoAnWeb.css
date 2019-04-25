@@ -7,14 +7,22 @@ html{
 	scroll-behavior: smooth;
 }
 body{
-	background-color:lightblue;
+	/*background-color:lightblue;*/
+	background-color: #F0F1F4;
 	font-family: Arial, Helvetica, sans-serif;
 }
 .header{
-	height: 50px;
+	height: 100px;
 	width: 100%;
-	background-color: red;
+	/*background-color: red;*/
+	display: flex;
+	justify-content: center;
 
+}
+#LogoWeb{
+	margin: auto;
+	height: 100px;
+	width: 150px;
 }
 
 .fa-clock{
@@ -31,7 +39,8 @@ body{
 	height: 50px;
 	width: 100%;
 	background-color: #333333;
-	box-shadow:  0px 4px 5px 1px rgba(50, 50, 50, 0.47);
+	box-shadow:  4px 4px 5px 1px rgba(50, 50, 50, 0.47);
+	
 }
 .navigation li{
 
@@ -50,6 +59,7 @@ body{
 }
 
 .navigation li:hover {
+	
 	background-color: #D94642;
 	color: #FFFF;
 
@@ -203,10 +213,15 @@ div.foot{
 	line-height: 20px;
 }
 .TinNoiBat{
+	margin-top: 15px;
+	margin-bottom: 15px;
 	background-color: white;
 	width: 1110px;
 	height:600px;
-	margin: auto;
+	margin-left:auto;
+	margin-right: auto;
+	box-shadow:  4px 4px 5px 2px rgba(50, 50, 50, 0.3);
+	/*margin: auto;*/
 
 }
 .TinNoiBat p{
@@ -379,9 +394,10 @@ article.TinNoiBat3:hover img{
 /*Noi Dung Trang Web*/
 .content-right{
 	width: 1110px;
-	height: 1000px;
+	height: auto;
 	margin: auto;
 	background-color: white;
+	box-shadow:  4px 4px 5px 2px rgba(50, 50, 50, 0.3);
 }
 
 .TinXemNhieuNhat{
@@ -453,6 +469,7 @@ article.TinNoiBat3:hover img{
 	margin-bottom: 10px;
 }
 .TopChuyenMuc article{
+	position: relative;
 	margin: 4px;
 	width: 250px;
 	height: 275px;
@@ -474,6 +491,61 @@ article.TinNoiBat3:hover img{
 	line-height: 24px;
 }
 .TopChuyenMuc .SliderTinXemNhieuNhat{
+	display: flex;
+	justify-content: center;
+}
+.SliderTinXemNhieuNhat div{
+
+}
+.ThongTinGioDang {
+	
+}
+
+.TinMoiNhatXaHoi{
+	display: inline-block;
+	width: 100%;
+	margin-top: 30px;
+
+}
+.TinMoiNhatXaHoi a{
+	text-decoration: none;
+}
+.TinMoiNhatXaHoi a:hover{
+	
+}
+.TinMoiNhatXaHoi p{
+	display: inline-block;
+	font-size: 10px;
+	font-weight:700;
+	margin-bottom: 10px;
+}
+.TinMoiNhatXaHoi article{
+	position: relative;
+	margin: 4px;
+	width: 250px;
+	height: 275px;
+	float: left;
+	background-color: #fff;
+	padding: 5px;
+	box-shadow:  2px 2px 5px 1px rgba(50, 50, 50, 0.47);
+}
+.TinMoiNhatXaHoi article img{
+
+	width: 250px;
+	height: 150px;
+}
+.TinMoiNhatXaHoi p{
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+	padding: 3px;
+	line-height: 24px;
+}
+.TinMoiNhatXaHoi .SliderTinXemNhieuNhat{
+	display: flex;
+	justify-content: center;
+}
+.TinMoiNhatXaHoi.SliderTinXemNhieuNhat{
 	display: flex;
 	justify-content: center;
 }
@@ -507,6 +579,48 @@ article.TinNoiBat3:hover img{
 	font-size: 20px;
 	color: white;
 }
-
-
-
+.SliderTinXemNhieuNhat .CongNgheColorTag{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	background: #64204F;
+	text-decoration: none;
+	color:white;
+	z-index: 2;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.48);
+}
+a.KinhTeColorTag{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	background:  #f9ca24;
+	text-decoration: none;
+	color:white;
+	z-index: 2;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.48);
+}
+a.XaHoiColorTag{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	background: #6ab04c;
+	text-decoration: none;
+	color:white;
+	z-index: 2;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.48);
+}
+a.GiaiTriColorTag{
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	background:#eb4d4b;
+	text-decoration: none;
+	color:white;
+	z-index: 2;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.48);
+}
