@@ -397,7 +397,7 @@ article.TinNoiBat3:hover img{
 	height: auto;
 	margin: auto;
 	background-color: white;
-	box-shadow:  4px 4px 5px 2px rgba(50, 50, 50, 0.3);
+	box-shadow:  4px 4px 10px 2px rgba(50, 50, 50, 0.3);
 }
 
 .TinXemNhieuNhat{
@@ -545,10 +545,6 @@ article.TinNoiBat3:hover img{
 	display: flex;
 	justify-content: center;
 }
-.TinMoiNhatXaHoi.SliderTinXemNhieuNhat{
-	display: flex;
-	justify-content: center;
-}
 .SliderTinXemNhieuNhat div{
 
 }
@@ -556,6 +552,52 @@ article.TinNoiBat3:hover img{
 	
 }
 
+/*Tin Moi Nhat Giai Tri*/
+
+.TinMoiNhatGiaiTri{
+	display: inline-block;
+	width: 100%;
+	margin-top: 30px;
+
+}
+.TinMoiNhatGiaiTri a{
+	text-decoration: none;
+}
+.TinMoiNhatGiaiTri a:hover{
+	
+}
+.TinMoiNhatGiaiTri p{
+	display: inline-block;
+	font-size: 10px;
+	font-weight:700;
+	margin-bottom: 10px;
+}
+.TinMoiNhatGiaiTri article{
+	position: relative;
+	margin: 4px;
+	width: 250px;
+	height: 275px;
+	float: left;
+	background-color: #fff;
+	padding: 5px;
+	box-shadow:  2px 2px 5px 1px rgba(50, 50, 50, 0.47);
+}
+.TinMoiNhatGiaiTri article img{
+
+	width: 250px;
+	height: 150px;
+}
+.TinMoiNhatGiaiTri p{
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+	padding: 3px;
+	line-height: 24px;
+}
+.TinMoiNhatGiaiTri .SliderTinXemNhieuNhat{
+	display: flex;
+	justify-content: center;
+}
 /*Button Back To Top*/
 #back-to-top{
 	display: block;
