@@ -4,17 +4,20 @@
 	padding: 0;
 }
 html{
-	scroll-behavior: smooth;
+	
 }
 body{
 	/*background-color:lightblue;*/
 	background-color: #F0F1F4;
 	/*Tao hinh nen fullscreen cho website*/
-	background-image: url("images/Background/bg.jpg");/* Duong dan hinh*/
+	background-image: url('images/Background/bg.jpg');/* Duong dan hinh*/
 	/*Thuoc tinh de lam background*/
-	background-size: cover;
+	/*	khong nen dung thuoc tinh size  vi gay cham*/
+	/*background-size: cover;*/
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 	font-family: Arial, Helvetica, sans-serif;
+
 }
 .header{
 	height: 75px;
@@ -41,8 +44,11 @@ body{
 .fa-comment{
 	font-size: 17px;
 }
+/*Start CSS Navigation*/
 .navigation{
-	position: relative;
+	position: sticky;
+	top: 0px;
+	/*2 thuoc tinh position sticky va top 0 dung de nav luon xuat hien*/
 	z-index: 10; 
 	margin-bottom: 10px;
 	/*margin: 5px;*/
@@ -50,11 +56,25 @@ body{
 	width: 100%;
 	background-color: #333333;
 	box-shadow:  4px 4px 5px 1px rgba(50, 50, 50, 0.47);
+
 	
 }
+.nav-left{
+	width: 1100px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin: auto;
+}
+.nav-right{
+	position: absolute;
+	right: 0;
+	top:0;
+}
+
 .navigation li{
 
-
+	border-left:  0.5px solid #222;
 	background-color: #333333;
 	float: left; 
 	text-align: center;
@@ -84,6 +104,26 @@ body{
 	padding: 14px 16px;
 
 }
+div.user-right{
+	float: right;
+
+}
+#icon-user{
+	color: white;
+	font-size: 20px;
+	padding: 14px;
+}
+button.btn-sumnit-user{
+	border: none;
+/*	border none dung de xoa hieu ung vien cua button trong html*/
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+
+}
+form.search{
+	float: right;
+}
 div.search-right{
 	display: block;
 	
@@ -96,15 +136,14 @@ div.search-right{
 .fa-search{
 	color: white;
 	font-size: 20px;
-	padding: 14px;
+	
 }
 .btn-submit-search{
+	border-radius: 50%;
+	border: none;
 	background-color: #6D6E6A;
 	height: 50px;
 	width: 50px;
-}
-nav{
-	
 }
 ul{
 	list-style: none;
@@ -126,6 +165,23 @@ div.navigation nav ul ul{
 div.navigation nav ul li:hover > ul{
 	display: block;
 }
+
+div.notification-right{
+	float: right;
+}
+button.btn-submit-notify{
+	border-radius: 50%;
+	border: none;
+	background-color: #6D6E6A;
+	height: 50px;
+	width: 50px;
+}
+#icon-notify{
+	color: white;
+	font-size: 20px;
+}
+/*End css navigation*/
+
 .footer{
 	height: 200px;
 	width: 100%;
