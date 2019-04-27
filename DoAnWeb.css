@@ -115,7 +115,7 @@ div.user-right{
 }
 button.btn-sumnit-user{
 	border: none;
-/*	border none dung de xoa hieu ung vien cua button trong html*/
+	/*	border none dung de xoa hieu ung vien cua button trong html*/
 	height: 50px;
 	width: 50px;
 	border-radius: 50%;
@@ -462,6 +462,7 @@ article.TinNoiBat3:hover img{
 	width: 1110px;
 	height: auto;
 	margin: auto;
+	margin-bottom: 15px;
 	background-color: white;
 	box-shadow:  4px 4px 10px 2px rgba(50, 50, 50, 0.3);
 }
@@ -472,6 +473,7 @@ article.TinNoiBat3:hover img{
 	margin-top: 30px;
 
 }
+
 .TinXemNhieuNhat a{
 	text-decoration: none;
 }
@@ -485,6 +487,7 @@ article.TinNoiBat3:hover img{
 	margin-bottom: 10px;
 }
 .TinXemNhieuNhat article{
+	position: relative;
 	margin: 4px;
 	width: 250px;
 	height: 275px;
@@ -573,17 +576,21 @@ article.TinNoiBat3:hover img{
 	margin-top: 30px;
 
 }
+.TinMoiNhatXaHoi i{
+	margin-left: 10px;
+}
 .TinMoiNhatXaHoi a{
 	text-decoration: none;
 }
-.TinMoiNhatXaHoi a:hover{
-	
-}
+
 .TinMoiNhatXaHoi p{
 	display: inline-block;
 	font-size: 10px;
 	font-weight:700;
 	margin-bottom: 10px;
+}
+.TinMoiNhatXaHoi p:hover{
+	color: #6ab04c;
 }
 .TinMoiNhatXaHoi article{
 	position: relative;
@@ -595,10 +602,34 @@ article.TinNoiBat3:hover img{
 	padding: 5px;
 	box-shadow:  2px 2px 5px 1px rgba(50, 50, 50, 0.47);
 }
-.TinMoiNhatXaHoi article img{
+.ovrly{
 
+	background: rgba(0, 0, 0,0.25);
 	width: 250px;
 	height: 150px;
+	left: 5px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.SliderTinXemNhieuNhat article img{
+	position: relative;
+	width: 250px;
+	height: 150px;
+}
+.SliderTinXemNhieuNhat article:hover .ovrly {
+	opacity: 1;
+}
+.TinMoiNhatXaHoi:hover .TenChuyenMuc{
+	color:  #6ab04c;
+}
+.TinMoiNhatXaHoi:hover .fa-globe-americas{
+	color:  #6ab04c;
 }
 .TinMoiNhatXaHoi p{
 	font-weight: 700;
@@ -626,6 +657,12 @@ article.TinNoiBat3:hover img{
 	margin-top: 30px;
 
 }
+.TinMoiNhatGiaiTri:hover #TieuDeChuyenMucGiaiTri p{
+	color: #eb4d4b;
+}
+.TinMoiNhatGiaiTri:hover #TieuDeChuyenMucGiaiTri{
+	color:#eb4d4b;
+}
 .TinMoiNhatGiaiTri a{
 	text-decoration: none;
 }
@@ -637,6 +674,7 @@ article.TinNoiBat3:hover img{
 	font-size: 10px;
 	font-weight:700;
 	margin-bottom: 10px;
+	font-size: 20px;
 }
 .TinMoiNhatGiaiTri article{
 	position: relative;
@@ -653,17 +691,187 @@ article.TinNoiBat3:hover img{
 	width: 250px;
 	height: 150px;
 }
-.TinMoiNhatGiaiTri p{
+/*.TinMoiNhatGiaiTri p{
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+	padding: 3px;
+	line-height: 24px;
+}*/
+.TinMoiNhatGiaiTri p:hover{
+	color: #eb4d4b;
+}
+.TinMoiNhatGiaiTri .SliderTinXemNhieuNhat{
+	display: flex;
+	justify-content: center;
+}
+/*Tin Moi Nhat Cong Nghe*/
+.TinMoiNhatCongNghe{
+	display: inline-block;
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+}
+.TinMoiNhatCongNghe:hover #TieuDeChuyenMucCongNghe p{
+	color: #64204F;
+}
+.TinMoiNhatCongNghe:hover #TieuDeChuyenMucCongNghe{
+	color: #64204F;
+}
+.IconChuyenMuc{
+	margin-left: 10px;
+}
+.TinMoiNhatCongNghe a{
+	text-decoration: none;
+}
+.TinMoiNhatCongNghe a:hover{
+	
+}
+.TinMoiNhatCongNghe p{
+	display: inline-block;
+	font-size: 10px;
+	font-weight:700;
+	margin-bottom: 10px;
+}
+.TinMoiNhatCongNghe p:hover{
+	color: #64204F;
+}
+.TinMoiNhatCongNghe article{
+	position: relative;
+	margin: 4px;
+	width: 250px;
+	height: 275px;
+	float: left;
+	background-color: #fff;
+	padding: 5px;
+	box-shadow:  2px 2px 5px 1px rgba(50, 50, 50, 0.47);
+}
+.TinMoiNhatCongNghe article img{
+
+	width: 250px;
+	height: 150px;
+}
+.TinMoiNhatCongNghe p{
 	font-weight: 700;
 	font-size: 20px;
 	color: #333;
 	padding: 3px;
 	line-height: 24px;
 }
-.TinMoiNhatGiaiTri .SliderTinXemNhieuNhat{
+.TinMoiNhatCongNghe .SliderTinXemNhieuNhat{
 	display: flex;
 	justify-content: center;
 }
+
+/*Tin Moi Nhat Suc Khoe*/
+.TinMoiNhatSucKhoe{
+	display: inline-block;
+	width: 100%;
+	margin-top: 30px;
+
+}
+.TinMoiNhatSucKhoe:hover #TieuDeChuyenMucSucKhoe p{
+	color: #3498db;
+}
+.TinMoiNhatSucKhoe:hover #TieuDeChuyenMucSucKhoe{
+	color:#3498db;
+}
+
+.TinMoiNhatSucKhoe a{
+	text-decoration: none;
+}
+
+.TinMoiNhatSucKhoe p{
+	display: inline-block;
+	font-size: 10px;
+	font-weight:700;
+	margin-bottom: 10px;
+}
+.TinMoiNhatSucKhoe p:hover{
+	color:#3498db;
+}
+.TinMoiNhatSucKhoe article{
+	position: relative;
+	margin: 4px;
+	width: 250px;
+	height: 275px;
+	float: left;
+	background-color: #fff;
+	padding: 5px;
+	box-shadow:  2px 2px 5px 1px rgba(50, 50, 50, 0.47);
+}
+.TinMoiNhatSucKhoe article img{
+
+	width: 250px;
+	height: 150px;
+}
+.TinMoiNhatSucKhoe p{
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+	padding: 3px;
+	line-height: 24px;
+}
+.TinMoiNhatSucKhoe .SliderTinXemNhieuNhat{
+	display: flex;
+	justify-content: center;
+}
+
+/*Tin Moi Nhat Tai Chinh*/
+.TinMoiNhatTaiChinh{
+	display: inline-block;
+	width: 100%;
+	margin-top: 30px;
+
+}
+.TinMoiNhatTaiChinh:hover #TieuDeChuyenMucTaiChinh p{
+	color: #f9ca24;
+}
+.TinMoiNhatTaiChinh:hover #TieuDeChuyenMucTaiChinh{
+	color: #f9ca24;
+}
+
+.TinMoiNhatTaiChinh a{
+	text-decoration: none;
+}
+
+.TinMoiNhatTaiChinh p{
+	display: inline-block;
+	font-size: 10px;
+	font-weight:700;
+	margin-bottom: 10px;
+}
+.TinMoiNhatTaiChinh p:hover{
+	color: #f9ca24;
+}
+.TinMoiNhatTaiChinh article{
+	position: relative;
+	margin: 4px;
+	width: 250px;
+	height: 275px;
+	float: left;
+	background-color: #fff;
+	padding: 5px;
+	box-shadow:  2px 2px 5px 1px rgba(50, 50, 50, 0.47);
+}
+.TinMoiNhatTaiChinh article img{
+
+	width: 250px;
+	height: 150px;
+}
+.TinMoiNhatTaiChinh p{
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+	padding: 3px;
+	line-height: 24px;
+}
+.TinMoiNhatTaiChinh .SliderTinXemNhieuNhat{
+	display: flex;
+	justify-content: center;
+}
+
 /*Button Back To Top*/
 #back-to-top{
 	display: block;
@@ -727,6 +935,18 @@ a.GiaiTriColorTag{
 	left: 0px;
 	margin: 0px;
 	background:#eb4d4b;
+	text-decoration: none;
+	color:white;
+	z-index: 2;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.48);
+}
+a.SucKhoeColorTag{
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	background:#3498db;
 	text-decoration: none;
 	color:white;
 	z-index: 2;
