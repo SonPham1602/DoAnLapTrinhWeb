@@ -6,6 +6,7 @@
 html{
 	
 }
+.con
 body{
 	/*background-color:lightblue;*/
 	background-color: #F0F1F4;
@@ -17,6 +18,7 @@ body{
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	font-family: Arial, Helvetica, sans-serif;
+	overflow-y: scroll;
 
 }
 .header{
@@ -108,6 +110,43 @@ div.user-right{
 	float: right;
 
 }
+.btn-nav{
+	margin-right:  5px;
+}
+.NavbarUser{
+	box-shadow: 0px 2px 7px rgba(0,0,0,0.45);
+	position:absolute;
+	margin-top:10px; 
+	right: 10px;
+	height: auto;
+	width: 200px;
+	background-color: #333;
+	border-radius: 10px;
+}
+.NavbarUser:after{
+	background-color: #333;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: ;
+	top:-25px;
+	left: 50%;
+	margin-left: -10px;
+	margin-top: 15px;
+	z-index: -1;
+	/*margin left bang 1 nua chieu rong */
+	content: ''; /*Can Them The Nay De xuat Hien*/
+	transform: rotate(45deg);
+}
+.NavbarUser i{
+	color:white;
+	font-size: 17px;
+}
+.NavbarUser a{
+	margin-left: 25%;
+	margin-right: auto;
+}
+
 #icon-user{
 	color: white;
 	font-size: 20px;
@@ -115,6 +154,7 @@ div.user-right{
 }
 button.btn-sumnit-user{
 	border: none;
+	background-color: #6D6E6A;
 	/*	border none dung de xoa hieu ung vien cua button trong html*/
 	height: 50px;
 	width: 50px;

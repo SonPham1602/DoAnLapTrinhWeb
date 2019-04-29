@@ -1,0 +1,165 @@
+.header{
+	margin-left: auto;
+	margin-right: auto;
+	height: 65px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	margin-bottom: 50px;
+
+}
+body{
+	/*background-color:lightblue;*/
+	background-color: #F0F1F4;
+	/*Tao hinh nen fullscreen cho website*/
+	background-image: url('images/Background/bg.jpg');/* Duong dan hinh*/
+	/*Thuoc tinh de lam background*/
+	/*	khong nen dung thuoc tinh size  vi gay cham*/
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow-y: scroll;
+}
+.LoginBox{
+	height: 400px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 10px;
+	box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.3);
+}
+.btnFacebook{
+	display: block;
+	text-align: center;
+	color:white;
+	font-size: 15px;
+	margin-left: auto;
+	margin-right:  auto;
+	margin-top: 5px;
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 10px;
+	background-color: #4267B2;
+	box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.25);
+	transition: 0.3s;
+}
+.btnFacebook:hover{
+	cursor: pointer;
+	background-color: #8199CB;
+}
+.btnGoogle{
+	display: block;
+	color:white;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right:  auto;
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 10px;
+	background-color: #EA4335;
+	box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.25);
+	transition: 0.3s;
+}
+.btnGoogle:hover{
+	background-color:#F18178 ;
+	cursor: pointer;
+}
+.InputEmail{
+	position:relative;
+	display: block;
+	text-decoration: none;
+	border: none;
+	width: 250px;
+	height: 30px;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+#textboxEmail{
+	border: none;
+	width: 250px;
+	height: 25px;
+	border-radius: 10px;
+	
+	
+}
+
+#textboxPassword{
+	border: none;
+	width: 250px;
+	height: 25px;
+	border-radius: 10px;	
+}
+.InputPassword{
+	position: relative;
+	display: block;
+	text-decoration: none;
+	border: none;
+	width: 250px;
+	height: 25px;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.btnLogin{
+	color:white;
+	box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.25);
+	border-radius: 5px;
+	background-color: lightgray;
+	border: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	height: 30px;
+}
+.SubmitLogin{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.SubmitLogin a{
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	width: 150px;
+	height: 30px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+h3{
+	display: block;
+	padding-top: 20px;
+	text-align: center;
+	color:white;
+	text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.fa-user{
+	height: 25px;
+	width: 25px;
+	color:gray;
+	position: absolute;
+	right: 0;
+	top:0;
+	line-height: 20px;
+	text-align: center;
+}
+.fa-unlock-alt{
+	height: 25px;
+	width: 25px;
+	color:gray;
+	position: absolute;
+	right: 0;
+	top:0;
+	line-height: 20px;
+	text-align: center;
+}
+button{
+	font-weight: 600;
+}
