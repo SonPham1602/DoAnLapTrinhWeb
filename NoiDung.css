@@ -1,0 +1,421 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	height: 75px;
+	width: 100%;
+	/*background-color: red;*/
+	display: flex;
+	justify-content: center;
+	position: relative;
+
+}
+.header div{
+	position: absolute;
+	left: 0;
+}
+body{
+	/*background-color:lightblue;*/
+	background-color: #F0F1F4;
+	/*Tao hinh nen fullscreen cho website*/
+	background-image: url('images/Background/bg.jpg');/* Duong dan hinh*/
+	/*Thuoc tinh de lam background*/
+	/*	khong nen dung thuoc tinh size  vi gay cham*/
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow-y: scroll;
+}
+img{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	border-radius: 10px;
+	box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.35);
+}
+.navigation{
+	position: sticky;
+	top: 0px;
+	/*2 thuoc tinh position sticky va top 0 dung de nav luon xuat hien*/
+	z-index: 10; 
+	margin-bottom: 10px;
+	/*margin: 5px;*/
+	height: 50px;
+	width: 100%;
+	background-color: #333333;
+	box-shadow:  4px 4px 5px 1px rgba(50, 50, 50, 0.47);
+}
+.nav-left{
+	width: 1100px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin: auto;
+}
+.nav-right{
+	position: absolute;
+	right: 0;
+	top:0;
+}
+
+.navigation li{
+
+	border-left:  0.5px solid #222;
+	background-color: #333333;
+	float: left; 
+	text-align: center;
+	height: 50px;
+	width: 130px; 
+	line-height: 50px; /*dung de text o chinh giua*/
+}
+.navigation a{
+	color: #f2f2f2;
+	text-decoration: none;  
+	font-weight: bold;
+}
+
+.navigation li:hover {
+	
+	background-color: #D94642;
+	color: #FFFF;
+
+}
+
+.navigation li.active {
+	background-color: #D94642;
+	color: white;
+}
+.homepage a i{
+	font-size: 17px;
+	padding: 14px 16px;
+
+}
+div.user-right{
+	float: right;
+
+}
+.btn-nav{
+	margin-right:  5px;
+}
+.NavbarUser{
+	box-shadow: 0px 2px 7px rgba(0,0,0,0.45);
+	position:absolute;
+	margin-top:10px; 
+	right: 10px;
+	height: auto;
+	width: 200px;
+	background-color: #333;
+	border-radius: 10px;
+}
+.NavbarUser:after{
+	background-color: #333;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: ;
+	top:-25px;
+	left: 50%;
+	margin-left: -10px;
+	margin-top: 15px;
+	z-index: -1;
+	/*margin left bang 1 nua chieu rong */
+	content: ''; /*Can Them The Nay De xuat Hien*/
+	transform: rotate(45deg);
+}
+.NavbarUser i{
+	color:white;
+	font-size: 17px;
+}
+.NavbarUser a{
+	margin-left: 25%;
+	margin-right: auto;
+}
+
+#icon-user{
+	color: white;
+	font-size: 20px;
+	padding: 14px;
+}
+button.btn-sumnit-user{
+	border: none;
+	background-color: #6D6E6A;
+	/*	border none dung de xoa hieu ung vien cua button trong html*/
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+
+}
+form.search{
+	float: right;
+}
+div.search-right{
+	display: block;
+	
+	width: 250px;
+	float: right;
+	text-decoration: none;
+
+	font-weight: bold;
+}
+.fa-search{
+	color: white;
+	font-size: 20px;
+	
+}
+.btn-submit-search{
+	border-radius: 50%;
+	border: none;
+	background-color: #6D6E6A;
+	height: 50px;
+	width: 50px;
+}
+ul{
+	list-style: none;
+}
+input.search-text{
+	height: 30px;
+	margin: 8px 0px;
+	box-sizing: border-box;
+	font-size: 12px;
+
+}
+
+div.navigation nav ul ul{
+	display: none;
+	background-color: #333333;
+
+}
+
+div.navigation nav ul li:hover > ul{
+	display: block;
+}
+
+div.notification-right{
+	float: right;
+}
+button.btn-submit-notify{
+	border-radius: 50%;
+	border: none;
+	background-color: #6D6E6A;
+	height: 50px;
+	width: 50px;
+}
+#icon-notify{
+	color: white;
+	font-size: 20px;
+}
+/*End css navigation*/
+
+/*Noi dung tin tuc*/
+.content{
+	background-color: white;
+	width: 1110px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.3);
+
+}
+
+.BinhLuanBox{
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: white;
+	width: 1110px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.3);
+}
+.BinhLuanBox textarea{
+
+	display: block;
+	width: 1000px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.btnGuiBinhLuan{
+	background-color: lightgray;
+	border:none;
+	width: 100px;
+	height: 30px;
+	border-radius: 8px;
+}
+/*Footer Css Start*/
+.footer{
+	height: 200px;
+	width: 100%;
+	background-color: #282923;
+	color :white;
+	box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.47);
+
+}
+.icon-footer{
+	width: 100%;
+	height: auto;
+
+}
+.icon-footer ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.icon-footer ul li a{
+	font-size: 30px;
+	line-height: 50px;
+
+}
+
+#icon-footer-facebook{
+	display:  inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 20px 10px;
+	border-radius: 100%;
+	background: white;
+	border: 4px solid #6D6E6A;
+}
+#icon-footer-twitter{
+	display:  inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 20px 10px;
+	border-radius: 100%;
+	background: white;
+	border: 4px solid #6D6E6A;
+}
+#icon-footer-twitter{
+	transition: 0.4s;
+}
+#icon-footer-twitter:hover{
+	background:#1DA1F2;
+}
+#icon-footer-twitter:hover .fa-twitter{
+	color: white;
+}
+
+#icon-footer-google{
+	display:  inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 20px 10px;
+	border-radius: 100%;
+	background: white;
+	border: 4px solid #6D6E6A;
+}
+#icon-footer-google{
+	transition: 0.4s;
+}
+#icon-footer-google:hover{
+	background: #EA4335;
+}
+#icon-footer-google:hover .fa-google{
+	color: white;
+}
+
+
+#icon-footer-facebook{
+	transition: 0.4s;
+}
+#icon-footer-facebook:hover{
+	background: #4267B2;
+}
+#icon-footer-facebook:hover .fa-facebook{
+	color: white;
+}
+
+.fa-facebook{
+	color: #4267B2;
+}
+.fa-twitter{
+	color: #1DA1F2;
+}
+.fa-google{
+	color:#EA4335;
+}
+div.foot{
+	margin-left: 20px;
+	line-height: 20px;
+}
+/*Button Back To Top*/
+#back-to-top{
+	display: block;
+	position: fixed;
+	bottom: 16px;
+	right: 30px;
+}
+#back-to-top a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #228AE6;
+	text-align: center;
+	line-height: 40px;
+}
+#back-to-top a:hover{
+	background-color:#165C99; 
+}
+#back-to-top .fa-arrow-up{
+	font-size: 20px;
+	color: white;
+}
+.border-top{
+	border-top: 1px solid #ddd;
+}
+.border-bot{
+	border-bottom: 1px solid #ddd;
+}
+p{
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.btnFacebook{
+	color:white;
+	font-size: 15px;
+	margin-left: auto;
+	margin-right:  auto;
+	margin-top: 5px;
+	width: 150px;
+	height: 30px;
+	border: none;
+	border-radius: 10px;
+	background-color: #4267B2;
+	box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.25);
+	transition: 0.3s;
+}
+.btnFacebook:hover{
+	cursor: pointer;
+	background-color: #8199CB;
+}
+.btnGoogle{
+	color:white;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right:  auto;
+	width: 150px;
+	height: 30px;
+	border: none;
+	border-radius: 10px;
+	background-color: #EA4335;
+	box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.25);
+	transition: 0.3s;
+}
+.btnGoogle:hover{
+	background-color:#F18178 ;
+	cursor: pointer;
+}
+#iconbtnGoogle{
+	color: white;
+}

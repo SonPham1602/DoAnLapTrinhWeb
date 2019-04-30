@@ -1,7 +1,7 @@
 .header{
 	margin-left: auto;
 	margin-right: auto;
-	height: 65px;
+	height: 60px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -119,6 +119,9 @@ body{
 	width: 100px;
 	height: 30px;
 }
+.btnLogin:hover{
+	background-color: #8C8C8C;
+}
 .SubmitLogin{
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -147,7 +150,7 @@ h3{
 	position: absolute;
 	right: 0;
 	top:0;
-	line-height: 20px;
+	line-height: 25px;
 	text-align: center;
 }
 .fa-unlock-alt{
@@ -157,7 +160,7 @@ h3{
 	position: absolute;
 	right: 0;
 	top:0;
-	line-height: 20px;
+	line-height: 25px;
 	text-align: center;
 }
 button{
