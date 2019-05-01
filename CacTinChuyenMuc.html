@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CacTinChuyenMuc</title>
+	<link rel="stylesheet" type="text/css" href="CacTinChuyenMuc.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<img src="images/logo.png" id="LogoWeb">	
+			<div>
+				<i class="far fa-clock"></i>
+				thứ 6,19 tháng 4 năm 2019
+			</div>
+		</div>
+
+		<div class="navigation">
+			<div class="nav-left">
+				<nav>
+					<ul>
+						<li class="homepage" title="Trang chủ">
+							<a href="#">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li>
+							<a class="active" href="#XaHoi">Xã Hội</a>
+							<ul>
+								<li >
+									<a href="#ThoiSu">Thời sự</a>
+								</li>
+								<li>
+									<a href="#PhapLuat">Pháp luật</a>
+								</li>
+
+							</ul>
+						</li>
+						<li>
+							<a href="#GiaiTri">Giải trí</a>
+							<ul>
+								<li>
+									<a href="#NgoiSao">Ngôi sao</a>
+								</li>
+								<li>
+									<a href="#DienAnh">Điện ảnh</a>
+								</li>
+								<li>
+									<a href="#AmNhac">Âm nhạc</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#SucKhoe">Sức khỏe</a>
+						</li>
+						<li>
+							<a href="#KinhDoanh">Kinh doanh</a>
+							<ul>
+								<li>
+									<a href="#NongSan">Nông sản</a>
+								</li>
+								<li>
+									<a href="#HaiSan">Hải sản</a>
+								</li>
+
+							</ul>
+
+						</li>
+						<li>
+							<a href="#CongNghe">Công nghệ</a>
+							<ul>
+								<li>
+									<a href="#Game">Game</a>
+								</li>
+								<li>
+									<a href="#ThietBi">Thiết bị</a>
+								</li>
+
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div class="nav-right">
+				<div class="user-right">
+					<button class="btn-nav btn-sumnit-user">
+						<i id="icon-user" class="far fa-user"></i>
+					</button>
+					<div class="NavbarUser">
+						
+						<a href="#">
+							<i class="fas fa-user-plus"></i>
+							&ensp;Sign up
+						</a><br>
+
+						
+						<a href="#">
+							<i class="fas fa-sign-in-alt"></i>&ensp;Login
+						</a><br>
+						
+						<a href="#">
+							<i class="fas fa-sign-out-alt"></i>&ensp;Logout</a><br>
+						</div>
+					</div>
+					<div class=" notification-right">
+						<button class="btn-nav btn-submit-notify">
+							<i id="icon-notify"class="fas fa-bell"></i>
+						</button>				
+
+					</div>	
+					<div class="search-right">
+						<form class="search" method="get">
+							<input type="text" class="search-text" id="s" value="Search..." />
+							<button class="btn-nav btn-submit-search">
+								<i class="fas fa-search"></i>
+							</button>				
+						</form>
+					</div>	
+				</div>
+			</div>
+			<div class="ListTinTuc">
+				<!-- Bai Viet 1 -->
+				<article class="border-bot">
+					<img src="images/TinTucChuyenMuc/hinh1.jpg" alt="">
+					<p class="TieuDeBaiViet">Apple bị tố 'chèn ép' các ứng dụng theo dõi màn hình</p>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						18:44, 29/04/2019
+						<span>
+							<i class="far fa-comment"></i>
+							0
+						</span>
+						<i class="far fa-share-square"></i>
+						0
+					</div>
+					<p class="MoTaBaiViet">Dftimeime và App Control đã trở thành những nạn nhân mới nhất của Apple, sau khi công ty này đưa tính năng Screen Time đến với iOS 12.</p>
+
+				</article>
+				<!-- 		Bai Viet Hai -->
+				<article class="border-bot">
+					<img src="images/TinTucChuyenMuc/hinh2.jpg" alt="">
+					<p class="TieuDeBaiViet">Huawei - Qualcom: Đối thủ trong cuộc chiến chip modem 5G cho smartphone?</p>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						18:44, 29/04/2019
+						<span>
+							<i class="far fa-comment"></i>
+							0
+						</span>
+						<i class="far fa-share-square"></i>
+						0
+					</div>
+					<p class="MoTaBaiViet">Việc Apple và Qualcomm “đình chiến” trong tháng này đã vẽ lại bản đồ chiến trận ở thị trường chip 5G, giữa lúc các nhà sản xuất smartphone và nhà mạng rục rịch triển khai thử nghiệm thế hệ mạng di động mới.</p>
+				</article>
+				<!-- Bai Viet 3 -->
+				<article class="border-bot">
+					<img src="images/TinTucChuyenMuc/hinh3.jpg" alt="">
+					<p class="TieuDeBaiViet">Docker Hub bị tấn công, 190.000 người dùng bị ảnh hưởng</p>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						18:44, 29/04/2019
+						<span>
+							<i class="far fa-comment"></i>
+							0
+						</span>
+						<i class="far fa-share-square"></i>
+						0
+					</div>
+					<p class="MoTaBaiViet">Dịch vụ Docker Hub mới đây đã thông báo bị tin tặc tấn công lộ tên đăng nhập, mật khẩu và các token truy cập GitHub và Bitbucker.</p>
+				</article>
+				<!-- Bai Viet 4 -->
+				<article class="border-bot">
+					<img src="images/TinTucChuyenMuc/hinh4.jpg" alt="">
+					<p class="TieuDeBaiViet">Sony xuất xưởng lượng smartphone thấp kỷ lục</p>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						18:44, 29/04/2019
+						<span>
+							<i class="far fa-comment"></i>
+							0
+						</span>
+						<i class="far fa-share-square"></i>
+						0
+					</div>
+					<p class="MoTaBaiViet">Sản lượng smartphone mà Sony bán ra trong năm tài chính 2018 thấp hơn rất nhiều so với ước tính đưa ra cách đây 1 năm, mặc dù công ty đã nhiều lần phải điều chỉnh hạ giá bán sản phẩm.</p>
+				</article>
+				<!-- Bai Viet 5 -->
+				<article class="border-bot">
+					<img src="images/TinTucChuyenMuc/hinh5.jpg" alt="">
+					<p class="TieuDeBaiViet">Tính năng thẻ mới của Windows 10 biến mất</p>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						18:44, 29/04/2019
+						<span>
+							<i class="far fa-comment"></i>
+							0
+						</span>
+						<i class="far fa-share-square"></i>
+						0
+					</div>
+					<p class="MoTaBaiViet">Microsoft đã hủy kế hoạch giới thiệu tính năng ứng dụng dạng thẻ mới trong hệ điều hành Windows 10 được đặt tên là Sets.</p>
+				</article>
+				<!-- Bai Viet 6 -->
+				<article class="border-bot">
+					<img src="images/TinTucChuyenMuc/hinh6.jpg" alt="">
+					<p class="TieuDeBaiViet">Apple bị tố 'chèn ép' các ứng dụng theo dõi màn hình</p>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						18:44, 29/04/2019
+						<span>
+							<i class="far fa-comment"></i>
+							0
+						</span>
+						<i class="far fa-share-square"></i>
+						0
+					</div>
+					<p class="MoTaBaiViet">Dftimeime và App Control đã trở thành những nạn nhân mới nhất của Apple, sau khi công ty này đưa tính năng Screen Time đến với iOS 12.</p>
+				</article>
+				<!-- 	Bai Viet so 7 -->
+				<article class="border-bot">
+					<img src="images/TinTucChuyenMuc/hinh7.jpg" alt="">
+					<p class="TieuDeBaiViet">Google mở rộng tính năng gọi nhóm Google Duo</p>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						18:44, 29/04/2019
+						<span>
+							<i class="far fa-comment"></i>
+							0
+						</span>
+						<i class="far fa-share-square"></i>
+						0
+					</div>
+					<p class="MoTaBaiViet">Google Duo được cho là câu trả lời của Google đối với FaceTime, và hiện đã bắt đầu triển khai tính năng cuộc gọi nhóm đến với một số thị trường nhất định.</p>
+				</article>
+				<!-- Bai viet so 8 -->
+				<article class="border-bot">
+					<img src="images/TinTucChuyenMuc/hinh8.jpg" alt="">
+					<p class="TieuDeBaiViet">Nvidia công bố card màn hình mới</p>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						18:44, 29/04/2019
+						<span>
+							<i class="far fa-comment"></i>
+							0
+						</span>
+						<i class="far fa-share-square"></i>
+						0
+					</div>
+					<p class="MoTaBaiViet">Nvidia vừa chính thức ra mắt dòng card đồ họa mới với tên gọi Geforce GTX 1660 Ti và GTX 1650, dựa trên kiến trúc Turing dành cho các laptop chơi game.</p>
+				</article>
+				<!-- Bai viet so 9 -->
+				<article class="border-bot">
+					<img src="images/TinTucChuyenMuc/hinh9.jpg" alt="">
+					<p class="TieuDeBaiViet">Muốn mua PlayStation 5, hãy chờ hơn một năm nữa</p>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						18:44, 29/04/2019
+						<span>
+							<i class="far fa-comment"></i>
+							0
+						</span>
+						<i class="far fa-share-square"></i>
+						0
+					</div>
+					<p class="MoTaBaiViet">Bình luận về tương lai của PlayStation, bộ phận Interactive Entertainment (SIE) của Sony cho biết phiên bản kế nhiệm của PlayStation 4 sẽ không lên kệ các cửa hàng trước tháng 5.2020.</p>
+				</article>
+				<!-- Bai viet so 10 -->
+				<article class="border-bot">
+					<img src="images/TinTucChuyenMuc/hinh10.jpg" alt="">
+					<p class="TieuDeBaiViet">iOS 13 sẽ giúp iPad kết nối được với chuột máy tính</p>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						18:44, 29/04/2019
+						<span>
+							<i class="far fa-comment"></i>
+							0
+						</span>
+						<i class="far fa-share-square"></i>
+						0
+					</div>
+					<p class="MoTaBaiViet">Thiếu hỗ trợ chuột là một trong những điểm yếu của iPad, khiến máy không được đánh giá tốt như máy tính xách tay. Tuy nhiên mọi thứ có thể sớm thay đổi.</p>
+				</article>
+				<div class="Pagination">
+					<ul>
+						<li>
+							<a href=""><</a>
+						</li>
+						<li>
+							<a href="">1</a>
+						</li>
+						<li>
+							<a href="">2</a>
+						</li>
+						<li>
+							<a href="">3</a>
+						</li>
+						<li>
+							<a href="">4</a>
+						</li>
+						<li>
+							<a href="">5</a>
+						</li>
+						<li>
+							<a href="">></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- Footer Trang web -->
+			<div class="footer">
+
+				<article class="icon-footer">
+					<ul>
+						<li id="icon-footer-facebook">
+							<a href="#" target="black">
+								<i class="fab fa-facebook"></i>
+							</a>
+						</li>
+
+						<li id="icon-footer-twitter">
+							<a href="#" target="black">
+								<i class="fab fa-twitter"></i>
+							</a>
+						</li>
+
+						<li id="icon-footer-google">
+							<a href="#" target="black">
+								<i class="fab fa-google"></i>
+							</a>
+						</li>
+
+					</ul>
+				</article>
+				<!-- footer start -->
+				<div class="foot">
+					<address>
+						<h4>Liên hệ</h4>
+						<p>
+							<i class="fa fa-home"> 227, Nguyễn Văn Cừ, Quận 5, TP Hồ Chí Minh</i>
+						</p>
+						<p>
+							<i class="fa fa-phone"> 0388249061</i>
+
+						</p>
+						<p>
+							<i class="fa fa-envelope"> phamngocsonl13.cla@gmail.com</i>
+						</p>
+					</address>
+				</div>
+				<!-- footer end -->
+				<!-- 	Button Arrow Up -->
+				<div id="back-to-top">
+					<a href="#">
+						<i class="fas fa-arrow-up"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	</html>

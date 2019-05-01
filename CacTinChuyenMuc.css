@@ -1,20 +1,9 @@
-
 *{
 	margin: 0;
 	padding: 0;
 }
-.header{
-	height: 75px;
-	width: 100%;
-	/*background-color: red;*/
-	display: flex;
-	justify-content: center;
-	position: relative;
-
-}
-.header div{
-	position: absolute;
-	left: 0;
+html{
+	
 }
 body{
 	/*background-color:lightblue;*/
@@ -29,15 +18,32 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 	overflow-y: scroll;
 }
-img{
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-	border-radius: 10px;
-	box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.35);
+.header{
+	height: 75px;
+	width: 100%;
+	/*background-color: red;*/
+	display: flex;
+	justify-content: center;
+	position: relative;
+
 }
+.header div{
+	position: absolute;
+	left: 0;
+}
+#LogoWeb{
+	margin: auto;
+	height:auto;
+	width: auto;
+}
+
+.fa-clock{
+	font-size: 17px;
+}
+.fa-comment{
+	font-size: 17px;
+}
+/*Start CSS Navigation*/
 .navigation{
 	position: sticky;
 	top: 0px;
@@ -49,6 +55,8 @@ img{
 	width: 100%;
 	background-color: #333333;
 	box-shadow:  4px 4px 5px 1px rgba(50, 50, 50, 0.47);
+
+	
 }
 .nav-left{
 	width: 1100px;
@@ -211,46 +219,6 @@ button.btn-submit-notify{
 }
 /*End css navigation*/
 
-/*Noi dung tin tuc*/
-.content{
-	background-color: white;
-	width: 1110px;
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
-	box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.3);
-
-}
-
-.BinhLuanBox{
-	position: relative;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	background-color: white;
-	width: 1110px;
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
-	box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.3);
-}
-.BinhLuanBox textarea{
-
-	display: block;
-	width: 1000px;
-	height: 100px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.btnGuiBinhLuan{
-	margin: 10px 0px 10px 1000px;
-	background-color: lightgray;
-	border:none;
-	width: 100px;
-	height: 30px;
-	border-radius: 8px;
-	box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.3);
-}
-/*Footer Css Start*/
 .footer{
 	height: 200px;
 	width: 100%;
@@ -347,6 +315,7 @@ div.foot{
 	margin-left: 20px;
 	line-height: 20px;
 }
+
 /*Button Back To Top*/
 #back-to-top{
 	display: block;
@@ -370,54 +339,87 @@ div.foot{
 	font-size: 20px;
 	color: white;
 }
+/*List Tin Tuc*/
+.ListTinTuc{
+	background-color: white;
+	width: 1110px;
+	height: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.3);
+}
+.ListTinTuc article{
+	width: auto;
+	height: 150px;
+}
+.ListTinTuc article img{
+	float: left;
+	height: 140px;
+}
 .border-top{
 	border-top: 1px solid #ddd;
 }
 .border-bot{
 	border-bottom: 1px solid #ddd;
 }
-p{
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.btnFacebook{
-	color:white;
-	font-size: 15px;
+/*Pagination*/
+.Pagination{
+
+	width: 300px;
 	margin-left: auto;
-	margin-right:  auto;
-	margin-top: 5px;
-	width: 150px;
+	margin-right: auto;
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+.Pagination ul{
+	display: flex;
+	justify-content: center;
+
+}
+
+.Pagination ul li a{
+	color: black;
+	margin: 2px;
+	font-size: 17px;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	display: block;
+	width: 30px;
 	height: 30px;
-	border: none;
-	border-radius: 10px;
-	background-color: #4267B2;
-	box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.25);
-	transition: 0.3s;
-}
-.btnFacebook:hover{
-	cursor: pointer;
-	background-color: #8199CB;
-}
-.btnGoogle{
-	color:white;
-	font-size: 15px;
-	margin-top: 5px;
-	margin-left: auto;
-	margin-right:  auto;
-	width: 150px;
-	height: 30px;
-	border: none;
-	border-radius: 10px;
-	background-color: #EA4335;
-	box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.25);
-	transition: 0.3s;
-}
-.btnGoogle:hover{
-	background-color:#F18178 ;
-	cursor: pointer;
-}
-#iconbtnGoogle{
+	text-decoration: none;
+	box-shadow: inset 0 5px 10px rgba(0,0,0,0.1) ,0 2px 5px rgba(0,0,0,0.5); 
+	transition-duration: 0.3s;
+} 
+.Pagination ul li:hover a{
+	background-color: #333;
 	color: white;
+}
+.Pagination ul li:first-child a{
+	border-radius: 15px 5px 5px 15px;
+}
+.Pagination ul li:last-child a{
+	border-radius: 5px 15px 15px 5px;
+}
+img{
+	display: block;
+	margin:5px;
+	margin-right: 20px;
+	border-radius: 5px;
+	box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.5);
+}
+#LogoWeb{
+	box-shadow: none;
+	border-radius: 0px;
+}
+p.TieuDeBaiViet{
+	font-size: 17px;
+	font-weight: 700;
+	margin: 5px;
+
+}
+p.MoTaBaiViet{
 }
