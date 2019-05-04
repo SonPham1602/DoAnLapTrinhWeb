@@ -2,20 +2,51 @@
 	margin: 0px;
 	padding:0px;
 }
+body{
+	
+}
 li{
 	list-style: none;
 }
+div{
+	
+}
+.avatar-picture{
+	padding-top: 10px;
+	width: 110px;
+	height: 110px;
+	margin-left: auto;
+	margin-right: auto;
 
+}
+.avatar-picture img{
+
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 3px solid white;
+}
+.Avatar p {
+	font-size: 17px;
+	text-align: center;
+	color: white;
+	margin: 5px 10px 5px 10px;
+}
+.Menu-left{
+	position: fixed;
+	height: auto;
+	width: 210px;
+	background-color: #2A3F54;
+	box-shadow:  4px 4px 5px 1px rgba(50, 50, 50, 0.47);
+}
 .navigation{
-	z-index: 10; 
 	position: sticky;
 	left: 0px;
 	top: 0px;
-	background-color: #2A3F54;
-	width: 200px;
+	z-index: 10; 
 	height: 1000px;
 	max-height: 100%;
-	box-shadow:  4px 4px 5px 1px rgba(50, 50, 50, 0.47);
+
 }
 .navigation a{
 	height: 30px;
@@ -23,21 +54,222 @@ li{
 	text-decoration: none;
 	color: white;
 }
-.navigation nav li{
+.navigation nav ul li{
+	list-style: none;
+	padding: 15px 10px;
 	width: auto;
 	height: auto;
 }
 
 div.navigation nav ul ul{
 	display: none;
-	background-color: #333333;
+	background-color:#717F8D;
 
 }
 
-div.navigation nav ul li:hover > ul{
-	display: block;
+div.navigation nav ul li:hover  > ul{
+	display:block;
 }
 
 .icon{
 	color: white;
 }
+.border-top{
+	margin-left: 10px;
+	margin-right: 10px;
+	border-top: 1px solid #ddd;
+}
+.border-bot{
+	margin-left: 10px;
+	margin-right: 10px;
+	border-bottom: 1px solid #ddd;
+}
+@media screen and (min-width: 400px){
+	.Menu-left{
+		width: 90px;
+	}
+	.avatar-picture{
+		width: 75px;
+		height:75px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.avatar-picture img{
+		width: 70px;
+		height:70px;
+	}
+	
+}
+@media screen and (min-width: 1000px){
+	.Menu-left{
+		width: 200px;
+
+	}
+	.avatar-picture img{
+
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		border: 3px solid white;
+	}
+	.avatar-picture{
+		padding-top: 10px;
+		width: 110px;
+		height: 110px;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+	
+}
+.icon{
+	font-size: 17px;
+}
+.Content-right{
+	display: block;
+	padding-left: 200px;
+	height: 100%;
+}
+.header-container{
+	z-index: 100;
+	width: calc(100% - 200px);
+	margin-bottom: 0;
+	padding: 0;
+	position: fixed;
+	display: block;
+	height: 50px;
+	border-bottom: 1px solid rgba(0,0,0,.0625);
+
+}
+.header-container .nav-right{
+	float: right;
+
+}
+.header-container .nav-right li{
+	position: relative;
+	float: left;
+	height: 50px;
+	width: 50px;
+	margin-right: 5px;
+	text-align: center;
+	line-height: 50px;
+
+}
+.icon-dashboard{
+	text-align: center;
+	font-size: 21px;
+	color: #72777a;
+}
+.so_luong_thong_bao{
+	background-color: #ff3c7e;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1;
+    padding: 3px 5.5px;
+    position: absolute;
+    right: 6px;
+    top: 5px;
+}
+.so_luong_tin_nhan{
+	background-color: #ff3c7e;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1;
+    padding: 3px 5.5px;
+    position: absolute;
+    right: 6px;
+    top: 5px;
+}
+.user_dashboard{
+	padding-right:  10px;
+	height: 50px;
+	width: 50px;
+}
+.user_dashboard img{
+	height: 46px;
+	width: 46px;
+	border: 2px solid #72777a;
+	border-radius: 50%;
+}
+
+/*Viet Bai Dash Board*/
+.VietBaiDashboard{
+	font-size: 17px;
+	padding: 60px 20px 20px;
+}
+.VietBaiDashboard p{
+	margin-bottom: 5px;
+	font-weight: 700;
+
+
+}
+#NoiDungBaiDang{
+	margin-right: 10px;
+	width: 100%;
+	height: 550px;
+	
+}
+#tieu-de-bai-viet{
+	margin-bottom: 5px;
+	font-size: 17px;
+	width: 300px;
+	height: 30px;
+	border: none;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+#chuyen-de-bai-viet{
+	margin-bottom: 5px;
+	border: none;
+	font-size: 17px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	height: 30px;
+	width: 300px;
+	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
+}
+#them-tag{
+	margin-bottom: 5px;
+	font-size: 17px;
+	width: 300px;
+	height: 30px;
+	border: none;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+.TieuDeTrang{
+	text-align: center;
+	font-size: 20px;
+}
+#btn-luu-bai-viet{
+	border-radius: 5px;
+	width: 150px;
+	height: 30px;
+	border: none;
+	border: 1px solid gray;
+}
+#btn-huy-bo-bai-viet{
+	border-radius: 5px;
+	border: none;
+	width: 150px;
+	height: 30px;
+	border: 1px solid gray;
+}
+#btn-xuat-ban-bai-viet{
+	border-radius: 5px;
+	border: none;
+	width: 150px;
+	height: 30px;
+	border: 1px solid gray;
+}
+.DanhSachBaiVietDashboard{
+	padding: 60px 20px 20px;
+}
+.table-danh-sach-bai-viet{
+	border-collapse: collapse;
+}
+.table-danh-sach-bai-viet td{
+	padding: 20px;
+} 

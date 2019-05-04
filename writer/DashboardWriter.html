@@ -5,12 +5,17 @@
 	<title>DashboardWritter</title>
 	<link rel="stylesheet" type="text/css" href="DashboardWriter.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+	<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+	<script type="text/javascript" src="DashboardWriter.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="Menu-left">
-			<div class="Avatar">
-				<img src="" alt="">
+			<div class="Avatar border-bot">
+				<div class="avatar-picture">
+					<img src="../images/avatar_writer.jpg" alt="">
+				</div>
 				<p class="nameWitter">
 					Phạm Ngọc Sơn
 				</p>
@@ -19,8 +24,9 @@
 				<nav>
 					<ul>
 						<li class="homepage" title="Trang chủ">
+							<i class="fas fa-home icon"></i>
 							<a href="#">
-								<i class="fas fa-home icon"></i>
+								Trang chủ
 							</a>
 						</li>
 						<li>
@@ -48,6 +54,9 @@
 							<a href="#GiaiTri">Viết bài</a>
 							<i class="fas fa-angle-down icon"></i>
 							<ul>
+								<li>
+									<a href="#NgoiSao">Bài viết mới</a>
+								</li>
 								<li>
 									<a href="#NgoiSao">Bài viết tạm</a>
 								</li>
@@ -80,6 +89,106 @@
 			</div>
 		</div>
 		<div class="Content-right">
+			<div class="header-container">
+				<div class="nav-left">
+					
+				</div>
+				<ul class="nav-right">
+					<li class="thong_bao_dashboard">
+						<span class="so_luong_thong_bao">2</span>
+						<i class="far fa-bell icon-dashboard"></i>
+					</li>
+					<li class="tin_nhan_dashboard">
+						<span class="so_luong_tin_nhan">5</span>
+						<i class="far fa-envelope icon-dashboard"></i>
+					</li>
+					<li class="user_dashboard">
+						<img src="../images/avatar_writer.jpg" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="TrangChuDashboard panel">
+			</div>
+			<div class="DanhSachBaiVietDashboard panel">
+				<p>Danh sách bài viết đã đăng</p>
+				<div class="header-table">
+					<table >
+						
+					</table>
+				</div>
+				<div class="data-table">
+					<table border="1px" class="table-danh-sach-bai-viet">
+						<tr>
+							<td>STT</td>
+							<td>Tên bài viết</td>
+							<td>Chuyên mục</td>
+							<td>Nguời kiểm duyệt</td>
+							<td>Ngày đăng</td>
+						</tr>		
+						<tr>
+							<td>1</td>
+							<td>Firefox chặn Add-on dùng kỹ thuật che giấu mã nguồn</td>
+							<td>Công nghệ</td>
+							<td>Hứa Thanh Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+						</tr>
+
+						<tr>
+							<td>1</td>
+							<td>Firefox chặn Add-on dùng kỹ thuật che giấu mã nguồn</td>
+							<td>Công nghệ</td>
+							<td>Hứa Thanh Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+						</tr>
+					</table>
+				</div>
+				
+			</div>
+			<div class="VietBaiDashboard panel">
+				<p class="TieuDeTrang">Viết bài</p>
+				<p>Tiêu đề bài viết</p>
+				<input type="text" name="" placeholder="Nhập Tiêu Đề Bài Viết" id="tieu-de-bai-viet">
+				<p>Nội dung bài viết</p>
+				<textarea id="NoiDungBaiDang">
+					
+				</textarea>
+				<!-- <script>
+					ClassicEditor
+					.create( document.querySelector( '#NoiDungBaiDang' ) )
+					.catch( error => {
+						console.error( error );
+					} );
+				</script> -->
+				<script>
+					var quill = new Quill('#NoiDungBaiDang', {
+						theme: 'snow'
+					});
+				</script>
+				<p>Chuyên mục</p>
+				<select id="chuyen-de-bai-viet">
+					<option>Xã hội</option>
+					<option>Giải trí</option>
+					<option>Sức khoẻ</option>
+					<option>Kinh doanh</option>
+					<option>Công nghệ</option>
+				</select><br>
+				<p>Tag</p>
+				<input type="text" name="" placeholder="Thêm tag" id="them-tag"><br>
+				<button id="btn-luu-bai-viet">
+					<i class="far fa-save"></i>
+					Lưu vào bài viết tạm
+				</button>
+				<button id="btn-huy-bo-bai-viet">
+					<i class="fas fa-ban"></i>		Huỷ bỏ bài viết
+				</button>
+				<button id="btn-xuat-ban-bai-viet">
+					<i class="fas fa-file-export"></i>
+					
+					Xuất bản bài viết
+				</button>
+			</div>
+			<div class="ThongKeDashboard panel">
+			</div>
 		</div>
 	</div>
 </body>
