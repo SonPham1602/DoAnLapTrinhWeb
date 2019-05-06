@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DashboardWritter</title>
+	<link rel="stylesheet" type="text/css" href="DashboardAdmin.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.css">
+	<script src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script type="text/javascript" src="DashboardAdmin
+	.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="Menu-left">
+			<div class="Avatar border-bot">
+				<div class="avatar-picture">
+					<img src="../images/avatar_writer.jpg" alt="">
+				</div>
+				<p class="nameWitter">
+					Phạm Ngọc Sơn
+				</p>
+			</div>
+			<div class="navigation">
+				<nav>
+					<ul>
+						<li class="homepage" title="Trang chủ" id="li-trang-chu">
+							<i class="fas fa-home icon"></i>
+							<a href="#">
+								Trang chủ
+							</a>
+						</li>
+						<li>
+							<i class="far fa-file-alt icon"></i>
+							<a href="#">Danh sách độc giả</a>
+							<i class="fas fa-angle-down icon"></i>
+							<ul>
+								<li id="li-cho-xuat-ban">
+									<a href="#">Tất cả độc giả</a>
+								</li>
+								<li id="li-cho-kiem-duyet">
+									<a href="#">Độc giả premium</a>
+								</li>
+								<li id="li-da-xuat-ban">
+									<a href="#">Độc giả bị block</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<i class="far fa-edit icon"></i>
+							<a href="#">Danh sách phóng viên</a>
+							<i class="fas fa-angle-down icon"></i>
+							<ul>
+								<li id="li-bai-viet-moi">
+									<a href="#">Tất cả phóng viên</a>
+								</li>
+								<li>
+									<a href="#">Phóng viên hợp lệ </a>
+								</li>
+								<li>
+									<a href="#">Phóng viên bị block</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<i class="far fa-edit icon"></i>
+							<a href="#">Quản lý nội dung</a>
+							<i class="fas fa-angle-down icon"></i>
+							<ul>
+								<li id="li-bai-viet-moi">
+									<a href="#">Quản lý bài viết</a>
+								</li>
+								<li>
+									<a href="#">Quản lí nhãn</a>
+								</li>
+								<li>
+									<a href="#">Quản lý chuyên mục</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<i class="fas fa-chart-line icon"></i>
+							<a href="#">Thông kê</a>
+							<i class="fas fa-angle-down icon"></i>
+							<ul>
+								<li>
+									<a href="#">Bài viết</a>
+								</li>
+								<li>
+									<a href="#">Tương tác</a>
+								</li>
+
+							</ul>
+
+						</li>
+						<li>
+							<i class="fas fa-user-cog icon"></i>
+							<a href="#">Cài đặt</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="Content-right">
+			<div class="header-container">
+				<div class="nav-left">
+					
+				</div>
+				<ul class="nav-right">
+					<li class="thong_bao_dashboard item-nav-right">
+						<span class="so_luong_thong_bao">3</span>
+						<i class="far fa-bell icon-dashboard"></i>
+						<ul id="thong-bao-drop-down-menu" class="drop-down-menu">
+							<li class="border-bot">
+								<i class="far fa-bell"></i>
+								Thông báo
+							</li>
+							<li class="drop-down-item">
+								<article class="border-bot">
+									<a href="">Bài viết "Firefox chặn Add-on dùng kỹ thuật che giấu mã nguồn" đã được xuất bản
+									</a>
+								</article>
+								
+							</li>
+							<li class="drop-down-item">
+								<article class="border-bot">
+									<a href="">Bài viết "Giá USD tự do lao dốc, thấp hơn ngân hàng" đã được xuất bản
+									</a>
+								</article>
+							</li>
+							<li class="drop-down-item">
+								
+								<article class="border-bot">
+									<a href="">Bài viết "Lộ thông tin chi tiết mẫu smartphone Mate 30 Pro" đã bị từ chối
+									</a>
+								</article>
+							</li>
+							<li class="border-bot">
+								<a href="">
+									Xem tát cả thông báo
+								</a>
+								
+								<i class="fas fa-arrow-right"></i>
+							</li>
+							
+						</ul>
+					</li>
+					<li class="tin_nhan_dashboard item-nav-right">
+						<span class="so_luong_tin_nhan">5</span>
+						<i class="far fa-envelope icon-dashboard"></i>
+
+					</li>
+					<li class="user_dashboard item-nav-right">
+						<img src="../images/avatar_writer.jpg" alt="">
+						<ul id="user-drop-down-menu" class="drop-down-menu">
+							<li class="drop-down-item">
+								<a href="">
+									<i class="fas fa-cog"></i>
+									Cài đặt
+								</a>
+							</li>
+							<li class="drop-down-item">
+								<a href="">
+									<i class="far fa-id-card"></i>
+									Thông tin tài khoản
+								</a>
+							</li>
+							<li class="drop-down-item">
+								<a href="">
+									<i class="far fa-envelope"></i>
+									Tin nhắn
+								</a>
+							</li>
+							<li class="drop-down-item">
+								<a href="">
+									<i class="fas fa-sign-out-alt"></i>
+									Logout
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="TrangChuDashboard panel">
+				<p class="TieuDeTrang">Trang chủ</p>
+				<div>
+					<article id="so-luong-bai-viet-da-xuat-ban">
+						<p class="tieu-de">Bài viết đã xuất bản</p>
+						<p class="number">10</p>
+					</article>
+					<article  id="so-luong-bai-viet-tu-choi">
+						<p class="tieu-de">Bài viết bị từ chối</p>
+						<p class="number">2</p>
+					</article>
+					<article  id="so-luong-bai-viet-da-viet">
+						<p class="tieu-de">Số lượng bài viết đã viết</p>
+						<p class="number">12</p>
+					</article>
+					<article  id="so-luot-like">
+						<p class="tieu-de">Số lượt like</p>
+						<p class="number">56</p>
+					</article>
+					<article id="so-luot-chia-se">
+						<p class="tieu-de">Số lượng chia sẽ</p>
+						<p class="number">10</p>
+					</article>
+
+
+				</div>
+				<p class="TieuDeTrang">Danh sách các chuyên đề đã viết</p>
+				<article id="danh-sach-cac-bai-viet-chuyen-de">
+
+					<ul>
+						<li>
+							<label>Xã hội:</label>
+							5
+						</li>
+						<li>
+							<label>Giải trí:</label>
+							5
+						</li>
+						<li>
+							<label>Sức khoẻ:</label>
+							5
+						</li>
+						<li>
+							<label>Kinh doanh:</label>
+							5
+						</li>
+						<li>
+							<label>Công nghệ:</label>
+							5
+						</li>
+					</ul>
+				</article>
+				
+				
+				
+
+			</div>
+			<div class="DanhSachBaiVietDashboard panel">
+				  
+				
+			</div>
+			<div class="DanhSachBaiVietBiTuChoiDashboard panel">
+				<p class="TieuDeTrang">Danh sách bài viết bị từ chối</p>
+				<div class="data-table">
+					<table border="1px" class="table-danh-sach-bai-viet">
+						<tr id="header-table">
+							<td>STT</td>
+							<td>Tên bài viết</td>
+							<td>Chuyên mục</td>
+							<td>Nguời kiểm duyệt</td>
+							<td>Ngày kiểm duyệt</td>
+							<td>Nguyên nhân</td>
+							<td>Xem chi tiết</td>
+						</tr>		
+						<tr>
+							<td>1</td>
+							<td>Firefox chặn Add-on dùng kỹ thuật che giấu mã nguồn</td>
+							<td>Công nghệ</td>
+							<td>Hứa Thanh Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							<td>Nội dung không phù hợp với chuyên mục</td>
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td>Xem xét kỷ luật nguyên Phó Thủ tướng Vũ Văn Ninh</td>
+							<td>Thời sự</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							<td>Thiếu hình ảnh minh hoạ</td>
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>3</td>
+							<td>'Thánh nữ mì gõ' Phi Huyền Trang nổi tiếng ra sao?</td>
+							<td>Giải trí</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							<td>Nội dung không phù hợp với chuyên mục</td>
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>4</td>
+							<td>Từ kẻ nghiện ngập, ‘Người sắt’ Robert Downey Jr. vươn lên thành tài tử triệu đô</td>
+							<td>Giải trí</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							<td>Nội dung không phù hợp với chuyên mục</td>
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Google Maps làm nổi bật hình ảnh các món ăn phổ biến nhất của nhà hàng</td>
+							<td>Công nghệ</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							<td>Nội dung không phù hợp với chuyên mục</td>
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+						
+					</table>
+				</div>
+				
+			</div>
+			<div class="DanhSachBaiVietChoXuatBaniDashboard panel">
+				<p class="TieuDeTrang">Danh sách bài viết chờ xuất bản</p>
+				<div class="data-table">
+					<table border="1px" class="table-danh-sach-bai-viet">
+						<tr id="header-table">
+							<td>STT</td>
+							<td>Tên bài viết</td>
+							<td>Chuyên mục</td>
+							<td>Nguời kiểm duyệt</td>
+							<td>Thời gian dự định xuất bản</td>
+							<td>Xem chi tiết</td>
+						</tr>		
+						<tr>
+							<td>1</td>
+							<td>Firefox chặn Add-on dùng kỹ thuật che giấu mã nguồn</td>
+							<td>Công nghệ</td>
+							<td>Hứa Thanh Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td>Xem xét kỷ luật nguyên Phó Thủ tướng Vũ Văn Ninh</td>
+							<td>Thời sự</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>3</td>
+							<td>'Thánh nữ mì gõ' Phi Huyền Trang nổi tiếng ra sao?</td>
+							<td>Giải trí</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>4</td>
+							<td>Từ kẻ nghiện ngập, ‘Người sắt’ Robert Downey Jr. vươn lên thành tài tử triệu đô</td>
+							<td>Giải trí</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Google Maps làm nổi bật hình ảnh các món ăn phổ biến nhất của nhà hàng</td>
+							<td>Công nghệ</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+						
+					</table>
+				</div>
+				
+			</div>
+			<div class="DanhSachBaiVietChoKiemDuyetDashboard panel">
+				<p class="TieuDeTrang">Danh sách bài viết chờ kiểm duyệt</p>
+				<div class="data-table">
+					<table border="1px" class="table-danh-sach-bai-viet">
+						<tr id="header-table">
+							<td>STT</td>
+							<td>Tên bài viết</td>
+							<td>Chuyên mục</td>
+							<td>Nguời kiểm duyệt</td>
+							<td>Thời gian dự định kiểm duyệt</td>
+							<td>Xem chi tiết</td>
+						</tr>		
+						<tr>
+							<td>1</td>
+							<td>Firefox chặn Add-on dùng kỹ thuật che giấu mã nguồn</td>
+							<td>Công nghệ</td>
+							<td>Hứa Thanh Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td>Xem xét kỷ luật nguyên Phó Thủ tướng Vũ Văn Ninh</td>
+							<td>Thời sự</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>3</td>
+							<td>'Thánh nữ mì gõ' Phi Huyền Trang nổi tiếng ra sao?</td>
+							<td>Giải trí</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>4</td>
+							<td>Từ kẻ nghiện ngập, ‘Người sắt’ Robert Downey Jr. vươn lên thành tài tử triệu đô</td>
+							<td>Giải trí</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Google Maps làm nổi bật hình ảnh các món ăn phổ biến nhất của nhà hàng</td>
+							<td>Công nghệ</td>
+							<td>Nguyễm Công Sơn</td>
+							<td>08:24, 04/05/2019 </td>
+							
+							<td>
+								<button class="btn-xem-bai-viet">Xem bài viết</button>
+							</td>
+						</tr>
+						
+					</table>
+				</div>
+				
+			</div>
+			<div class="VietBaiDashboard panel">
+				<p class="TieuDeTrang">Viết bài</p>
+				<p>Tiêu đề bài viết</p>
+				<input type="text" name="" placeholder="Nhập Tiêu Đề Bài Viết" id="tieu-de-bai-viet">
+				<p>Nội dung bài viết</p>
+				<textarea id="NoiDungBaiDang">
+					
+				</textarea>
+				<!-- <script>
+					ClassicEditor
+					.create( document.querySelector( '#NoiDungBaiDang' ) )
+					.catch( error => {
+						console.error( error );
+					} );
+				</script> -->
+				<script>
+					var quill = new Quill('#NoiDungBaiDang', {
+						theme: 'snow'
+					});
+				</script>
+				<p>Chuyên mục</p>
+				<select id="chuyen-de-bai-viet">
+					<option>Xã hội</option>
+					<option>Giải trí</option>
+					<option>Sức khoẻ</option>
+					<option>Kinh doanh</option>
+					<option>Công nghệ</option>
+				</select><br>
+				<p>Tag</p>
+				<input type="text" name="" placeholder="Thêm tag" id="them-tag"><br>
+				<button id="btn-luu-bai-viet">
+					<i class="far fa-save"></i>
+					Lưu vào bài viết tạm
+				</button>
+				<button id="btn-huy-bo-bai-viet">
+					<i class="fas fa-ban"></i>		Huỷ bỏ bài viết
+				</button>
+				<button id="btn-xuat-ban-bai-viet">
+					<i class="fas fa-file-export"></i>
+					
+					Xuất bản bài viết
+				</button>
+			</div>
+			<div class="ThongKeDashboard panel">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
