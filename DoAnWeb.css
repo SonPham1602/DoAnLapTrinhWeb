@@ -129,9 +129,8 @@ div.user-right{
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	background-color: ;
-	top:-25px;
-	left: 50%;
+	top:-20px;
+	left: 90%;
 	margin-left: -10px;
 	margin-top: 15px;
 	z-index: -1;
@@ -147,7 +146,9 @@ div.user-right{
 	margin-left: 25%;
 	margin-right: auto;
 }
-
+.NavbarUser a:first-child i{
+	margin-top: 5px;
+}
 #icon-user{
 	color: white;
 	font-size: 20px;
@@ -164,11 +165,13 @@ button.btn-sumnit-user{
 }
 form.search{
 	float: right;
+	
 }
 div.search-right{
 	display: block;
-	
-	width: 250px;
+	position: relative;
+	width: auto;
+	height: auto;
 	float: right;
 	text-decoration: none;
 
@@ -179,23 +182,64 @@ div.search-right{
 	font-size: 20px;
 	
 }
+
+ul{
+	list-style: none;
+}
+input.search-text{
+
+	/*z-index: 1;*/
+	width: 200px;
+	border: none;
+	height: 50px;
+	/*margin: 8px 0px;*/
+	box-sizing: border-box;
+	font-size: 12px;
+
+}
+input.search-text:after{
+	/*background-color: #333;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:-20px;
+	left: 90%;
+	margin-left: -10px;
+	margin-top: 15px;
+	z-index: -1;
+	/*margin left bang 1 nua chieu rong */
+	content: ''; /*Can Them The Nay De xuat Hien*/
+	transform: rotate(45deg);*/
+	height: 50px;
+	width: 50px;
+	border:none;
+	border-radius: 50%;
+	background-color: #333;
+
+}
+#search-text-div{
+	top:0px;
+	display: none;
+	right: 28px;
+	position: absolute;
+	width: 150px;
+	height: 50px;
+	animation-duration: 0.5s;
+}
 .btn-submit-search{
+	display: block;
+	position: relative;
+	z-index: 2;
 	border-radius: 50%;
 	border: none;
 	background-color: #6D6E6A;
 	height: 50px;
 	width: 50px;
 }
-ul{
-	list-style: none;
-}
-input.search-text{
-	height: 30px;
-	margin: 8px 0px;
-	box-sizing: border-box;
-	font-size: 12px;
-
-}
+/*.search-right:active .search-text{
+	display: block;
+	width: 150px;
+}*/
 
 div.navigation nav ul ul{
 	display: none;
@@ -915,7 +959,7 @@ article.TinNoiBat3:hover img{
 
 /*Button Back To Top*/
 #back-to-top{
-	display: block;
+	display: none;
 	position: fixed;
 	bottom: 16px;
 	right: 30px;
