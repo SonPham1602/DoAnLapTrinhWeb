@@ -8,6 +8,13 @@ $(document).ready(function() {
 		$(".NavbarUser").toggle(300);
 
 	});
+	$(".btn-toggle-nav").click(function(event) {
+		/* Act on the event */
+		$(".nav-left").fadeToggle('300', function() {
+			
+		});
+
+	});
 	$(".btn-submit-search").click(function(event) {
 		/* Act on the event */
 		event.preventDefault(); 
