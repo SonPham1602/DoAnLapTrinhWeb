@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Footer Trang web -->
+			<div class="ListTinTuc">
+			<p class="TieuDeChuyenMuc">{{cname}}</p>
+			<!--Cac Bai Viet -->
+			{{#each articles}}
+			<article class="border-bot">
+				<img src="{{image}}" alt="">
+				<a href="/article/{{id}}">
+					<p class="TieuDeBaiViet">{{title}}</p>
+				</a>
+				<div class="ThoigianBinhLuanChiase">
+					<i class="far fa-clock"></i>
+					{{format date_post}}
+					<span>
+					<i class="far fa-comment"></i>
+					{{num_comment}}
+					</span>
+					<i class="far fa-share-square"></i>
+					0
+				</div>
+				<p class="MoTaBaiViet">{{abstract}}</p>
+			</article>
+			{{/each}}
+			<div class="Pagination">
+				<ul>
+					<li>
+						<a href=""><</a>
+					</li>
+					<li>
+						<a href="">1</a>
+					</li>
+					<li>
+						<a href="">2</a>
+					</li>
+					<li>
+						<a href="">3</a>
+					</li>
+					<li>
+						<a href="">4</a>
+					</li>
+					<li>
+						<a href="">5</a>
+					</li>
+					<li>
+						<a href="">></a>
+					</li>
+				</ul>
+			</div>

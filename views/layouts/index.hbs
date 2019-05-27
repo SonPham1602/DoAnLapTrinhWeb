@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<title>DoAnCuoiKi</title>
+	<link rel="stylesheet" type="text/css" href="/public/css/DoAnWeb.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/CacTinChuyenMuc.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/public/js/DoAnWeb.js"></script>
+</head>
+<body class="body-color">
+	<div class="container">
+		<div class="header">
+			<img src="/images/logo.png" id="LogoWeb">	
+			<div>
+				<i class="far fa-clock"></i>
+				{{datenow}}
+			</div>
+		</div>
+
+	<div class="navigation">
+		<div class="nav-left">
+				<nav>
+					<ul>
+						<li class="homepage" title="Trang chủ">
+							<a href="/">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						{{#each lcCategories}}						
+						<li>
+							<a href="/categorie/{{id}}">{{name}}</a>
+							<ul>
+							{{#each ../this.lcCategories2}}
+								{{#if_equal id_cat  ../id}}
+								<li>
+									<a href="/categorie/{{../id}}/{{id}}">{{name}}</a>
+								</li>
+								{{/if_equal}}							
+							{{/each}}
+							</ul>			
+						</li>					
+						{{/each}}															
+					</ul>
+				</nav>
+		</div>
+			
+		<div class="nav-right"> <!--Sua lai vi tri thanh tim kiem -->
+				<div class="user-right">
+					<button class="btn-nav btn-sumnit-user">
+						<i id="icon-user" class="far fa-user"></i>
+					</button>
+					<div class="NavbarUser">
+						
+						<a href="#">
+							<i class="fas fa-user-plus"></i>
+							&ensp;Sign up
+						</a><br>
+
+						
+						<a href="#">
+							<i class="fas fa-sign-in-alt"></i>&ensp;Login
+						</a><br>
+						
+						<a href="#">
+							<i class="fas fa-sign-out-alt"></i>&ensp;Logout</a><br>
+						</div>
+					</div>
+					<div class=" notification-right">
+						<button class="btn-nav btn-submit-notify">
+							<i id="icon-notify"class="fas fa-bell"></i>
+						</button>				
+
+					</div>	
+					<div class="search-right">
+						<button class="btn-nav btn-submit-search">
+							<i " class="fas fa-search"></i>
+						</button>	
+						<div  id="search-text-div">
+							<form class="search" method="get">
+								<input type="text" class="search-text" id="search-nav-textbox" value="Search..." />
+							</form>
+						</div>
+						
+					</div>	
+				</div>
+		</div>
+
+		{{{body}}}
+	</div>
+
+		
+			
+<script type="text/javascript" src="/public/js/DoAnWeb.js"></script>
+<script type="text/javascript" src="/public/js/CacTinChuyenMuc.js"></script>
+</body>
+</html>
