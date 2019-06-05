@@ -2,12 +2,16 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 	<title>DoAnCuoiKi</title>
 	<link rel="stylesheet" type="text/css" href="/public/css/DoAnWeb.css">
 	<link rel="stylesheet" type="text/css" href="/public/css/CacTinChuyenMuc.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script type="text/javascript" src="/public/js/DoAnWeb.js"></script>
+	<!-- 	bootstrap -->
+	
+
 </head>
 <body class="body-color">
 	<div class="container">
@@ -20,6 +24,9 @@
 		</div>
 
 	<div class="navigation">
+		<button class="	btn-toggle-nav">
+			<i class="fas fa-bars"></i>
+		</button>
 		<div class="nav-left">
 				<nav>
 					<ul>
@@ -46,7 +53,7 @@
 				</nav>
 		</div>
 			
-		<div class="nav-right"> <!--Sua lai vi tri thanh tim kiem -->
+		<div class="nav-right">
 				<div class="user-right">
 					<button class="btn-nav btn-sumnit-user">
 						<i id="icon-user" class="far fa-user"></i>
@@ -80,12 +87,15 @@
 						<div  id="search-text-div">
 							<form class="search" method="get">
 								<input type="text" class="search-text" id="search-nav-textbox" value="Search..." />
+
 							</form>
 						</div>
 						
 					</div>	
 				</div>
+
 		</div>
+	</div>
 
 		{{{body}}}
 	</div>
