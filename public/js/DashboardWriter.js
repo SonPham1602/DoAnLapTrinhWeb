@@ -1,4 +1,5 @@
  $(document).ready(function(){
+
  	$(".panel").hide();
  		$(".TrangChuDashboard").fadeIn(200);
  	$("#btn-luu-bai-viet").click(function(event){
@@ -35,6 +36,27 @@
  	$("#li-trang-chu").click(function(event){
  		$(".panel").hide();
  		$(".TrangChuDashboard").fadeIn(200);
+ 	});
+ 	$("#li-bai-viet-tam").click(function(event){
+ 		$(".panel").hide();
+ 		$(".BaiVietTamDashboard").fadeIn(200);
+ 	});
+ 	$(".drop-down-menu").mouseleave(function(event) {
+ 		/* Act on the event */
+ 		$(this).delay(800).fadeOut(400, function() {
+ 			
+ 		});
+ 	});
+ 	$(".tin_nhan_dashboard").click(function(event) {
+ 		$("#tin-nhan-drop-down-menu").toggle(300);
+ 	});
+ 	$(".btn-toggle").click(function(event) {
+ 		$(".navigation nav").fadeToggle('300', function() {
+ 			
+ 		});;
+ 		
+ 		
+ 		/* Act on the event */
  	});
 
 
