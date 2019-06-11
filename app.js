@@ -20,7 +20,13 @@ app.engine('hbs', exphbs({
 
 		format: val => {
 			return dateFormat(val, "dd/mm/yyyy");
+		},
+
+		breaklines: function(text) {
+    		text = text.replace(/(\r\n|\n|\r)/gm, '<br>');
+    		return text;
 		}
+
 	}	
 }));
 app.set('view engine', 'hbs');
