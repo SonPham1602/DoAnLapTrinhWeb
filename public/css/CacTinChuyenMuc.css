@@ -402,6 +402,13 @@ div.foot{
 	background-color: #333;
 	color: white;
 }
+.Pagination .active{
+	background-color: #333;
+	color: white;
+}
+.Pagination .block {
+	display: none;
+}
 .Pagination ul li:first-child a{
 	border-radius: 15px 5px 5px 15px;
 }

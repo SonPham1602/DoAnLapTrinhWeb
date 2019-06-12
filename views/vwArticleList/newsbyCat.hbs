@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="/public/css/CacTinChuyenMuc.css">
 <div class="ListTinTuc">
 <p class="TieuDeChuyenMuc">{{cname}}</p>
@@ -24,27 +24,41 @@
 {{/each}}
 <div class="Pagination">
 			<ul>
+				{{#if_equal pre 0 }}
 				<li>
-					<a href=""><</a>
+					<a class="block"></a>
 				</li>
+				{{else}}
 				<li>
-					<a href="">1</a>
+					<a href="?page={{pre}}"><</a>
 				</li>
+				{{/if_equal}}
+				{{#each this.pages}}
+				{{#if active}}
 				<li>
-					<a href="">2</a>
+					<a class="active" href="javascript:;">{{value}}</a>
 				</li>
+				{{else}}				
 				<li>
-					<a href="">3</a>
+					<a href="?page={{value}}">{{value}}</a>
 				</li>
+				{{/if}}
+				{{/each}}
+				{{#if_equal page nPages}}
 				<li>
-					<a href="">4</a>
+					<a class="block"></a>
 				</li>
-				<li>
-					<a href="">5</a>
-				</li>
-				<li>
-					<a href="">></a>
-				</li>
+				{{else}}
+					{{#if_equal nPages 0}}
+					<li>
+						<a class="block"></a>
+					</li>
+					{{else}}
+					<li>
+						<a href="?page={{next}}">></a>
+					</li>
+					{{/if_equal}}				
+				{{/if_equal}}
 			</ul>
 </div>
 </div>
