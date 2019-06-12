@@ -240,6 +240,8 @@ button.btn-submit-notify{
 	height: 100px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 15px;
+	padding-left: 20px;
 }
 .btnGuiBinhLuan{
 	margin: 10px 0px 10px 1000px;

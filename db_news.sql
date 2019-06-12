@@ -1,4 +1,4 @@
-
+create database doubles;
 create table category(
 	id mediumint not null auto_increment,
 	name varchar(50) not null,
