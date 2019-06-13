@@ -53,16 +53,9 @@
 
 					</article>
 				</div>			
-
 </div>
 <!-- Noi Dung Chinh -->
 <div class="content-right">
-
-			</div>
-			<!-- Noi Dung Chinh -->
-			<div class="content-right">
-
-
 				<div class="TinXemNhieuNhat">
 					<p> Tin Xem Nhiều Nhất</p><br>
 					<div class="SliderTinXemNhieuNhat">
@@ -154,7 +147,6 @@
 						</article>
 
 					</div>
-
 				</div>
 				<div class="TopChuyenMuc">
 					<p> Top Tin Chuyên Mục</p><br>
@@ -253,87 +245,25 @@
 							<i class="fas fa-globe-americas"></i>
 							<p class="TenChuyenMuc">Tin Xã Hội</p><br>
 							<div class="SliderTinXemNhieuNhat">
-
+								{{#each r4xh}}
 								<article>
-									<a href="#">
-										<img src="images/ThoiSu/hinh1.jpg">
+									<a href="/article/{{id}}">
+										<img src="{{image}}">
 										<div class="ovrly"></div>
 									</a>
-									<a href="#">
+									<a href="/article/{{id}}">
 										<div >
-											<p>Tín dụng đen sẽ bị CA Đà Nẵng trấn áp đến 'không còn bóng dáng'
+											<p>{{title}}
 											</p>
 											<time class="ThongTinGioDang">
 												<i class="fa fa-clock"></i>
-												3 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>2</span>
+												{{format date_post}}   &emsp;
 											</time>
 										</div>
 									</a>
 
 								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/ThoiSu/hinh2.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Thủ tướng: Việt Nam ngày càng tự tin, chủ động trong hội nhập
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/ThoiSu/hinh3.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Khốn đốn vì bị lừa xuất khẩu lao động sang Úc
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/ThoiSu/hinh4.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Việt Nam đăng cai Phiên họp Đại Hội đồng thể thao quân sự quốc tế
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
+								{{/each}}								
 							</div>
 						</div>
 						<!-- 	Tin Moi Nhat Giai Tri -->
@@ -344,86 +274,25 @@
 							</div>
 
 							<div class="SliderTinXemNhieuNhat">
-
+								{{#each r4gt}}
 								<article>
-									<a href="#">
-										<img src="images/GiaiTri/hinh1.jpg">
+									<a href="/article/{{id}}">
+										<img src="{{image}}">
 										<div class="ovrly"></div>
 									</a>
-									<a href="#">
+									<a href="/article/{{id}}">
 										<div >
-											<p>3 cô gái Black Pink thua người đẹp Philippines trong cuộc đua nhan sắc
+											<p>{{title}}
 											</p>
 											<time class="ThongTinGioDang">
 												<i class="fa fa-clock"></i>
-												3 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>2</span>
+												{{format date_post}}   &emsp;
 											</time>
 										</div>
 									</a>
 
 								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/GiaiTri/hinh2.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Taylor Swift và dàn sao lộng lẫy trên thảm đỏ Time 100
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/GiaiTri/hinh3.jpg">
-									</a>
-									<a href="#">
-										<div>
-											<p>Khán giả hãy xem lại Civil War, Infinity War trước Avengers: Endgame
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/GiaiTri/hinh4.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Diễn viên Thanh Trúc lên tiếng trước tin đã sinh con, làm mẹ đơn thân
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
+								{{/each}}								
 							</div>
 						</div>
 
@@ -434,87 +303,25 @@
 								<p>Tin Sức Khoẻ</p><br>
 							</div>			
 							<div class="SliderTinXemNhieuNhat">
-
+								{{#each r4sk}}
 								<article>
-									<a href="#">
-										<img src="images/SucKhoe/hinh1.jpg">
+									<a href="/article/{{id}}">
+										<img src="{{image}}">
 										<div class="ovrly"></div>
 									</a>
-									<a href="#">
+									<a href="/article/{{id}}">
 										<div >
-											<p>9 vấn đề sức khỏe có thể xảy ra khi nắng nóng 40 độ C
+											<p>{{title}}
 											</p>
 											<time class="ThongTinGioDang">
 												<i class="fa fa-clock"></i>
-												3 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>2</span>
+												{{format date_post}}   &emsp;
 											</time>
 										</div>
 									</a>
 
 								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/SucKhoe/hinh2.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p> 9 thời điểm bạn tuyệt đối không nên tắm
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/SucKhoe/hinh3.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Càng béo hút mỡ càng nguy hiểm
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/SucKhoe/hinh4.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Nhiệt độ cao có làm chỉ số tia UV vượt ngưỡng?
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
+								{{/each}}								
 							</div>
 						</div>
 						<!-- Tin Tai Chinh -->
@@ -524,87 +331,25 @@
 								<p>Tin Kinh Doanh</p><br>
 							</div>
 							<div class="SliderTinXemNhieuNhat">
-
+								{{#each r4kd}}
 								<article>
-									<a href="#">
-										<img src="images/TaiChinh/hinh1.jpg">
+									<a href="/article/{{id}}">
+										<img src="{{image}}">
 										<div class="ovrly"></div>
 									</a>
-									<a href="#">
+									<a href="/article/{{id}}">
 										<div >
-											<p>HDBank hưởng lợi gì từ hệ sinh thái đặc quyền?
+											<p>{{title}}
 											</p>
 											<time class="ThongTinGioDang">
 												<i class="fa fa-clock"></i>
-												3 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>2</span>
+												{{format date_post}}   &emsp;
 											</time>
 										</div>
 									</a>
 
 								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/TaiChinh/hinh2.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Mua công ty tài chính, sếp TPBank muốn tránh vết xe đổ của đối thủ
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/TaiChinh/hinh3.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Gửi tiết kiệm tại ngân hàng nào lãi cao nhất hiện nay?
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/TaiChinh/hinh4.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Bao nhiêu startup đã nhận được tiền từ Shark Tank?
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
+								{{/each}}								
 							</div>
 						</div>
 
@@ -617,93 +362,27 @@
 							</div>
 
 							<div class="SliderTinXemNhieuNhat">
-
+								{{#each r4cn}}
 								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh1.jpg">
+									<a href="/article/{{id}}">
+										<img src="{{image}}">
 										<div class="ovrly"></div>
 									</a>
-									<a href="#">
+									<a href="/article/{{id}}">
 										<div >
-											<p>LG ngừng sản xuất điện thoại ở Hàn Quốc, chuyển sang Việt Nam
+											<p>{{title}}
 											</p>
 											<time class="ThongTinGioDang">
 												<i class="fa fa-clock"></i>
-												3 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>2</span>
+												{{format date_post}}   &emsp;
 											</time>
 										</div>
 									</a>
 
 								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh2.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Làm iPhone quá tốt, Apple đang tự đấu với chính mình
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh3.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Facebook sắp nhận án phạt hàng tỷ USD, kỷ lục giới công nghệ
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh4.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Việt Nam là một trong 5 'mỏ vàng' của YouTube
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
+								{{/each}}								
 							</div>
 						</div>
 					</div>
-					<!-- 	Tin Moi Nhat Cua Giai tri -->
-
-
 				</div>
-</div>
 </div>
