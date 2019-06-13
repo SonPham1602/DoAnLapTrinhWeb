@@ -40,18 +40,25 @@ module.exports = {
 	},
 
 	top3Week: () => {
-		return db.load(`select row_number() over (order by a.view desc) as stt, a.* from article a 
-						where date_post between date_sub(curdate(), interval 7 day) and curdate()
-					limit 3
+		return db.load(`select row_number() over (order by a.view desc) as stt, a.*, c.name as cname 
+						from article a, category c
+						where a.id_cat = c.id 
+						and date_post between date_sub(curdate(), interval 7 day) and curdate()
+						limit 3
 					`)
 	},
 
 	top10View: () => {
-		return db.load(`select * from article order by view desc limit 10;`)
+		return db.load(`select a.*, c.name as cname from article a, category c
+						where a.id_cat = c.id
+						order by view desc limit 10`)
 	},
 
 	top10New: () => {
-		return db.load(`select * from article order by date_post desc limit 10;`)
+		return db.load(`select a.*, c.name as cname from article a, category c
+						where a.id_cat = c.id
+						order by date_post desc limit 10
+						`)
 	},
 
 
