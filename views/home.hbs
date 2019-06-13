@@ -4,54 +4,21 @@
 
 				<p>Tin Nổi Bật</p>
 				<div class="TinNoiBatDiv"> 
-					<article class="TinNoiBat1">
-						<a href="#" class="post-cat ts-orange-bg">Công Nghệ</a>
-						<img src="images/hinh1.jpg" alt="">
+					{{#each top3}}
+					<article class="TinNoiBat{{stt}}">
+						<a href="/article/{{id}}" class="post-cat ts-orange-bg">Công Nghệ</a>
+						<img src="{{image2}}" alt="">
 						<div>
 							<p>
-								Khám phá các tính năng vui vẻ, tiện ích của ColorOS 6 trên Realme 3
+								{{title}}
 							</p>
 							<time>
 								<i class="fa fa-clock"></i>
-								21/04/2019 22:02:12    &emsp;
-								<i class="far fa-comment"></i>
-								<span>0</span>
+								{{format date_post}}    &emsp;
 							</time>
 						</div>
 					</article>
-					<article  class="TinNoiBat2">
-						<a href="#" class="post-cat ts-orange-bg">Đời sống</a>
-						<img src="images/hinh2.jpg" alt="">
-						<div>
-							<p>
-								Mã giảm giá giúp mua Windows 10 bản quyền chỉ với 270.000đ, rẻ hơn hàng chục lần so với mua trực tiếp
-							</p>
-							<time>
-								<i class="fa fa-clock"></i>
-								21/04/2019 22:02:12
-								&emsp;
-								<i class="far fa-comment"></i>
-								<span>0</span>
-							</time>
-						</div>
-					</article>
-					<article  class="TinNoiBat3">
-						<a href="#" class="post-cat ts-orange-bg">Đời sống</a>
-						<img src="images/hinh3.jpg" alt="">
-						<div>
-							<p>
-								Galaxy Fold giá lên đến 46 triệu đồng nhưng vẫn "cháy hàng" đến mức khó tin
-							</p>
-							<time>
-								<i class="fa fa-clock"></i>
-								21/04/2019 22:02:12&emsp;
-								<i class="far fa-comment"></i>
-								<span>0</span>
-
-							</time>
-						</div>
-
-					</article>
+					{{/each}}
 				</div>			
 </div>
 <!-- Noi Dung Chinh -->

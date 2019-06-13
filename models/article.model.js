@@ -40,7 +40,10 @@ module.exports = {
 	},
 
 	top3Week: () => {
-		return db.load(`select * from article where date_post between date_sub(curdate(), interval 7 day) and curdate() order by view desc limit 3`)
+		return db.load(`select row_number() over (order by a.view desc) as stt, a.* from article a 
+						where date_post between date_sub(curdate(), interval 7 day) and curdate()
+					limit 3
+					`)
 	},
 
 	top10View: () => {
