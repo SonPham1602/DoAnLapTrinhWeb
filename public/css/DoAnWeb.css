@@ -9,12 +9,13 @@ html{
 
 body{
 	/*background-color:lightblue;*/
-	background-color: #F0F1F4;
+	background-color: #F0F1F4 !important;
 	/*Tao hinh nen fullscreen cho website*/
-	background-image: url('images/Background/bg.jpg');/* Duong dan hinh*/
+	/*background-image: url('images/Background/bg.jpg') !important;*//* Duong dan hinh*/
 	/*Thuoc tinh de lam background*/
 	/*	khong nen dung thuoc tinh size  vi gay cham*/
-	background-size: cover;
+	  background: url('https://audit-invest.com.ua/wp-content/uploads/2017/06/Savin-NY-Website-Background-Web1-kopiya.jpg') no-repeat center center fixed;
+	background-size: cover !important;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +29,6 @@ body{
 	display: flex;
 	justify-content: center;
 	position: relative;
-
 }
 .header div{
 	position: absolute;
@@ -263,7 +263,7 @@ button.btn-submit-notify{
 /*End css navigation*/
 
 .footer{
-	height: 200px;
+	height: 250px;
 	width: 100%;
 	background-color: #282923;
 	color :white;
@@ -574,7 +574,7 @@ article.TinNoiBat3:hover img{
 .TinXemNhieuNhat article{
 	position: relative;
 	margin: 4px;
-	width: 250px;
+	width: 260px;
 	height: 275px;
 	float: left;
 	background-color: #fff;
@@ -601,7 +601,8 @@ article.TinNoiBat3:hover img{
 
 }
 .ThongTinGioDang {
-	
+	position: absolute;
+	bottom: 5px;
 }
 
 .TopChuyenMuc{
@@ -625,7 +626,7 @@ article.TinNoiBat3:hover img{
 .TopChuyenMuc article{
 	position: relative;
 	margin: 4px;
-	width: 250px;
+	width: 260px;
 	height: 275px;
 	float: left;
 	background-color: #fff;
@@ -680,7 +681,7 @@ article.TinNoiBat3:hover img{
 .TinMoiNhatXaHoi article{
 	position: relative;
 	margin: 4px;
-	width: 250px;
+	width: 260px;
 	height: 275px;
 	float: left;
 	background-color: #fff;
@@ -764,7 +765,7 @@ article.TinNoiBat3:hover img{
 .TinMoiNhatGiaiTri article{
 	position: relative;
 	margin: 4px;
-	width: 250px;
+	width: 260px;
 	height: 275px;
 	float: left;
 	background-color: #fff;
@@ -819,7 +820,7 @@ article.TinNoiBat3:hover img{
 .TinMoiNhatCongNghe article{
 	position: relative;
 	margin: 4px;
-	width: 250px;
+	width: 260px;
 	height: 275px;
 	float: left;
 	background-color: #fff;
@@ -873,7 +874,7 @@ article.TinNoiBat3:hover img{
 .TinMoiNhatSucKhoe article{
 	position: relative;
 	margin: 4px;
-	width: 250px;
+	width: 260px;
 	height: 275px;
 	float: left;
 	background-color: #fff;
@@ -927,7 +928,7 @@ article.TinNoiBat3:hover img{
 .TinMoiNhatTaiChinh article{
 	position: relative;
 	margin: 4px;
-	width: 250px;
+	width: 260px;
 	height: 275px;
 	float: left;
 	background-color: #fff;
@@ -1046,6 +1047,16 @@ a.SucKhoeColorTag{
 	font-size: 25px;
 	color: white;
 }
+.pull-right{
+	color: #333;
+	position: absolute;
+	right: 0px;
+	height: 50px;
+	width: 100px;
+}
+.pull-right i{
+	color: #333;
+}
 @media only screen and (max-width: 375px) {
 	.btn-toggle-nav{
 		display: block;
@@ -1106,4 +1117,19 @@ a.SucKhoeColorTag{
 		width: 1110px;
 	}
 
+}
+p{
+	color: #333333;
+}
+time{
+	position: absolute;
+	bottom: 5px;
+	color:  #333333;
+}
+article{
+	position: relative;
+}
+a{
+	
+	text-decoration: none;
 }
