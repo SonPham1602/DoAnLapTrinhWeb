@@ -6,4 +6,7 @@ module.exports = {
 		return db.load(`select * from comment where id_art = ${idart}`)
 	},
 	
+	add: entity => {
+		return db.add('comment', entity);	
+	}
 }

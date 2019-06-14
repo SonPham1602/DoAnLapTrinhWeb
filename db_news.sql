@@ -1,4 +1,4 @@
-
+-- create database doubles;
 create table category(
 	id mediumint not null auto_increment,
 	name varchar(50) not null,
@@ -29,7 +29,7 @@ create table article(
     content text,
     id_writer mediumint,
     status varchar(50),
-    view int,
+    view int default 0,
     premium int default 0 check (premium = 0 or premium = 1),  
 	primary key (id),
 	foreign key (id_cat) references category(id),

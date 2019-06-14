@@ -6,16 +6,16 @@
 			<h2>
 				{{article.title}}
 			</h2>
+			<br>
+			<h4 style="color: red; font-style: italic;">
+				Chuyên mục: {{cname}}
+			</h4>
+			<br>
 			<div class="ThongTinbaiViet border-top border-bot">
 				<i class="far fa-clock"></i>
 				{{format article.date_post}}
-
-
 			</div>
 			{{{article.content}}}
-		
-			
-			
 			Bạn có thích bài viết này?
 			<br>
 			<button>
@@ -31,26 +31,27 @@
 		</div>
 		<!-- Box Binh Luan Bai Viet -->
 		<div class="BinhLuanBox">
-			<h4>
-				Bình luận
-			</h4>
-			<textarea class="NoiDungBinhLuan">
-				
-			</textarea>
-			<button class="btnGuiBinhLuan">
-				Gửi bình luận
-			</button>
+			<form method="POST">
+				<h4>
+					Bình luận
+				</h4>
+				<textarea name="content" class="NoiDungBinhLuan"></textarea>
+				<input type="submit" class="btnGuiBinhLuan" value="Gửi bình luận">
+				</input>
+			</form>
 			<div class="DanhSachBinhLuan">
+				<button>
+					<a href="">load</a> <!--  nut reload lai binh luan -->
+				</button>
 				{{#each comments}}
-				<article>
 					<div class="avatar">
 						<img src="{{image_reader}}" >
 					</div>
 					<div class="data-comment">
-						<p class="name">{{name_reader}}&ensp;17/10/2018</p>
+						<p class="name">{{name_reader}}&ensp;{{format date_comment}}</p>
 						<p class="noidung">{{content}}</p>
 					</div>
-				</article>
+			
 				{{/each}}
 			</div>
 		</div>

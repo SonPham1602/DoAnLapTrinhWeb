@@ -3,7 +3,13 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var dateFormat = require('dateformat');
+var morgan = require('morgan');
+
 var app = express();
+
+app.use(morgan('dev'));
+app.use(express.json());	
+app.use(express.urlencoded());
 
 app.engine('hbs', exphbs({
 	defaultLayout: 'index.hbs',

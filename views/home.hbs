@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- Tin Noi Bat -->
 <div class="TinNoiBat">
-
 	<p>Tin Nổi Bật</p>
 	<div class="TinNoiBatDiv"> 
 		<article class="TinNoiBat1">
@@ -991,6 +990,50 @@
 										</div>
 									</a>
 
+				<p>Tin Nổi Bật</p>
+				<div class="TinNoiBatDiv"> 
+					{{#each top3}}
+					<article class="TinNoiBat{{stt}}">
+						<a href="/article/{{id}}" class="post-cat ts-orange-bg">{{cname}}</a>
+						<img src="{{image2}}" alt="">
+						<div>
+							<p>
+								{{title}}
+							</p>
+							<time>
+								<i class="fa fa-clock"></i>
+								{{format date_post}}    &emsp;
+							</time>
+						</div>
+					</article>
+					{{/each}}
+				</div>			
+</div>
+<!-- Noi Dung Chinh -->
+<div class="content-right">
+				<div class="TinXemNhieuNhat">
+					<p> Tin Xem Nhiều Nhất</p><br>
+					<div class="SliderTinXemNhieuNhat">
+						<article>
+							<a href="#">
+								<img src="images/hinh4.jpg">
+								<div class="ovrly"></div>
+							</a>
+							<a href="#">
+								<div >
+									<p>Huawei giới thiệu phần cứng 5G đầu tiên trên thế giới cho xe hơi
+									</p>
+									<time class="ThongTinGioDang">
+										<i class="fa fa-clock"></i>
+										1 giờ trước   &emsp;
+										<i class="far fa-comment"></i>
+										<span>0 &emsp;</span>
+										<i class="fas fa-eye"></i>
+										<span>12161</span>
+									</time>
+								</div>
+
+
 								</article>
 
 								<article>
@@ -1058,7 +1101,6 @@
 						</div>
 					</div>
 
-					
 				</div>
 			</div>
 			<!-- Tin Tai Chinh -->
@@ -1138,6 +1180,7 @@
 										</div>
 									</a>
 
+
 								</article>
 
 								<article>
@@ -1164,10 +1207,24 @@
 								<article>
 									<a href="#">
 										<img src="images/KinhDoanh/hinh1.jpg">
+
+					</div>
+					<div class="TinMoiNhat">
+						<!-- 	Tin Moi Nhat Cua Xa Hoi -->
+						<div class="TinMoiNhatXaHoi">
+							<i class="fas fa-globe-americas"></i>
+							<p class="TenChuyenMuc">Tin Xã Hội</p><br>
+							<div class="SliderTinXemNhieuNhat">
+								{{#each r4xh}}
+								<article>
+									<a href="/article/{{id}}">
+										<img src="{{image}}">
+
 										<div class="ovrly"></div>
 									</a>
-									<a href="#">
+									<a href="/article/{{id}}">
 										<div >
+
 											<p>HDBank hưởng lợi gì từ hệ sinh thái đặc quyền?
 											</p>
 											<time class="ThongTinGioDang">
@@ -1235,20 +1292,46 @@
 												1 giờ trước   &emsp;
 												<i class="far fa-comment"></i>
 												<span>0</span>
+
+											<p>{{title}}
+											</p>
+											<time class="ThongTinGioDang">
+												<i class="fa fa-clock"></i>
+												{{format date_post}}   &emsp;
+
 											</time>
 										</div>
 									</a>
 
 								</article>
+
 							</div>
 							<div class="carousel-item " data-interval="10000">
 								<article>
 									<a href="#">
 										<img src="images/KinhDoanh/hinh1.jpg">
+
+								{{/each}}								
+							</div>
+						</div>
+						<!-- 	Tin Moi Nhat Giai Tri -->
+						<div class="TinMoiNhatGiaiTri">
+							<div class="IconChuyenMuc" id="TieuDeChuyenMucGiaiTri">
+								<i class="fas fa-users"></i>
+								<p>Tin Giải trí</p><br>
+							</div>
+
+							<div class="SliderTinXemNhieuNhat">
+								{{#each r4gt}}
+								<article>
+									<a href="/article/{{id}}">
+										<img src="{{image}}">
+
 										<div class="ovrly"></div>
 									</a>
-									<a href="#">
+									<a href="/article/{{id}}">
 										<div >
+
 											<p>HDBank hưởng lợi gì từ hệ sinh thái đặc quyền?
 											</p>
 											<time class="ThongTinGioDang">
@@ -1296,11 +1379,19 @@
 												1 giờ trước   &emsp;
 												<i class="far fa-comment"></i>
 												<span>0</span>
+
+											<p>{{title}}
+											</p>
+											<time class="ThongTinGioDang">
+												<i class="fa fa-clock"></i>
+												{{format date_post}}   &emsp;
+
 											</time>
 										</div>
 									</a>
 
 								</article>
+
 
 								<article>
 									<a href="#">
@@ -1356,10 +1447,28 @@
 								<article>
 									<a href="#">
 										<img src="images/CongNghe/hinh1.jpg">
+
+								{{/each}}								
+							</div>
+						</div>
+
+						<!-- 	Tin Moi Nhat Suc Khoe -->
+						<div class="TinMoiNhatSucKhoe">
+							<div class="IconChuyenMuc" id="TieuDeChuyenMucSucKhoe">
+								<i class="fas fa-stethoscope"></i>
+								<p>Tin Sức Khoẻ</p><br>
+							</div>			
+							<div class="SliderTinXemNhieuNhat">
+								{{#each r4sk}}
+								<article>
+									<a href="/article/{{id}}">
+										<img src="{{image}}">
+
 										<div class="ovrly"></div>
 									</a>
-									<a href="#">
+									<a href="/article/{{id}}">
 										<div >
+
 											<p>LG ngừng sản xuất điện thoại ở Hàn Quốc, chuyển sang Việt Nam
 											</p>
 											<time class="ThongTinGioDang">
@@ -1412,6 +1521,119 @@
 									</a>
 
 								</article>
+
+								<article>
+									<a href="#">
+										<img src="images/CongNghe/hinh4.jpg">
+										<div class="ovrly"></div>
+									</a>
+									<a href="#">
+										<div>
+											<p>Việt Nam là một trong 5 'mỏ vàng' của YouTube
+											</p>
+											<time>
+												<i class="fa fa-clock"></i>
+												1 giờ trước   &emsp;
+												<i class="far fa-comment"></i>
+												<span>0</span>
+
+											<p>{{title}}
+											</p>
+											<time class="ThongTinGioDang">
+												<i class="fa fa-clock"></i>
+												{{format date_post}}   &emsp;
+
+											</time>
+										</div>
+									</a>
+
+								</article>
+								{{/each}}								
+							</div>
+
+							<div class="carousel-item" data-interval="10000">
+								<article>
+									<a href="#">
+										<img src="images/CongNghe/hinh1.jpg">
+
+						</div>
+						<!-- Tin Tai Chinh -->
+						<div class="TinMoiNhatTaiChinh">
+							<div class="IconChuyenMuc" id="TieuDeChuyenMucTaiChinh">
+								<i class="fas fa-chart-line"></i>
+								<p>Tin Kinh Doanh</p><br>
+							</div>
+							<div class="SliderTinXemNhieuNhat">
+								{{#each r4kd}}
+								<article>
+									<a href="/article/{{id}}">
+										<img src="{{image}}">
+
+										<div class="ovrly"></div>
+									</a>
+									<a href="/article/{{id}}">
+										<div >
+
+											<p>LG ngừng sản xuất điện thoại ở Hàn Quốc, chuyển sang Việt Nam
+											</p>
+											<time class="ThongTinGioDang">
+												<i class="fa fa-clock"></i>
+												3 giờ trước   &emsp;
+												<i class="far fa-comment"></i>
+												<span>2</span>
+											</time>
+										</div>
+									</a>
+
+								</article>
+
+								<article>
+									<a href="#">
+										<img src="images/CongNghe/hinh2.jpg">
+										<div class="ovrly"></div>
+									</a>
+									<a href="#">
+										<div>
+											<p>Làm iPhone quá tốt, Apple đang tự đấu với chính mình
+											</p>
+											<time>
+												<i class="fa fa-clock"></i>
+												1 giờ trước   &emsp;
+												<i class="far fa-comment"></i>
+												<span>0</span>
+											</time>
+										</div>
+									</a>
+
+								</article>
+
+								<article>
+									<a href="#">
+										<img src="images/CongNghe/hinh3.jpg">
+										<div class="ovrly"></div>
+									</a>
+									<a href="#">
+										<div>
+											<p>Facebook sắp nhận án phạt hàng tỷ USD, kỷ lục giới công nghệ
+											</p>
+											<time>
+												<i class="fa fa-clock"></i>
+												1 giờ trước   &emsp;
+												<i class="far fa-comment"></i>
+												<span>0</span>
+
+											<p>{{title}}
+											</p>
+											<time class="ThongTinGioDang">
+												<i class="fa fa-clock"></i>
+												{{format date_post}}   &emsp;
+
+											</time>
+										</div>
+									</a>
+
+								</article>
+
 
 								<article>
 									<a href="#">
@@ -1435,168 +1657,40 @@
 
 							</div>
 							<div class="carousel-item" data-interval="10000">
-								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh1.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div >
-											<p>LG ngừng sản xuất điện thoại ở Hàn Quốc, chuyển sang Việt Nam
-											</p>
-											<time class="ThongTinGioDang">
-												<i class="fa fa-clock"></i>
-												3 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>2</span>
-											</time>
-										</div>
-									</a>
 
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh2.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Làm iPhone quá tốt, Apple đang tự đấu với chính mình
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh3.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Facebook sắp nhận án phạt hàng tỷ USD, kỷ lục giới công nghệ
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh4.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Việt Nam là một trong 5 'mỏ vàng' của YouTube
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
+								{{/each}}								
 							</div>
-							<div class="carousel-item" data-interval="10000">
+						</div>
+
+						<!-- Tin Cong Nghe -->
+
+						<div class="TinMoiNhatCongNghe">
+							<div class="IconChuyenMuc" id="TieuDeChuyenMucCongNghe">
+								<i class="fas fa-desktop"></i>
+								<p>Tin Công Nghệ</p><br>
+							</div>
+
+							<div class="SliderTinXemNhieuNhat">
+								{{#each r4cn}}
+
 								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh1.jpg">
+									<a href="/article/{{id}}">
+										<img src="{{image}}">
 										<div class="ovrly"></div>
 									</a>
-									<a href="#">
+									<a href="/article/{{id}}">
 										<div >
-											<p>LG ngừng sản xuất điện thoại ở Hàn Quốc, chuyển sang Việt Nam
+											<p>{{title}}
 											</p>
 											<time class="ThongTinGioDang">
 												<i class="fa fa-clock"></i>
-												3 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>2</span>
+												{{format date_post}}   &emsp;
 											</time>
 										</div>
 									</a>
 
 								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh2.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Làm iPhone quá tốt, Apple đang tự đấu với chính mình
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh3.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Facebook sắp nhận án phạt hàng tỷ USD, kỷ lục giới công nghệ
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#">
-										<img src="images/CongNghe/hinh4.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Việt Nam là một trong 5 'mỏ vàng' của YouTube
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
+								{{/each}}								
 							</div>
 						</div>
 					</div>
@@ -1609,4 +1703,7 @@
 
 	</div>
 </div>
+
+				</div>
+
 </div>
