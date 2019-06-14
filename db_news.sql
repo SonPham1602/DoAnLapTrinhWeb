@@ -28,7 +28,12 @@ create table article(
     abstract varchar(500),
     content text,
     id_writer mediumint,
-    status varchar(50),
+    status int check (status = 1 or status = 2 or status = 3 or status = 4),
+    -- status 1: Đã được duyệt, chờ xuất bản
+    -- status 2: Đã xuất bản
+    -- status 3: Bị từ chối
+    -- status 4: Chưa được duyệt
+    
     view int default 0,
     premium int default 0 check (premium = 0 or premium = 1),  
 	primary key (id),
@@ -216,6 +221,6 @@ value(1, '2019-05-25','/images/avatar.jpg','Sơn Hứa','Bài viết khá hay!')
 -- drop table usertype;
 -- drop table article;
 -- drop table category2;
--- drop table category;
+-- drop table category; 
 
 

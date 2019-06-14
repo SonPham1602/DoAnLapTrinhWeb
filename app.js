@@ -1,5 +1,4 @@
 
-
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var dateFormat = require('dateformat');
@@ -13,7 +12,6 @@ app.use(express.urlencoded());
 
 app.engine('hbs', exphbs({
 	defaultLayout: 'index.hbs',
-	// layoutsDir: 'views/_layouts'2
 	helpers: {
 		if_equal: function (a, b, opts) {
 			if(a == b) { 
@@ -43,8 +41,13 @@ app.get('/',(req, res) => {
 	res.render('home');
 })
 
+
 app.use('/public',express.static('public'));
 app.use('/images',express.static('images'));
+
+app.use('/editor', require('./routes/editor.route'));
+app.use('/writer', require('./routes/writer.route'));
+app.use('/admin', require('./routes/admin.route'));
 
 app.use('/categorie', require('./routes/category.route'));
 app.use('/article', require('./routes/article.route'));

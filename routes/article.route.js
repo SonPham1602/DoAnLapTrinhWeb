@@ -22,7 +22,7 @@ router.get('/:id',(req, res) => {
 			comments,
 			article: rows[0],
 			cname: cname[0].name,
-			five: five[0]
+			five
 			})
 		})
 		.catch(err => {
