@@ -265,11 +265,13 @@ div.navigation nav ul li:hover  > ul{
 	height: 100px;
 	
 }
+.ck-editor__editable {
+    min-height: 500px;
+}
 #NoiDungBaiDang{
 	margin-right: 10px;
 	width: 100%;
-	height: 550px;
-	
+	height: 500px;
 }
 #tieu-de-bai-viet{
 	margin-bottom: 5px;

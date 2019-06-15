@@ -6,8 +6,23 @@
 	<title>DashboardWritter</title>
 	<link rel="stylesheet" type="text/css" href="/public/css/DashboardWriter.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=ezd73nxbzc7bu6e86g2l82jbbffke0mwevwrnyvc5q8h89j6"></script>
+	<script>
+  	$(function () {
+      tinymce.init({
+      selector: '#NoiDungBaiDang',
+      height: 600,
+      menubar: false,
+      plugins: 'paste image link autolink lists table media',
+      toolbar: [
+        'undo redo | bold italic underline strikethrough | numlist bullist | alignleft aligncenter alignright',
+        'forecolor backcolor',
+        'table link image media',
+      ],
+    });
+  })
+</script>
 </head>
 <body>
 	<div class="container">
@@ -52,9 +67,6 @@
 							<ul>
 								<li id="li-bai-viet-moi">
 									<a href="#">Bài viết mới</a>
-								</li>
-								<li id="li-bai-viet-tam">
-									<a href="#">Bài viết tạm</a>
 								</li>							
 							</ul>
 						</li>					
@@ -106,9 +118,6 @@
 							<td>{{cname}}</td>
 							<td>Hứa Thanh Sơn</td>
 							<td>{{format date_post}}</td>
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
 						</tr>
 						{{/each}}
 					</table>
@@ -137,7 +146,9 @@
 							<td>{{format date_post}} </td>
 							<td>Nội dung không phù hợp với chuyên mục</td>
 							<td>
-								<button class="btn-xem-bai-viet">Hiệu chỉnh</button>
+								<button onclick="window.location.href='/writer/{{id_writer}}/{{id}}'" class="btn-xem-bai-viet">
+								Hiệu chỉnh
+								</button>
 							</td>
 						</tr>
 						{{/each}}
@@ -164,10 +175,6 @@
 							<td>{{cname}}</td>
 							<td>Hứa Thanh Sơn</td>
 							<td>{{format date_post}}</td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
 						</tr>
 						{{/each}}
 					</table>
@@ -194,7 +201,8 @@
 							<td>Hứa Thanh Sơn</td>
 							<td>{{format date_post}}</td>		
 							<td>
-								<button class="btn-xem-bai-viet">Hiệu chỉnh</button>
+								<button onclick="window.location.href='/writer/{{id_writer}}/{{id}}'" class="btn-xem-bai-viet">Hiệu chỉnh
+								</button>
 							</td>
 						</tr>
 						{{/each}}		
@@ -202,77 +210,35 @@
 				</div>
 				
 			</div>
-			<div class="BaiVietTamDashboard panel">
-				<p class="TieuDeTrang">Danh sách bài viết tạm</p>
-				<div class="data-table">
-					<table border="1px" class="table-danh-sach-bai-viet">
-						<tr id="header-table">
-							<td>STT</td>
-							<td>Tên bài viết</td>
-							<td>Chuyên mục</td>
-							<td>Xem chi tiết</td>
-						</tr>
-						{{#each arts4}}		
-						<tr>
-							<td>{{stt}}</td>
-							<td>{{title}}</td>
-							<td>{{cname}}</td>
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-						{{/each}}						
-					</table>
-				</div>
-			</div>
+			<form method="POST">
 			<div class="VietBaiDashboard panel">
 				<p class="TieuDeTrang">Viết bài</p>
 				<p>Tiêu đề bài viết</p>
-				<input type="text" name="" placeholder="Nhập Tiêu Đề Bài Viết" id="tieu-de-bai-viet">
+				<input type="text" name="title" placeholder="Nhập Tiêu Đề Bài Viết" id="tieu-de-bai-viet">
 				<p>Tóm tắt</p>
-				<textarea id="TomTatBaiDang"></textarea>
+				<textarea id="TomTatBaiDang" name="abstract"></textarea>
 				<p>Nội dung bài viết</p>
-				<textarea id="NoiDungBaiDang"></textarea>
-				<!-- <script>
-					ClassicEditor
-					.create( document.querySelector( '#NoiDungBaiDang' ) )
-					.catch( error => {
-						console.error( error );
-					} );
-				</script> -->
-				<script>
-					var quill = new Quill('#NoiDungBaiDang', {
-						theme: 'snow'
-					});
-				</script>
+				<textarea name="content" id="NoiDungBaiDang" name="NoiDungBaiDang"></textarea>
+
 				<p>Chuyên mục</p>
-				<select id="chuyen-de-bai-viet">
+				<select id="chuyen-de-bai-viet" name="namecat">
 					<option>Xã hội</option>
 					<option>Giải trí</option>
 					<option>Sức khoẻ</option>
 					<option>Kinh doanh</option>
 					<option>Công nghệ</option>
 				</select><br>
-				<p>Tag</p>
-				<input type="text" name="" placeholder="Thêm tag" id="them-tag"><br>
-				<button id="btn-luu-bai-viet">
-					<i class="far fa-save"></i>
-					Lưu vào bài viết tạm
-				</button>
-				<button id="btn-huy-bo-bai-viet">
-					<i class="fas fa-ban"></i>		Huỷ bỏ bài viết
-				</button>
-				<button id="btn-xuat-ban-bai-viet">
-					<i class="fas fa-file-export"></i>
-					
+				<!-- <p>Tag</p>
+				<input type="text" name="tag" placeholder="Thêm tag" id="them-tag"><br> -->
+				<button type="submit" id="btn-xuat-ban-bai-viet">
+					<i class="fas fa-file-export"></i>					
 					Xuất bản bài viết
 				</button>
 			</div>
+			</form>
 			<div class="ThongKeDashboard panel">
 			</div>
 		</div>
-		<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 		<script type="text/javascript" src="/public/js/DashboardWriter.js"></script>
 	</div>
 </body>

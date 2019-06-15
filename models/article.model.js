@@ -87,6 +87,10 @@ module.exports = {
 		 from article a, category c where a.id_writer = ${id_writer} and status = ${status}
 		 and a.id_cat = c.id`)
 		
+	},
+
+	add: entity => {
+		return db.add('article', entity);	
 	}
 
 }

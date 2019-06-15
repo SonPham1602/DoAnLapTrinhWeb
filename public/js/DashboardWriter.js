@@ -45,6 +45,7 @@
  		/* Act on the event */
  		$(this).delay(800).fadeOut(400, function() {
  			
+
  		});
  	});
  	$(".tin_nhan_dashboard").click(function(event) {
@@ -59,5 +60,5 @@
  		/* Act on the event */
  	});
 
+});
 
- });

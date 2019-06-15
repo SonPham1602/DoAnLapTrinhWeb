@@ -36,6 +36,7 @@ app.engine('hbs', exphbs({
 app.set('view engine', 'hbs');
 
 app.use(require('./middlewares/locals.mdw'));
+// require('./middlewares/upload')(app);
 
 app.get('/',(req, res) => {
 	res.render('home');

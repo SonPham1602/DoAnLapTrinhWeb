@@ -9,5 +9,10 @@ module.exports = {
 		return db.load(
 			`select name from category where id = ${id}`
 			)
+	},
+	findId: name => {
+		return db.load(
+			`select id from category where name = '${name}'`
+			)
 	}
 }

@@ -37,5 +37,10 @@
  		$(".TrangChuDashboard").fadeIn(200);
  	});
 
+ 	$("#btn-xem-bai-viet").click(function(event){		
+ 		$(".panel").hide();
+ 		$(".VietBaiDashboard").fadeIn(200);
+ 	});
+
 
  });
