@@ -2,31 +2,135 @@
 <!-- Tin Noi Bat -->
 <div class="TinNoiBat">
 
-				<p>Tin Nổi Bật</p>
-				<div class="TinNoiBatDiv"> 
-					{{#each top3}}
-					<article class="TinNoiBat{{stt}}">
-						<a href="/article/{{id}}" class="post-cat ts-orange-bg">{{cname}}</a>
-						<img src="{{image2}}" alt="">
-						<div>
-							<p>
-								{{title}}
-							</p>
-							<time>
-								<i class="fa fa-clock"></i>
-								{{format date_post}}    &emsp;
-							</time>
-						</div>
-					</article>
-					{{/each}}
-				</div>			
+	<p>Tin Nổi Bật</p>
+	<div class="TinNoiBatDiv"> 
+		{{#each top3}}
+		<article class="TinNoiBat{{stt}}">
+			<a href="/article/{{id}}" class="post-cat ts-orange-bg">{{cname}}</a>
+			<img src="{{image2}}" alt="">
+			<div>
+				<p>
+					{{title}}
+				</p>
+				<time>
+					<i class="fa fa-clock"></i>
+					{{format date_post}}    &emsp;
+				</time>
+			</div>
+		</article>
+		{{/each}}
+	</div>			
 </div>
 <!-- Noi Dung Chinh -->
 <div class="content-right">
-				<div class="TinXemNhieuNhat"> 
-					<p> Tin Xem Nhiều Nhất</p><br>
-					<div class="SliderTinXemNhieuNhat">
-					<!--chỗ cần thêm hiệu ứng đẩy 10 bài viết--> 
+	<div class="TinXemNhieuNhat"> 
+		<h4 class="TenChuyenMuc position-relative"> <i class="far fa-eye"></i>
+			Tin Xem Nhiều Nhất 
+			<span class="pull-right">
+				<a  href="#carouselXemNhieuNhat" role="button" data-slide="prev">
+					<i class="fas fa-chevron-circle-left"></i>
+				</a>
+				<a  href="#carouselXemNhieuNhat" role="button" data-slide="next">
+					<i class="fas fa-chevron-circle-right"></i>
+				</a>
+			</span>
+		</h4>
+		<div class="SliderTinXemNhieuNhat">
+			<div id="carouselXemNhieuNhat" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<!-- 4 tin dau tien -->
+					<div class="carousel-item active" data-interval="10000">
+						<!--  Bai viet xem nhieu nhat 1-->
+						<article>
+							<a href="#">
+								<img src="images/hinh4.jpg">
+								<div class="ovrly"></div>
+							</a>
+							<a href="#">
+								<div >
+									<p>Huawei giới thiệu phần cứng 5G đầu tiên trên thế giới cho xe hơi
+									</p>
+									<time class="ThongTinGioDang">
+										<i class="fa fa-clock"></i>
+										1 giờ trước   &emsp;
+										<i class="far fa-comment"></i>
+										<span>0 &emsp;</span>
+										<i class="fas fa-eye"></i>
+										<span>12161</span>
+									</time>
+								</div>
+
+							</a>
+
+						</article>
+						<!--  Bai viet xem nhieu nhat 2-->
+						<article>
+							<a href="#">
+								<img src="images/hinh5.jpg">
+								<div class="ovrly"></div>
+							</a>
+							<a href="#">
+								<div>
+									<p>Apple sẽ phát hành iPhone 5G vào năm 2020
+									</p>
+									<time>
+										<i class="fa fa-clock"></i>
+										1 giờ trước   &emsp;
+										<i class="far fa-comment"></i>
+										<span>0 &emsp;</span>
+										<i class="fas fa-eye"></i>
+										<span>22241</span>
+									</time>
+								</div>
+							</a>
+
+						</article>
+						<!--  Bai viet xem nhieu nhat 3-->
+						<article>
+							<a href="#">
+								<img src="images/hinh6.jpg">
+								<div class="ovrly"></div>
+							</a>
+							<a href="#">
+								<div>
+									<p>Hệ thống máy ảnh iPhone 2019 có gì mới?
+									</p>
+									<time>
+										<i class="fa fa-clock"></i>
+										1 giờ trước   &emsp;
+										<i class="far fa-comment"></i>
+										<span>0 &emsp;</span>
+										<i class="fas fa-eye"></i>
+										<span>4252</span>
+									</time>
+								</div>
+							</a>
+
+						</article>
+						<!--  Bai viet xem nhieu nhat 4-->
+						<article>
+							<a href="#">
+								<img src="images/hinh7.jpg">
+								<div class="ovrly"></div>
+							</a>
+							<a href="#">
+								<div>
+									<p>Singapore nỗ lực thu hút các hãng xe điện
+									</p>
+									<time>
+										<i class="fa fa-clock"></i>
+										1 giờ trước   &emsp;
+										<i class="far fa-comment"></i>
+										<span>0</span>
+									</time>
+								</div>
+							</a>
+
+						</article>
+					</div>
+					<!-- 4 tin tiep theo -->
+					<div class="carousel-item" data-interval="10000">
+						<!--  Bai viet xem nhieu nhat 5-->
 						<article>
 							<a href="#">
 								<img src="images/hinh4.jpg">
@@ -113,13 +217,123 @@
 							</a>
 
 						</article>
+					</div>
+					<!-- 4 tin cuoi cung -->
+					<div class="carousel-item" data-interval="10000">
+						<!--  Bai viet xem nhieu nhat 5-->
+						<article>
+							<a href="#">
+								<img src="images/hinh4.jpg">
+								<div class="ovrly"></div>
+							</a>
+							<a href="#">
+								<div >
+									<p>Huawei giới thiệu phần cứng 5G đầu tiên trên thế giới cho xe hơi
+									</p>
+									<time class="ThongTinGioDang">
+										<i class="fa fa-clock"></i>
+										1 giờ trước   &emsp;
+										<i class="far fa-comment"></i>
+										<span>0 &emsp;</span>
+										<i class="fas fa-eye"></i>
+										<span>12161</span>
+									</time>
+								</div>
 
+							</a>
+
+						</article>
+
+						<article>
+							<a href="#">
+								<img src="images/hinh5.jpg">
+								<div class="ovrly"></div>
+							</a>
+							<a href="#">
+								<div>
+									<p>Apple sẽ phát hành iPhone 5G vào năm 2020
+									</p>
+									<time>
+										<i class="fa fa-clock"></i>
+										1 giờ trước   &emsp;
+										<i class="far fa-comment"></i>
+										<span>0 &emsp;</span>
+										<i class="fas fa-eye"></i>
+										<span>22241</span>
+									</time>
+								</div>
+							</a>
+
+						</article>
+
+						<article>
+							<a href="#">
+								<img src="images/hinh6.jpg">
+								<div class="ovrly"></div>
+							</a>
+							<a href="#">
+								<div>
+									<p>Hệ thống máy ảnh iPhone 2019 có gì mới?
+									</p>
+									<time>
+										<i class="fa fa-clock"></i>
+										1 giờ trước   &emsp;
+										<i class="far fa-comment"></i>
+										<span>0 &emsp;</span>
+										<i class="fas fa-eye"></i>
+										<span>4252</span>
+									</time>
+								</div>
+							</a>
+
+						</article>
+
+						<article>
+							<a href="#">
+								<img src="images/hinh7.jpg">
+								<div class="ovrly"></div>
+							</a>
+							<a href="#">
+								<div>
+									<p>Singapore nỗ lực thu hút các hãng xe điện
+									</p>
+									<time>
+										<i class="fa fa-clock"></i>
+										1 giờ trước   &emsp;
+										<i class="far fa-comment"></i>
+										<span>0</span>
+									</time>
+								</div>
+							</a>
+
+						</article>
 					</div>
 				</div>
-				<div class="TopChuyenMuc">
-					<p> Top Tin Chuyên Mục</p><br>
-					<!--chỗ cần thêm hiệu ứng đẩy 10 bài viết-->
-					<div class="SliderTinXemNhieuNhat">
+			</div>
+			<!--chỗ cần thêm hiệu ứng đẩy 10 bài viết--> 
+
+
+		</div>
+	</div>
+	<div class="TopChuyenMuc">
+		<h4 class="TenChuyenMuc position-relative">
+			<i class="far fa-star"></i>
+			Top Tin Chuyên Mục
+			
+			<span class="pull-right">
+				<a  href="#carouselTopChuyenMuc" role="button" data-slide="prev">
+					<i class="fas fa-chevron-circle-left"></i>
+				</a>
+				<a  href="#carouselTopChuyenMuc" role="button" data-slide="next">
+					<i class="fas fa-chevron-circle-right"></i>
+				</a>
+			</span>
+		</h4>
+
+		<div class="SliderTinXemNhieuNhat">
+			<div id="carouselTopChuyenMuc" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active" data-interval="10000">
 						<article>
 							<a href="#" class="CongNgheColorTag">Công nghệ</a>
 							<a href="#">
@@ -204,153 +418,245 @@
 								</a>
 
 							</article>
+						</div>
+
+						<div class="carousel-item" data-interval="10000">
+							<article>
+								<a href="#" class="CongNgheColorTag">Công nghệ</a>
+								<a href="#">
+									<img src="images/TopTinChuyenMuc/hinh1.jpg">
+									<div class="ovrly"></div>
+								</a>
+								<a href="#">
+									<div >
+										<p>Huawei giới thiệu phần cứng 5G đầu tiên trên thế giới cho xe hơi
+										</p>
+										<time class="ThongTinGioDang">
+											<i class="fa fa-clock"></i>
+											1 giờ trước   &emsp;
+											<i class="far fa-comment"></i>
+											<span>0</span>
+										</time>
+									</div>
+								</a>
+
+							</article>
+
+							<article>
+								<a href="#" class="KinhTeColorTag">Kinh tế</a>
+								<a href="#">
+									<img src="images/TopTinChuyenMuc/hinh4.jpg">
+									<div class="ovrly"></div>
+								</a>
+								<a href="#">
+									<div>
+										<p>Giá điện lũy kế tăng gần 75%?
+										</p>
+										<time>
+											<i class="fa fa-clock"></i>
+											1 giờ trước   &emsp;
+											<i class="far fa-comment"></i>
+											<span>0</span>
+										</time>
+									</div>
+								</a>
+
+							</article>
+
+							<article>
+								<a href="#" class="XaHoiColorTag">Xã Hội</a>
+								<a href="#">
+									<a href="#">
+										<img src="images/TopTinChuyenMuc/hinh2.jpg">
+										<div class="ovrly"></div>
+									</a>
+									<a href="#">
+										<div>
+											<p>Tổng bí thư, Chủ tịch nước làm trưởng ban lễ tang Đại tướng Lê Đức Anh
+											</p>
+											<time>
+												<i class="fa fa-clock"></i>
+												1 giờ trước   &emsp;
+												<i class="far fa-comment"></i>
+												<span>0</span>
+											</time>
+										</div>
+									</a>
+
+								</article>
+
+								<article>
+									<a href="#" class="GiaiTriColorTag">Giải trí</a>
+									<a href="#">
+										<img src="images/TopTinChuyenMuc/hinh3.jpg">
+										<div class="ovrly"></div>
+									</a>
+									<a href="#">
+										<div>
+											<p>'Avengers: Endgame' thu hơn 30 tỉ đồng ngày đầu chiếu ở Việt Nam
+											</p>
+											<time>
+												<i class="fa fa-clock"></i>
+												1 giờ trước   &emsp;
+												<i class="far fa-comment"></i>
+												<span>0</span>
+											</time>
+										</div>
+									</a>
+
+								</article>
+							</div>
 
 						</div>
 					</div>
-					<div class="TinMoiNhat">
-						<!-- 	Tin Moi Nhat Cua Xa Hoi -->
-						<div class="TinMoiNhatXaHoi">
-							<i class="fas fa-globe-americas"></i>
-							<p class="TenChuyenMuc">Tin Xã Hội</p><br>
-							<div class="SliderTinXemNhieuNhat">
-								{{#each r4xh}}
-								<article>
-									<a href="/article/{{id}}">
-										<img src="{{image}}">
-										<div class="ovrly"></div>
-									</a>
-									<a href="/article/{{id}}">
-										<div >
-											<p>{{title}}
-											</p>
-											<time class="ThongTinGioDang">
-												<i class="fa fa-clock"></i>
-												{{format date_post}}   &emsp;
-											</time>
-										</div>
-									</a>
+					
 
-								</article>
-								{{/each}}								
-							</div>
-						</div>
-						<!-- 	Tin Moi Nhat Giai Tri -->
-						<div class="TinMoiNhatGiaiTri">
-							<div class="IconChuyenMuc" id="TieuDeChuyenMucGiaiTri">
-								<i class="fas fa-users"></i>
-								<p>Tin Giải trí</p><br>
-							</div>
+				</div>
+			</div>
+			<div class="TinMoiNhat">
+				<!-- 	Tin Moi Nhat Cua Xa Hoi -->
+				<div class="TinMoiNhatXaHoi">
+					<i class="fas fa-globe-americas"></i>
+					<p class="TenChuyenMuc">Tin Xã Hội</p><br>
+					<div class="SliderTinXemNhieuNhat">
+						{{#each r4xh}}
+						<article>
+							<a href="/article/{{id}}">
+								<img src="{{image}}">
+								<div class="ovrly"></div>
+							</a>
+							<a href="/article/{{id}}">
+								<div >
+									<p>{{title}}
+									</p>
+									<time class="ThongTinGioDang">
+										<i class="fa fa-clock"></i>
+										{{format date_post}}   &emsp;
+									</time>
+								</div>
+							</a>
 
-							<div class="SliderTinXemNhieuNhat">
-								{{#each r4gt}}
-								<article>
-									<a href="/article/{{id}}">
-										<img src="{{image}}">
-										<div class="ovrly"></div>
-									</a>
-									<a href="/article/{{id}}">
-										<div >
-											<p>{{title}}
-											</p>
-											<time class="ThongTinGioDang">
-												<i class="fa fa-clock"></i>
-												{{format date_post}}   &emsp;
-											</time>
-										</div>
-									</a>
-
-								</article>
-								{{/each}}								
-							</div>
-						</div>
-
-						<!-- 	Tin Moi Nhat Suc Khoe -->
-						<div class="TinMoiNhatSucKhoe">
-							<div class="IconChuyenMuc" id="TieuDeChuyenMucSucKhoe">
-								<i class="fas fa-stethoscope"></i>
-								<p>Tin Sức Khoẻ</p><br>
-							</div>			
-							<div class="SliderTinXemNhieuNhat">
-								{{#each r4sk}}
-								<article>
-									<a href="/article/{{id}}">
-										<img src="{{image}}">
-										<div class="ovrly"></div>
-									</a>
-									<a href="/article/{{id}}">
-										<div >
-											<p>{{title}}
-											</p>
-											<time class="ThongTinGioDang">
-												<i class="fa fa-clock"></i>
-												{{format date_post}}   &emsp;
-											</time>
-										</div>
-									</a>
-
-								</article>
-								{{/each}}								
-							</div>
-						</div>
-						<!-- Tin Tai Chinh -->
-						<div class="TinMoiNhatTaiChinh">
-							<div class="IconChuyenMuc" id="TieuDeChuyenMucTaiChinh">
-								<i class="fas fa-chart-line"></i>
-								<p>Tin Kinh Doanh</p><br>
-							</div>
-							<div class="SliderTinXemNhieuNhat">
-								{{#each r4kd}}
-								<article>
-									<a href="/article/{{id}}">
-										<img src="{{image}}">
-										<div class="ovrly"></div>
-									</a>
-									<a href="/article/{{id}}">
-										<div >
-											<p>{{title}}
-											</p>
-											<time class="ThongTinGioDang">
-												<i class="fa fa-clock"></i>
-												{{format date_post}}   &emsp;
-											</time>
-										</div>
-									</a>
-
-								</article>
-								{{/each}}								
-							</div>
-						</div>
-
-						<!-- Tin Cong Nghe -->
-
-						<div class="TinMoiNhatCongNghe">
-							<div class="IconChuyenMuc" id="TieuDeChuyenMucCongNghe">
-								<i class="fas fa-desktop"></i>
-								<p>Tin Công Nghệ</p><br>
-							</div>
-
-							<div class="SliderTinXemNhieuNhat">
-								{{#each r4cn}}
-								<article>
-									<a href="/article/{{id}}">
-										<img src="{{image}}">
-										<div class="ovrly"></div>
-									</a>
-									<a href="/article/{{id}}">
-										<div >
-											<p>{{title}}
-											</p>
-											<time class="ThongTinGioDang">
-												<i class="fa fa-clock"></i>
-												{{format date_post}}   &emsp;
-											</time>
-										</div>
-									</a>
-
-								</article>
-								{{/each}}								
-							</div>
-						</div>
+						</article>
+						{{/each}}								
 					</div>
 				</div>
-</div>
+				<!-- 	Tin Moi Nhat Giai Tri -->
+				<div class="TinMoiNhatGiaiTri">
+					<div class="IconChuyenMuc" id="TieuDeChuyenMucGiaiTri">
+						<i class="fas fa-users"></i>
+						<p>Tin Giải trí</p><br>
+					</div>
+
+					<div class="SliderTinXemNhieuNhat">
+						{{#each r4gt}}
+						<article>
+							<a href="/article/{{id}}">
+								<img src="{{image}}">
+								<div class="ovrly"></div>
+							</a>
+							<a href="/article/{{id}}">
+								<div >
+									<p>{{title}}
+									</p>
+									<time class="ThongTinGioDang">
+										<i class="fa fa-clock"></i>
+										{{format date_post}}   &emsp;
+									</time>
+								</div>
+							</a>
+
+						</article>
+						{{/each}}								
+					</div>
+				</div>
+
+				<!-- 	Tin Moi Nhat Suc Khoe -->
+				<div class="TinMoiNhatSucKhoe">
+					<div class="IconChuyenMuc" id="TieuDeChuyenMucSucKhoe">
+						<i class="fas fa-stethoscope"></i>
+						<p>Tin Sức Khoẻ</p><br>
+					</div>			
+					<div class="SliderTinXemNhieuNhat">
+						{{#each r4sk}}
+						<article>
+							<a href="/article/{{id}}">
+								<img src="{{image}}">
+								<div class="ovrly"></div>
+							</a>
+							<a href="/article/{{id}}">
+								<div >
+									<p>{{title}}
+									</p>
+									<time class="ThongTinGioDang">
+										<i class="fa fa-clock"></i>
+										{{format date_post}}   &emsp;
+									</time>
+								</div>
+							</a>
+
+						</article>
+						{{/each}}								
+					</div>
+				</div>
+				<!-- Tin Tai Chinh -->
+				<div class="TinMoiNhatTaiChinh">
+					<div class="IconChuyenMuc" id="TieuDeChuyenMucTaiChinh">
+						<i class="fas fa-chart-line"></i>
+						<p>Tin Kinh Doanh</p><br>
+					</div>
+					<div class="SliderTinXemNhieuNhat">
+						{{#each r4kd}}
+						<article>
+							<a href="/article/{{id}}">
+								<img src="{{image}}">
+								<div class="ovrly"></div>
+							</a>
+							<a href="/article/{{id}}">
+								<div >
+									<p>{{title}}
+									</p>
+									<time class="ThongTinGioDang">
+										<i class="fa fa-clock"></i>
+										{{format date_post}}   &emsp;
+									</time>
+								</div>
+							</a>
+
+						</article>
+						{{/each}}								
+					</div>
+				</div>
+
+				<!-- Tin Cong Nghe -->
+
+				<div class="TinMoiNhatCongNghe">
+					<div class="IconChuyenMuc" id="TieuDeChuyenMucCongNghe">
+						<i class="fas fa-desktop"></i>
+						<p>Tin Công Nghệ</p><br>
+					</div>
+
+					<div class="SliderTinXemNhieuNhat">
+						{{#each r4cn}}
+						<article>
+							<a href="/article/{{id}}">
+								<img src="{{image}}">
+								<div class="ovrly"></div>
+							</a>
+							<a href="/article/{{id}}">
+								<div >
+									<p>{{title}}
+									</p>
+									<time class="ThongTinGioDang">
+										<i class="fa fa-clock"></i>
+										{{format date_post}}   &emsp;
+									</time>
+								</div>
+							</a>
+
+						</article>
+						{{/each}}								
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
