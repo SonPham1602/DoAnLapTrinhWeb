@@ -51,6 +51,7 @@ app.get('/',(req, res) => {
 app.use('/public',express.static('public'));
 app.use('/images',express.static('images'));
 
+app.use('/register',require('./routes/register.route'));
 app.use('/login',require('./routes/login.route'));
 app.use('/editor', require('./routes/editor.route'));
 app.use('/writer', require('./routes/writer.route'));
