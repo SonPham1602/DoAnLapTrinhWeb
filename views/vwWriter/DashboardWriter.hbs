@@ -106,17 +106,14 @@
 						<tr id="header-table">
 							<td>STT</td>
 							<td>Tên bài viết</td>
-							<td>Chuyên mục</td>
-							<td>Nguời kiểm duyệt</td>
+							<td>Chuyên mục</td>							
 							<td>Ngày đăng</td>
-							<td>Xem chi tiết</td>
 						</tr>
-						{{#each art2}}		
+						{{#each arts2}}		
 						<tr>
 							<td>{{stt}}</td>
 							<td>{{title}}</td>
 							<td>{{cname}}</td>
-							<td>Hứa Thanh Sơn</td>
 							<td>{{format date_post}}</td>
 						</tr>
 						{{/each}}
@@ -132,19 +129,15 @@
 							<td>STT</td>
 							<td>Tên bài viết</td>
 							<td>Chuyên mục</td>
-							<td>Nguời kiểm duyệt</td>
-							<td>Ngày kiểm duyệt</td>
 							<td>Nguyên nhân</td>
 							<td>Xem chi tiết</td>
 						</tr>
-						{{#each art3}}		
+						{{#each arts3}}		
 						<tr>
 							<td>{{stt}}</td>
 							<td>{{title}}</td>
 							<td>{{cname}}</td>
-							<td>Hứa Thanh Sơn</td>
-							<td>{{format date_post}} </td>
-							<td>Nội dung không phù hợp với chuyên mục</td>
+							<td>{{refuse}}</td>
 							<td>
 								<button onclick="window.location.href='/writer/{{id_writer}}/{{id}}'" class="btn-xem-bai-viet">
 								Hiệu chỉnh
@@ -164,16 +157,13 @@
 							<td>STT</td>
 							<td>Tên bài viết</td>
 							<td>Chuyên mục</td>
-							<td>Nguời kiểm duyệt</td>
 							<td>Thời gian dự định xuất bản</td>
-							<td>Xem chi tiết</td>
 						</tr>
 						{{#each arts1}}	
 						<tr>
 							<td>{{stt}}</td>
 							<td>{{title}}</td>
 							<td>{{cname}}</td>
-							<td>Hứa Thanh Sơn</td>
 							<td>{{format date_post}}</td>
 						</tr>
 						{{/each}}
@@ -189,17 +179,13 @@
 							<td>STT</td>
 							<td>Tên bài viết</td>
 							<td>Chuyên mục</td>
-							<td>Nguời kiểm duyệt</td>
-							<td>Thời gian dự định kiểm duyệt</td>
 							<td>Xem chi tiết</td>
 						</tr>
 						{{#each arts4}}	
 						<tr>
 							<td>{{stt}}</td>
 							<td>{{title}}</td>
-							<td>{{cname}}</td>
-							<td>Hứa Thanh Sơn</td>
-							<td>{{format date_post}}</td>		
+							<td>{{cname}}</td>	
 							<td>
 								<button onclick="window.location.href='/writer/{{id_writer}}/{{id}}'" class="btn-xem-bai-viet">Hiệu chỉnh
 								</button>

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>DashboardWritter</title>
+	<title>DashboardEditor</title>
 	<link rel="stylesheet" type="text/css" href="/public/css/DashboardWriter.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -21,41 +21,31 @@
         'forecolor backcolor',
         'table link image media',
       ],
+      readonly: 1
     });
   })
 </script>
 </head>
 <body>
 	<div class="container">
-			<form method="POST">
-			<div class="VietBaiDashboard">
-				<p class="TieuDeTrang">Viết bài</p>
+			<div class="VietBaiDashboard panel">
+				<p class="TieuDeTrang">Xem nội dung</p>
 				<p>Tiêu đề bài viết</p>
 				<input type="text" name="title" placeholder="Nhập Tiêu Đề Bài Viết" id="tieu-de-bai-viet" 
-				value="{{article.title}}">
+				value="{{article.title}}" readonly>
 				<p>Tóm tắt</p>
-				<textarea id="TomTatBaiDang" name="abstract">{{article.abstract}}</textarea>
+				<textarea id="TomTatBaiDang" name="abstract" readonly>{{article.abstract}}</textarea>
 				<p>Nội dung bài viết</p>
 				<textarea name="content" id="NoiDungBaiDang" name="NoiDungBaiDang">{{article.content}}</textarea>
 				<p>Chuyên mục</p>
-				<select id="chuyen-de-bai-viet" name="namecat">
-					<option selected hidden>{{cname}}</option>
-					<option>Xã hội</option>
-					<option>Giải trí</option>
-					<option>Sức khoẻ</option>
-					<option>Kinh doanh</option>
-					<option>Công nghệ</option>
+				<select id="chuyen-de-bai-viet" name="namecat" readonly>
+					<option selected hidden>{{cname}}</option>					
 				</select><br>
 				<!-- <p>Tag</p>
-				<input type="text" name="tag" placeholder="Thêm tag" id="them-tag"><br> -->
-				<button type="submit" id="btn-xuat-ban-bai-viet">
-					<i class="fas fa-file-export"></i>					
-					Lưu bài viết
-				</button>
+				<input type="text" name="tag" placeholder="Thêm tag" id="them-tag"><br> -->			
 			</div>
-			</form>
 			<button id="btn-luu-bai-viet" style="margin-left: 15px">							
-					<a href="/writer/{{article.id_cat}}">Back</a>
+					<a href="/editor/{{article.id_cat}}">Back</a>
 			</button>
 	</div>
 </body>

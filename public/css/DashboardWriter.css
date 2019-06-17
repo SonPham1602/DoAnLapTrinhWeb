@@ -603,5 +603,7 @@ div.navigation nav ul li:hover  > ul{
 		margin-right: auto;
 
 	}
-	
 }
+[readonly] {
+		cursor: no-drop;
+	}

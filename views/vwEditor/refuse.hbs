@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DashboardEditor</title>
+	<link rel="stylesheet" type="text/css" href="/public/css/DashboardWriter.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+			<form method="POST">
+			<div class="VietBaiDashboard">
+				<p>Lý do từ chối</p>
+				<textarea style="width: 500px; height: 100px" name="refuse"></textarea>
+				<br>
+				<button type="submit" id="btn-xuat-ban-bai-viet" >
+					<i class="fas fa-file-export"></i>					
+					Xác nhận
+				</button>	
+			</div>
+			</form>
+			<button id="btn-luu-bai-viet" style="margin-left: 15px">							
+					<a href="/editor/{{id_cat}}">Back</a>
+			</button>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/public/js/GetImage.js"></script>
+
+</body>
+</html>
