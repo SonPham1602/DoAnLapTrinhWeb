@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>DashboardWritter</title>
+	<title>DashboardAdmin</title>
 	<link rel="stylesheet" type="text/css" href="/public/css/DashboardAdmin.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
@@ -31,51 +31,36 @@
 							<a href="#">Danh sách độc giả</a>
 							<i class="fas fa-angle-down icon"></i>
 							<ul>
-								<li id="li-cho-xuat-ban">
+								<li id="li-quan-ly-doc-gia">
 									<a href="#">Tất cả độc giả</a>
 								</li>
-								<li id="li-cho-kiem-duyet">
+								<li id="li-quan-ly-premium">
 									<a href="#">Độc giả premium</a>
-								</li>
-								<li id="li-da-xuat-ban">
-									<a href="#">Độc giả bị block</a>
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li id="li-quan-ly-phong-vien">
 							<i class="far fa-edit icon"></i>
-							<a href="#">Danh sách phóng viên</a>
-							<i class="fas fa-angle-down icon"></i>
-							<ul>
-								<li id="li-bai-viet-moi">
-									<a href="#">Tất cả phóng viên</a>
-								</li>
-								<li>
-									<a href="#">Phóng viên hợp lệ </a>
-								</li>
-								<li>
-									<a href="#">Phóng viên bị block</a>
-								</li>
-							</ul>
+							<a href="#">Danh sách phóng viên</a>					
 						</li>
 						<li>
 							<i class="far fa-edit icon"></i>
 							<a href="#">Quản lý nội dung</a>
 							<i class="fas fa-angle-down icon"></i>
 							<ul>
-								<li id="li-bai-viet-moi">
+								<li id="li-quan-ly-bai-viet">
 									<a href="#">Quản lý bài viết</a>
 								</li>
-								<li>
+								<li id="li-quan-ly-nhan">
 									<a href="#">Quản lí nhãn</a>
 								</li>
-								<li>
+								<li id="li-quan-ly-chuyen-muc">
 									<a href="#">Quản lý chuyên mục</a>
 								</li>
 							</ul>
 						</li>
 
-						<li>
+					<!-- 	<li>
 							<i class="fas fa-chart-line icon"></i>
 							<a href="#">Thông kê</a>
 							<i class="fas fa-angle-down icon"></i>
@@ -93,7 +78,7 @@
 						<li>
 							<i class="fas fa-user-cog icon"></i>
 							<a href="#">Cài đặt</a>
-						</li>
+						</li> -->
 					</ul>
 				</nav>
 			</div>
@@ -178,6 +163,7 @@
 					</li>
 				</ul>
 			</div>
+			<!-- Trang chu -->
 			<div class="TrangChuDashboard panel">
 				<p class="TieuDeTrang">Trang chủ</p>
 				<div>
@@ -230,17 +216,150 @@
 						</li>
 					</ul>
 				</article>
-				
-				
-				
-
 			</div>
 			<div class="DanhSachBaiVietDashboard panel">
 				  
 				
 			</div>
-			<div class="DanhSachBaiVietBiTuChoiDashboard panel">
-				<p class="TieuDeTrang">Danh sách bài viết bị từ chối</p>
+
+			<!-- Quản lý phóng viên -->
+			<div class="QuanlyPhongVien panel">
+				<p class="TieuDeTrang">Danh sách phóng viên</p>
+					<div class="data-table">
+					<table border="1px" class="table-danh-sach-bai-viet">
+						<tr id="header-table">
+							<td>STT</td>
+							<td>Tên độc giả</td>
+							<td>Email</td>
+							<td>Chức năng</td>
+						</tr>		
+						<tr>
+							<td>1</td>
+							<td>Nguyễn Hoàng Sang</td>
+							<td>nguyenhoangsang@gmail.com</td>
+							<td>
+								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Phạm Tú Uyên</td>
+							<td>phamtuuyen@gmail.com</td>
+							<td>
+								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+								
+							</td>
+						</tr>
+
+						<tr>
+							<td>3</td>
+							<td>NguyenThiAnh</td>
+							<td>nguyenthianh@gmail.com</td>
+							<td>
+								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+								
+							</td>
+						</tr>					
+					</table>
+				</div>
+			</div>
+
+				<!-- 	Quản lý độc giả prmium-->
+			<div class="QuanLyDocGiaPremium panel">
+				<p class="TieuDeTrang">Danh sách độc giả Premium</p>
+				<div class="data-table">
+					<table border="1px" class="table-danh-sach-bai-viet">
+						<tr id="header-table">
+							<td>STT</td>
+							<td>Tên độc giả</td>
+							<td>Email</td>
+							<td>Chức năng</td>
+						</tr>		
+						<tr>
+							<td>1</td>
+							<td>Nguyễn Hoàng Sang</td>
+							<td>nguyenhoangsang@gmail.com</td>
+							<td>
+								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+								<button class="btn-chuc-nang"><i class="fas fa-money-check-alt"></i> &nbsp Gia hạn</button>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Phạm Tú Uyên</td>
+							<td>phamtuuyen@gmail.com</td>
+							<td>
+								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+								<button class="btn-chuc-nang"><i class="fas fa-money-check-alt"></i> &nbsp Gia hạn</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>3</td>
+							<td>NguyenThiAnh</td>
+							<td>nguyenthianh@gmail.com</td>
+							<td>
+								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+								<button class="btn-chuc-nang"><i class="fas fa-money-check-alt"></i> &nbsp Gia hạn</button>
+							</td>
+						</tr>					
+					</table>
+				</div>
+			</div>
+
+			<!-- 	Quản lý độc giả -->
+			<div class="QuanLyDocGia panel">
+				<p class="TieuDeTrang">Danh sách độc giả</p>
+				<div class="data-table">
+					<table border="1px" class="table-danh-sach-bai-viet">
+						<tr id="header-table">
+							<td>STT</td>
+							<td>Tên độc giả</td>
+							<td>Email</td>
+							<td>Chức năng</td>
+						</tr>		
+						<tr>
+							<td>1</td>
+							<td>Nguyễn Hoàng Sang</td>
+							<td>nguyenhoangsang@gmail.com</td>
+							<td>
+								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td>Trần Phú Sý</td>
+							<td>tranphusy@gmail.com</td>
+							<td>
+								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>3</td>
+							<td>Phạm Tú Uyên</td>
+							<td>phamtuuyen@gmail.com</td>
+							<td>
+								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>4</td>
+							<td>NguyenThiAnh</td>
+							<td>nguyenthianh@gmail.com</td>
+							<td>
+								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+							</td>
+						</tr>					
+					</table>
+				</div>
+			</div>
+			<!-- 	Quản lý bài viết -->
+			<div class="QuanLyBaiViet panel">
+				<p class="TieuDeTrang">Danh sách bài viết</p>
 				<div class="data-table">
 					<table border="1px" class="table-danh-sach-bai-viet">
 						<tr id="header-table">
@@ -249,8 +368,8 @@
 							<td>Chuyên mục</td>
 							<td>Nguời kiểm duyệt</td>
 							<td>Ngày kiểm duyệt</td>
-							<td>Nguyên nhân</td>
-							<td>Xem chi tiết</td>
+							<td>Trạng thái</td>
+							<td>Xuất bản</td>
 						</tr>		
 						<tr>
 							<td>1</td>
@@ -258,7 +377,7 @@
 							<td>Công nghệ</td>
 							<td>Hứa Thanh Sơn</td>
 							<td>08:24, 04/05/2019 </td>
-							<td>Nội dung không phù hợp với chuyên mục</td>
+							<td>Đã xuất bản</td>
 							<td>
 								<button class="btn-xem-bai-viet">Xem bài viết</button>
 							</td>
@@ -270,7 +389,7 @@
 							<td>Thời sự</td>
 							<td>Nguyễm Công Sơn</td>
 							<td>08:24, 04/05/2019 </td>
-							<td>Thiếu hình ảnh minh hoạ</td>
+							<td>Chưa được duyệt</td>
 							<td>
 								<button class="btn-xem-bai-viet">Xem bài viết</button>
 							</td>
@@ -282,7 +401,7 @@
 							<td>Giải trí</td>
 							<td>Nguyễm Công Sơn</td>
 							<td>08:24, 04/05/2019 </td>
-							<td>Nội dung không phù hợp với chuyên mục</td>
+							<td>Bị từ chối</td>
 							<td>
 								<button class="btn-xem-bai-viet">Xem bài viết</button>
 							</td>
@@ -294,7 +413,7 @@
 							<td>Giải trí</td>
 							<td>Nguyễm Công Sơn</td>
 							<td>08:24, 04/05/2019 </td>
-							<td>Nội dung không phù hợp với chuyên mục</td>
+							<td>Đã xuất bản</td>
 							<td>
 								<button class="btn-xem-bai-viet">Xem bài viết</button>
 							</td>
@@ -305,7 +424,7 @@
 							<td>Công nghệ</td>
 							<td>Nguyễm Công Sơn</td>
 							<td>08:24, 04/05/2019 </td>
-							<td>Nội dung không phù hợp với chuyên mục</td>
+							<td>Chờ xuất bản</td>
 							<td>
 								<button class="btn-xem-bai-viet">Xem bài viết</button>
 							</td>
@@ -313,189 +432,120 @@
 						
 					</table>
 				</div>
-				
+
 			</div>
-			<div class="DanhSachBaiVietChoXuatBaniDashboard panel">
-				<p class="TieuDeTrang">Danh sách bài viết chờ xuất bản</p>
-				<div class="data-table">
-					<table border="1px" class="table-danh-sach-bai-viet">
-						<tr id="header-table">
-							<td>STT</td>
-							<td>Tên bài viết</td>
-							<td>Chuyên mục</td>
-							<td>Nguời kiểm duyệt</td>
-							<td>Thời gian dự định xuất bản</td>
-							<td>Xem chi tiết</td>
-						</tr>		
-						<tr>
-							<td>1</td>
-							<td>Firefox chặn Add-on dùng kỹ thuật che giấu mã nguồn</td>
-							<td>Công nghệ</td>
-							<td>Hứa Thanh Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
+		
+			<!-- Quản lý chuyên mục -->
+			<div class="QuanLyChuyenMuc panel">
+				<p class="TieuDeTrang">Danh sách chuyên mục</p>
 
-						<tr>
-							<td>2</td>
-							<td>Xem xét kỷ luật nguyên Phó Thủ tướng Vũ Văn Ninh</td>
-							<td>Thời sự</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>3</td>
-							<td>'Thánh nữ mì gõ' Phi Huyền Trang nổi tiếng ra sao?</td>
-							<td>Giải trí</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>4</td>
-							<td>Từ kẻ nghiện ngập, ‘Người sắt’ Robert Downey Jr. vươn lên thành tài tử triệu đô</td>
-							<td>Giải trí</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>Google Maps làm nổi bật hình ảnh các món ăn phổ biến nhất của nhà hàng</td>
-							<td>Công nghệ</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-						
-					</table>
-				</div>
-				
-			</div>
-			<div class="DanhSachBaiVietChoKiemDuyetDashboard panel">
-				<p class="TieuDeTrang">Danh sách bài viết chờ kiểm duyệt</p>
-				<div class="data-table">
-					<table border="1px" class="table-danh-sach-bai-viet">
-						<tr id="header-table">
-							<td>STT</td>
-							<td>Tên bài viết</td>
-							<td>Chuyên mục</td>
-							<td>Nguời kiểm duyệt</td>
-							<td>Thời gian dự định kiểm duyệt</td>
-							<td>Xem chi tiết</td>
-						</tr>		
-						<tr>
-							<td>1</td>
-							<td>Firefox chặn Add-on dùng kỹ thuật che giấu mã nguồn</td>
-							<td>Công nghệ</td>
-							<td>Hứa Thanh Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>2</td>
-							<td>Xem xét kỷ luật nguyên Phó Thủ tướng Vũ Văn Ninh</td>
-							<td>Thời sự</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>3</td>
-							<td>'Thánh nữ mì gõ' Phi Huyền Trang nổi tiếng ra sao?</td>
-							<td>Giải trí</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>4</td>
-							<td>Từ kẻ nghiện ngập, ‘Người sắt’ Robert Downey Jr. vươn lên thành tài tử triệu đô</td>
-							<td>Giải trí</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>Google Maps làm nổi bật hình ảnh các món ăn phổ biến nhất của nhà hàng</td>
-							<td>Công nghệ</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-						
-					</table>
-				</div>
-				
-			</div>
-			<div class="VietBaiDashboard panel">
-				<p class="TieuDeTrang">Viết bài</p>
-				<p>Tiêu đề bài viết</p>
-				<input type="text" name="" placeholder="Nhập Tiêu Đề Bài Viết" id="tieu-de-bai-viet">
-				<p>Nội dung bài viết</p>
-				
-				<p>Chuyên mục</p>
-				<select id="chuyen-de-bai-viet">
-					<option>Xã hội</option>
-					<option>Giải trí</option>
-					<option>Sức khoẻ</option>
-					<option>Kinh doanh</option>
-					<option>Công nghệ</option>
-				</select><br>
-				<p>Tag</p>
-				<input type="text" name="" placeholder="Thêm tag" id="them-tag"><br>
-				<button id="btn-luu-bai-viet">
-					<i class="far fa-save"></i>
-					Lưu vào bài viết tạm
-				</button>
-				<button id="btn-huy-bo-bai-viet">
-					<i class="fas fa-ban"></i>		Huỷ bỏ bài viết
-				</button>
-				<button id="btn-xuat-ban-bai-viet">
-					<i class="fas fa-file-export"></i>
+				<div>
 					
-					Xuất bản bài viết
-				</button>
+					<button  class="btn-chuc-nang m-auto"> <i class="fas fa-plus"></i> &nbsp Thêm chuyên mục</button>
+				</div>
+				<!-- chỗ này m dùng dung for để đổ dữ liệu dô nha.mỗi cái data-table là một cái chuyên mục á  -->
+
+				<!-- Tin Xa hoi -->
+				<div class="data-table ChuyenMucDiv">
+					<h4 class="TenChuyenMuc">Xã Hội</h4>
+					<div class="align-item-center">
+						<button class="btn-chuc-nang m-auto"> <i class="far fa-trash-alt"></i> &nbspXoá chuyên mục</button>
+						<button  class="btn-chuc-nang m-auto"> <i class="fas fa-edit"></i> &nbsp Sửa tên chuyên mục</button>
+					</div>
+					
+					<table border="1px" class="table-danh-sach-bai-viet table-hover m-5">
+						<tr id="header-table">
+							<td>STT</td>
+							<td>Tên chuyên mục</td>
+							<td>Chức năng</td>
+						</tr>		
+						<tr>
+							<td>1</td>
+							<td>Thời sự</td>
+							<td>
+								<button class="btn-xem-bai-viet"><i class="far fa-trash-alt"></i> &nbsp Xoá</button>
+								<button class="btn-xem-bai-viet">  <i class="fas fa-edit"></i> &nbsp  Chỉnh sửa</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td>Pháp luật</td>
+							<td>
+								<button class="btn-xem-bai-viet">Xoá</button>
+								<button class="btn-xem-bai-viet">Chỉnh sửa</button>
+							</td>
+						</tr>					
+					</table>
+				</div>
+				<!-- Tin Giai Tri -->
+				<div class="data-table ChuyenMucDiv">
+					<h4 class="TenChuyenMuc">Giải trí</h4>
+					<div class="align-item-center">
+						<button class="btn-chuc-nang m-auto"> <i class="far fa-trash-alt"></i> &nbsp Xoá chuyên mục</button>
+						<button  class="btn-chuc-nang m-auto"> <i class="fas fa-edit"></i> &nbspSửa tên chuyên mục</button>
+					</div>
+					
+					<table border="1px" class="table-danh-sach-bai-viet table-hover m-5">
+						<tr id="header-table">
+							<td>STT</td>
+							<td>Tên chuyên mục</td>
+							<td>Chức năng</td>
+						</tr>		
+						<tr>
+							<td>1</td>
+							<td>Ngôi sao</td>
+							<td>
+								<button class="btn-xem-bai-viet"> <i class="far fa-trash-alt"></i> &nbsp Xoá</button>
+								<button class="btn-xem-bai-viet"> 
+									<i class="fas fa-edit"></i> &nbsp Chỉnh sửa</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td>Điện ảnh</td>
+							<td>
+								<button class="btn-xem-bai-viet">  <i class="far fa-trash-alt"></i> &nbspXoá</button>
+								<button class="btn-xem-bai-viet"> <i class="fas fa-edit"></i> &nbsp Chỉnh sửa</button>
+							</td>
+						</tr>					
+					</table>
+				</div>
+				<div class="data-table ChuyenMucDiv">
+					<h4 class="TenChuyenMuc">Kinh Doanh</h4>
+					<div class="align-item-center">
+						<button class="btn-chuc-nang m-auto"> <i class="far fa-trash-alt"></i> &nbsp Xoá chuyên mục</button>
+						<button  class="btn-chuc-nang m-auto"><i class="fas fa-edit"></i> &nbsp Sửa tên chuyên mục</button>
+					</div>
+					
+					<table border="1px" class="table-danh-sach-bai-viet table-hover m-5">
+						<tr id="header-table">
+							<td>STT</td>
+							<td>Tên chuyên mục</td>
+							<td>Chức năng</td>
+						</tr>		
+						<tr>
+							<td>1</td>
+							<td>Nông sản</td>
+							<td>
+								<button class="btn-xem-bai-viet"> <i class="far fa-trash-alt"></i> &nbsp  Xoá</button>
+								<button class="btn-xem-bai-viet"><i class="fas fa-edit"></i> &nbsp Chỉnh sửa</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td>Hải sản</td>
+							<td>
+								<button class="btn-xem-bai-viet">   <i class="far fa-trash-alt"></i> &nbsp  Xoá</button>
+								<button class="btn-xem-bai-viet"><i class="fas fa-edit"></i> &nbsp Chỉnh sửa</button>
+							</td>
+						</tr>					
+					</table>
+				</div>
 			</div>
-			<div class="ThongKeDashboard panel">
-			</div>
+			
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
