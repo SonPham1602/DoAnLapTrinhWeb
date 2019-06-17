@@ -49,19 +49,7 @@ router.post('/:id',(req, res) => {
 	}
 	commentModel.add(entity)
 	.then(
-		Promise.all([
-		commentModel.allByArt(id),
-		articleModel.single(id)
-		])
-		.then(([comments,rows]) => {
-			res.render('vwArticle/newbyId', {
-				comments,
-				article: rows[0]
-			})	
-		})
-		.catch(err => {
-			console.log(err);
-		})
+		res.redirect('/article/' + id)
 	)
 	.catch(err => {
 		console.log(err);
@@ -70,4 +58,4 @@ router.post('/:id',(req, res) => {
 
 })
 
-module.exports = router;
+module.exports = router;  

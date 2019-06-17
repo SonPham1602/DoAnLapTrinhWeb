@@ -89,6 +89,13 @@ module.exports = {
 		
 	},
 
+	artEditor: (id_cat, status)  => {
+		return db.load(`select row_number() over (order by a.id) as stt, a.*, c.name as cname
+		 from article a, category c where a.id_cat = ${id_cat} and status = ${status}
+		 and a.id_cat = c.id`)
+		
+	},
+
 	add: entity => {
 		return db.add('article', entity);	
 	}

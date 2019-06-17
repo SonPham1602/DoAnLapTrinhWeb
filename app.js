@@ -26,6 +26,10 @@ app.engine('hbs', exphbs({
 		format: val => {
 			return dateFormat(val, "dd/mm/yyyy");
 		},
+		
+		format2: val => {
+			return dateFormat(val, "yyyy-mm-dd");
+		},
 
 		breaklines: function(text) {
     		text = text.replace(/(\r\n|\n|\r)/gm, '<br>');

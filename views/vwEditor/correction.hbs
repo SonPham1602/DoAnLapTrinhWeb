@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DashboardEditor</title>
+	<link rel="stylesheet" type="text/css" href="/public/css/DashboardWriter.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+			<form method="POST">
+			<div class="VietBaiDashboard">
+				<p>Chọn ảnh đại diện cho bài viết</p>
+				<input id="HinhMoTa" type="text" name="img" size="70"><br>
+				<img id="ImageMoTa" src="http://liststories.com/wp-content/uploads/2014/10/default-img.gif" width="400px" height="auto" >
+				<p>Ngày xuất bản (mm/dd/yyyy)</p>
+				<input type="date" name="datepost" value="{{format2 article.date_post}}">	
+				<p>Chuyên mục</p>
+				<select id="chuyen-de-bai-viet" name="namecat">
+					<option selected hidden>{{cname}}</option>
+					<option>Xã hội</option>
+					<option>Giải trí</option>
+					<option>Sức khoẻ</option>
+					<option>Kinh doanh</option>
+					<option>Công nghệ</option>				
+				</select><br>
+				<!-- <p>Tag</p>
+				<input type="text" name="tag" placeholder="Thêm tag" id="them-tag"><br> -->
+				<button type="submit" id="btn-xuat-ban-bai-viet" >
+					<i class="fas fa-file-export"></i>					
+					Xuất bản
+				</button>	
+			</div>
+			</form>
+			<button id="btn-luu-bai-viet" style="margin-left: 15px">							
+					<a href="/editor/{{article.id_cat}}">Back</a>
+			</button>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/public/js/GetImage.js"></script>
+
+</body>
+</html>

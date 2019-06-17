@@ -5,8 +5,8 @@ var dateFormat = require('dateformat');
 
 module.exports = (req, res, next) => {
 	res.locals.datenow = dateFormat(new Date(),"dddd, dd mm yyyy");
-	res.locals.datenowSql = dateFormat(new Date(),"yyyy-mm-dd");
-	res.locals.id_account = 1;
+	res.locals.datenowSql = dateFormat(new Date(),"yyyy-mm-dd");	
+	// res.locals.id_account = 1;
 	Promise.all([
 		categoryModel.all(),
 		category2Model.all(),

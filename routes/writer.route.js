@@ -4,6 +4,7 @@ var category = require('../models/category.model');
 
 var router = express.Router();
 
+//load các bài viết lên trang cửa writer
 router.get('/:id',(req, res) => {
 	var id_writer = req.params.id;
 	Promise.all([
@@ -12,7 +13,7 @@ router.get('/:id',(req, res) => {
 		articleModel.artWriter(id_writer, 3),
 		articleModel.artWriter(id_writer, 4)
 	])
-	.then(([arts1 , arts2, arts3 ,arts4, cname]) => {
+	.then(([arts1 , arts2, arts3 ,arts4]) => {
 		res.render('vwWriter/DashBoardWriter', {
 			layout: false,
 			arts1,
@@ -33,7 +34,6 @@ router.post('/:id', (req, res) => {
 	category.findId(req.body.namecat).then(rows =>{
 		var entity = {
 		id_writer: Number(id),
-		date_post: res.locals.datenowSql,
 		title: req.body.title,
 		abstract: req.body.abstract,
 		content: req.body.content,
