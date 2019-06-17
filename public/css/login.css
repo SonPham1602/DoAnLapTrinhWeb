@@ -13,10 +13,10 @@ body{
 	/*background-color:lightblue;*/
 	/*background-color: #F0F1F4;*/
 	/*Tao hinh nen fullscreen cho website*/
-	background-image: url('images/Background/bg.jpg');/* Duong dan hinh*/
+ 	background: url('https://audit-invest.com.ua/wp-content/uploads/2017/06/Savin-NY-Website-Background-Web1-kopiya.jpg') no-repeat center center fixed;
+	background-size: cover !important;
 	/*Thuoc tinh de lam background*/
 	/*	khong nen dung thuoc tinh size  vi gay cham*/
-	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	font-family: Arial, Helvetica, sans-serif;

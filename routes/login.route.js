@@ -9,12 +9,12 @@
 // module.exports = router;
 
 var express = require('express');
+// var passport = require('passport'); phải bật cmd lên npm install passport này
+//const userModel = require('../../models/user.model'); lên google sear ch cài lại này là đc
 var router = express.Router();
-var passport = require('passport');
-//const userModel = require('../../models/user.model');
 
 router.get('/', (req, res) => {
-  res.end('...');
+ 	res.render('vwLogin/login', {layout: false});
 });
 
 // router.post('/', (req, res, next) => {
@@ -36,6 +36,6 @@ router.get('/', (req, res) => {
 //         });
 //     })(req, res, next);
 // });
-
+//bat cmd nhu nao k to hop phim dc a
 
 module.exports = router;

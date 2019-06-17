@@ -18,7 +18,8 @@ app.engine('hbs', exphbs({
 				return opts.fn(this)
 			}
 			else {
-				return opts.inverse(this)	
+				return opts.inverse(this)		 
+				
 			}
 		},
 
