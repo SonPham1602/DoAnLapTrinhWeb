@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="/public/css/NoiDung.css">
+<!-- install jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript" src="/public/js/NoiDung.js"></script>
 <div class="container">
 		<div class="content">
 			<img src="{{article.image2}}" alt="">
@@ -40,10 +43,11 @@
 				</input>
 			</form>
 			<div class="DanhSachBinhLuan">
-				<button>
-					<a href="">load</a> <!--  nut reload lai binh luan -->
-				</button>
+			<!-- 	<button id="btn-reload-comment">
+					<a href="">load</a> 
+				</button> -->
 				{{#each comments}}
+				
 					<div class="avatar">
 						<img src="{{image_reader}}" >
 					</div>
@@ -51,7 +55,7 @@
 						<p class="name">{{name_reader}}&ensp;{{format date_comment}}</p>
 						<p class="noidung">{{content}}</p>
 					</div>
-			
+				
 				{{/each}}
 			</div>
 		</div>
@@ -60,5 +64,5 @@
 			<div class="BaiVietLienQuan">
 				
 			</div>
-		</div>	
+		</div>
 </div>
