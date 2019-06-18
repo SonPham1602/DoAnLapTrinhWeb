@@ -24,7 +24,7 @@ module.exports = {
 	},
 
 	pageByCat2: (idcat2, limit, offset) => {
-		return db.load(`select * from article status = 2 and where id_cat2 = ${idcat2} limit ${limit} offset ${offset}`)
+		return db.load(`select * from article where status = 2 and id_cat2 = ${idcat2} limit ${limit} offset ${offset}`)
 	},
 	
 	countByCat2: idcat2 => {

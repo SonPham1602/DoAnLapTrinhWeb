@@ -8,21 +8,22 @@
 </head>
 <body>
 	<div class="header">
-			<img src="images/logo.png" id="LogoWeb">	
+			<img src="/images/logo.png" id="LogoWeb">	
 		</div>
+
 	<div class="UserBox">
 		<p class="bigSize">Thông tin cá nhân</p>
-		<form>
+		<form method="POST">
 			<div class="InputDiv">
 				<p>Họ và tên</p>
-				<input class="text-input" type="text" name="" placeholder="&ensp;Your Name" id="textboxName" value="Phạm Ngọc Sơn">
+				<input style="height: 22px" class="text-input" type="text" name="name" placeholder="&ensp;Your Name" id="textboxName" value="{{account.name}}">
 				<span>
 					<i class="fas fa-user"></i>
 				</span>
 			</div>
 			<div class="InputEmail">
 				<p>Email</p>
-				<input type="text" name="" placeholder="&ensp;Your Email" id="textboxEmail" value="phamngocson@gmail.com">
+				<input type="text" name="email" placeholder="&ensp;Your Email" id="textboxEmail" value="{{account.email}}">
 				<span>
 					<i class="far fa-envelope"></i>
 				</span>
@@ -31,21 +32,21 @@
 			<div class="InputPassword">
 				<p>Mật khẩu hiện tại</p>
 
-				<input type="Password" name="" placeholder="&ensp;Password" id="textboxPassword">
+				<input type="Password" name="" placeholder="&ensp;Password" id="textboxPassword" value = {{account.password}} readonly>
 				<span>
 					<i class="fas fa-unlock-alt"></i>
 				</span> 
 			</div>
 			<div class="InputPassword">
 				<p>Mật khẩu mới</p>
-				<input type="Password" name="" placeholder="&ensp; Repeat Password" id="textboxPassword">
+				<input type="Password" name="newpass" placeholder="&ensp; Repeat Password" id="textboxPassword">
 				<span>
 					<i class="fas fa-unlock-alt"></i>
 				</span> 
 			</div>
 			<div class="InputPassword">
 				<p>Nhập lại mật khẩu mới</p>
-				<input type="Password" name="" placeholder="&ensp; Repeat Password" id="textboxPassword">
+				<input type="Password" name="repeat" placeholder="&ensp; Repeat Password" id="textboxPassword">
 				<span>
 					<i class="fas fa-unlock-alt"></i>
 				</span> 

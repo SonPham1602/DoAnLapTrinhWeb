@@ -75,19 +75,19 @@ create table usertype(
     primary key(id)
 );
 
--- create table account(
--- 	id mediumint not null auto_increment,
---     name_account varchar(50),
---     password varchar(50),
---     time_expired date,
---     
---     primary key(id)
--- );
+create table account(
+	id mediumint not null auto_increment,
+    name_account varchar(50),
+    password varchar(50),
+    time_expired date,
+    
+    primary key(id)
+);
 
 create table user(
 	id mediumint not null auto_increment,
     id_type mediumint not null,
-    -- id_account mediumint not null unique,
+    id_account mediumint unique,
     name varchar(50),
     email varchar(100),
     birthday date,
@@ -120,43 +120,39 @@ insert into usertype(name) value ('Độc giả');
 insert into usertype(name) value ('Phóng viên');
 insert into usertype(name) value ('Biên tập viên');
 
--- insert into account (name_account, password) value ('huathanhson','1');
--- insert into account (name_account, password) value ('phamngocson','2');
--- insert into account (name_account, password) value ('nguyenhoangsang','3');
--- insert into account (name_account, password) value ('tranphusy','4');
--- insert into account (name_account, password) value ('phamtuuyen','5');
--- insert into account (name_account, password) value ('nguyenthianh','6');
--- insert into account (name_account, password) value ('dangtuangoc','7');
--- insert into account (name_account, password) value ('thanhthieu','8');
--- insert into account (name_account, password) value ('phamhuuthang','9');
--- insert into account (name_account, password) value ('vodongtrieu','10');
--- insert into account (name_account, password) value ('buithanhdat','11');
+insert into account (name_account, password) value ('huathanhson','1');
+insert into account (name_account, password) value ('phamngocson','2');
+insert into account (name_account, password) value ('nguyenhoangsang','3');
+insert into account (name_account, password) value ('tranphusy','4');
+insert into account (name_account, password) value ('phamtuuyen','5');
+insert into account (name_account, password) value ('nguyenthianh','6');
+insert into account (name_account, password) value ('dangtuangoc','7');
+insert into account (name_account, password) value ('thanhthieu','8');
+insert into account (name_account, password) value ('phamhuuthang','9');
+insert into account (name_account, password) value ('vodongtrieu','10');
+insert into account (name_account, password) value ('buithanhdat','11');
 
 
-insert into user(id_type, name, email) value (1,'Hứa Thanh Sơn', 'huason@gmail.com');
-insert into user(id_type, name, email) value (1,'Phạm Ngọc Sơn', 'ngocson.cla@gmail.com');
-insert into user(id_type, name, email, premium) value (2,'Nguyễn Hoàng Sang', 'nguyenhoangsang@gmail.com', 1);
-insert into user(id_type, name, email) value (2,'Trần Phú Sý', 'tranphusy@gmail.com');
-insert into user(id_type, name, email, premium) value (2,'Phạm Tú Uyên', 'phamtuuyen@gmail.com', 1);
-insert into user(id_type, name, email) value (2,'Nguyễn Thi Anh', 'nguyenthianh@gmail.com');
-insert into user(id_type, name, email) value (3,'Đặng Tuấn Ngọc', 'dangtuangoc@gmail.com');
-insert into user(id_type, name, email) value (3,'Thành Thiếu', 'thanhthieu@gmail.com');
-insert into user(id_type, name, email) value (4,'Phạm Hữu Thắng', 'phamhuuthang@gmail.com');
-insert into user(id_type, name, email) value (4,'Võ Đông Triều', 'vodongtrieu@gmail.com');
-insert into user(id_type, name, email) value (3,'Bùi Thành Đạt', 'buithanhdat@gmail.com');
-
-insert into editor(id, id_cat) value (9, 1);
-insert into editor(id, id_cat) value (10, 2);
-
-
-
-
+insert into user(id_account, id_type, name, email) value (1, 1,'Hứa Thanh Sơn', 'huason@gmail.com');
+insert into user(id_account, id_type, name, email) value (2, 1,'Phạm Ngọc Sơn', 'ngocson.cla@gmail.com');
+insert into user(id_account, id_type, name, email, premium) value (3, 2,'Nguyễn Hoàng Sang', 'nguyenhoangsang@gmail.com', 1);
+insert into user(id_account, id_type, name, email) value (4, 2,'Trần Phú Sý', 'tranphusy@gmail.com');
+insert into user(id_account, id_type, name, email, premium) value (5, 2,'Phạm Tú Uyên', 'phamtuuyen@gmail.com', 1);
+insert into user(id_account, id_type, name, email) value (6, 2,'Nguyễn Thi Anh', 'nguyenthianh@gmail.com');
+insert into user(id_account, id_type, name, email) value (7, 3,'Đặng Tuấn Ngọc', 'dangtuangoc@gmail.com');
+insert into user(id_account, id_type, name, email) value (8, 3,'Thành Thiếu', 'thanhthieu@gmail.com');
+insert into user(id_account, id_type, name, email) value (9, 4,'Phạm Hữu Thắng', 'phamhuuthang@gmail.com');
+insert into user(id_account, id_type, name, email) value (10, 4,'Võ Đông Triều', 'vodongtrieu@gmail.com');
+insert into user(id_account, id_type, name, email) value (11, 3,'Bùi Thành Đạt', 'buithanhdat@gmail.com');
 
 insert into category(name) values('Xã hội');
 insert into category(name) values('Giải trí');
 insert into category(name) values('Sức khỏe');
 insert into category(name) values('Kinh doanh');
 insert into category(name) values('Công nghệ');
+
+insert into editor(id, id_cat) value (9, 1);
+insert into editor(id, id_cat) value (10, 2);
 
 insert into category2(id_cat, name) values('1', 'Thời sự');
 insert into category2(id_cat, name) values('1', 'Pháp luật');
@@ -263,6 +259,50 @@ value(5,7,'Khám phá các tính năng vui vẻ, tiện ích của ColorOS 6 tr�
 				Như vậy, có thể thấy, với một smartphone chỉ 3,99 triệu, nhưng Realme rất chăm chút cho từng tính năng trên Realme 3, để đảm bảo trải nghiệm người dùng thoải mái, tiện lợi nhất.
 			</p>', 2);
 
+insert article(id_cat, id_cat2, title, date_post, image, image2, abstract, content, status) 
+value(5, 7,'LMHT: Đội hình full đóng lồng cực thốn trong Liên Minh Huyền Thoại','2019-06-16','http://genknews.genkcdn.vn/zoom/260_162/2019/6/16/photo-4-15606918440322131050150.jpg',
+'https://genknews.genkcdn.vn/2019/6/16/photo-4-15606918440322131050150.jpg',
+'Một đội hình vui vẻ để bạn trải nghiệm cùng bạn bè nhưng không kém phần ức chế dành cho team địch.', 
+'<h2 data-field="sapo">Một đội h&igrave;nh vui vẻ để bạn trải nghiệm c&ugrave;ng bạn b&egrave; nhưng kh&ocirc;ng k&eacute;m phần ức chế d&agrave;nh cho team địch.</h2>
+<div data-check-position="gamek_detail_position_start">&nbsp;</div>
+<div class="rightdetail_content" data-field="body">
+<p>Bạn muốn khiến kẻ địch khốn đốn trong mọi giao tranh? Bạn muốn b&aacute;n h&agrave;nh trong cả trận đấu? H&atilde;y thử đội h&igrave;nh nhốt team địch đến chết sau đ&acirc;y.</p>
+<p><strong>Camille</strong></p>
+<p>Camille sẽ l&agrave; c&aacute;i lồng đầu ti&ecirc;n trong đội h&igrave;nh n&agrave;y với nhiệm vụ nhốt c&aacute;c mục ti&ecirc;u quan trọng trong đội h&igrave;nh đối phương v&agrave;o cho đồng đội nh&agrave;o tới "l&agrave;m thịt". Trong thời điểm hiện tại, c&ocirc; n&agrave;ng l&agrave; một tướng đường tr&ecirc;n kh&aacute; ổn với khả năng đi được với nhiều k&egrave;o đấu v&agrave; c&oacute; thể trụ đường tốt trong trường hợp gặp k&egrave;o bất lợi. Kết hợp với Jarvan IV, Camille sẽ rất dễ d&agrave;ng lăn cầu tuyết nhờ khả năng dồn khống chế đơn giản của m&igrave;nh. Chỉ cần v&agrave;i lần hỏi thăm l&agrave; c&ocirc; n&agrave;ng n&agrave;y ho&agrave;n to&agrave;n c&oacute; thể chơi tr&ecirc;n đầu tr&ecirc;n cổ đối thủ rồi.</p>
+<div class="VCSortableInPreviewMode noCaption">
+<div><a class="detail-img-lightbox" title="" href="https://genknews.genkcdn.vn/2019/6/16/photo-1-15606918411211435535858.jpg" target="_blank" data-fancybox-group="img-lightbox"><img id="img_f0db7d50-903a-11e9-b3ee-d9422bf87fe7" class="lightbox-content gif-content" title="LMHT: Đội h&igrave;nh full đ&oacute;ng lồng cực thốn trong Li&ecirc;n Minh Huyền Thoại - Ảnh 1." src="https://genknews.genkcdn.vn/thumb_w/640/2019/6/16/photo-1-15606918411211435535858.jpg" alt="LMHT: Đội h&igrave;nh full đ&oacute;ng lồng cực thốn trong Li&ecirc;n Minh Huyền Thoại - Ảnh 1." width="" height="" data-original="https://genknews.genkcdn.vn/2019/6/16/photo-1-15606918411211435535858.jpg" /></a></div>
+<div class="PhotoCMS_Caption">&nbsp;</div>
+</div>
+<p>M&agrave; một khi đ&atilde; lăn cầu tuyết, đ&acirc;y l&agrave; một vị tướng m&agrave; kh&ocirc;ng đường giữa hay xạ thủ n&agrave;o muốn gặp phải v&igrave; khả năng khiến 3/4 b&igrave;nh m&aacute;u bay m&agrave;u với s&aacute;t thương chuẩn. Nhưng trong trường hợp gặp k&egrave;o tr&ecirc;n, nếu kh&ocirc;ng biết đ&aacute;nh th&igrave; Camille rất dễ biến th&agrave;nh ATM của đối phương. Do đ&oacute; c&ocirc; n&agrave;ng n&agrave;y sẽ cần sự chăm s&oacute;c tận t&igrave;nh từ người đi rừng.</p>
+<p><strong>Jarvan IV</strong></p>
+<p>Khả năng đ&oacute;ng lồng của vị tướng n&agrave;y th&igrave; quả thực l&agrave; miễn b&agrave;n rồi, mỗi lần &uacute;p ai cũng đồng nghĩa với việc c&oacute; người nằm xuống hoặc bắt buộc phải tốc biến. V&agrave; c&ograve;n g&igrave; th&iacute;ch th&uacute; hơn khi m&agrave; đường n&agrave;o cũng c&oacute; khống chế cứng. Đ&atilde; vậy lại c&ograve;n thuộc dạng dễ sử dụng nữa chứ. Trong đội h&igrave;nh n&agrave;y, Jarvan IV c&oacute; thể l&ecirc;n kiểu đỡ đ&ograve;n hoặc thậm ch&iacute; l&agrave; full s&aacute;t thương t&ugrave;y v&agrave;o t&igrave;nh h&igrave;nh của trận đấu. Mặc d&ugrave; c&oacute; bị giảm sức mạnh một ch&uacute;t nhưng đừng khinh thường Jarvan IV nh&eacute;. Điều đ&aacute;ng lưu &yacute; l&agrave; phải &uacute;p lồng v&agrave;o mục ti&ecirc;u quan trọng để đồng đội c&oacute; thể dồn s&aacute;t thương đồng thời đợi tr&uacute;ng khống chế rồi hẵng combo để dồn.</p>
+<div class="VCSortableInPreviewMode noCaption">
+<div><a class="detail-img-lightbox" title="" href="https://genknews.genkcdn.vn/2019/6/16/photo-1-15606918440291586523012.jpg" target="_blank" data-fancybox-group="img-lightbox"><img id="img_f2b98c20-903a-11e9-b0c6-8f292a4123a0" class="lightbox-content gif-content" title="LMHT: Đội h&igrave;nh full đ&oacute;ng lồng cực thốn trong Li&ecirc;n Minh Huyền Thoại - Ảnh 2." src="https://genknews.genkcdn.vn/thumb_w/640/2019/6/16/photo-1-15606918440291586523012.jpg" alt="LMHT: Đội h&igrave;nh full đ&oacute;ng lồng cực thốn trong Li&ecirc;n Minh Huyền Thoại - Ảnh 2." width="" height="" data-original="https://genknews.genkcdn.vn/2019/6/16/photo-1-15606918440291586523012.jpg" /></a></div>
+<div class="PhotoCMS_Caption">&nbsp;</div>
+</div>
+<p><strong>Veigar</strong></p>
+<p>Veigar sẽ l&agrave; người đ&oacute;ng lồng cuối c&ugrave;ng v&agrave; cũng l&agrave; vị tướng đặt dấu chấm hết cho c&aacute;c nạn nh&acirc;n. Giai đoạn đầu trận, Veigar c&oacute; lẽ sẽ hơi yếu một ch&uacute;t nhưng với sự trợ gi&uacute;p từ Jarvan IV, ph&aacute;p sư hắc &aacute;m n&agrave;y sẽ c&oacute; thể lăn cầu tuyết cực kỳ nhanh ch&oacute;ng. May ra đ&aacute;nh Zed th&igrave; c&ograve;n c&oacute; cửa chạy trốn chứ vớ phải c&aacute;c tướng lướt lướt như đấng th&igrave; đ&uacute;ng l&agrave; vui miễn b&agrave;n. C&ugrave;ng với Kai&rsquo;Sa, Veigar sẽ đ&oacute;ng vai tr&ograve; l&agrave; nguồn s&aacute;t thương ch&iacute;nh của đội. Nhờ v&agrave;o c&aacute;c hiệu ứng khống chế, việc dồn kỹ năng sẽ trở n&ecirc;n đơn giản hơn v&agrave; hắn c&oacute; thể t&iacute;ch cộng dồn&nbsp;<strong>Sức Mạnh Quỷ Quyệt&nbsp;</strong>nhanh ch&oacute;ng.</p>
+<div id="admzone508553" class="wp100 mt-10">&nbsp;</div>
+<div class="VCSortableInPreviewMode noCaption">
+<div><a class="detail-img-lightbox" title="" href="https://genknews.genkcdn.vn/2019/6/16/photo-2-15606918440302127591989.jpg" target="_blank" data-fancybox-group="img-lightbox"><img id="img_f283fd30-903a-11e9-bb97-6d115d1f27d6" class="lightbox-content gif-content" title="LMHT: Đội h&igrave;nh full đ&oacute;ng lồng cực thốn trong Li&ecirc;n Minh Huyền Thoại - Ảnh 3." src="https://genknews.genkcdn.vn/thumb_w/640/2019/6/16/photo-2-15606918440302127591989.jpg" alt="LMHT: Đội h&igrave;nh full đ&oacute;ng lồng cực thốn trong Li&ecirc;n Minh Huyền Thoại - Ảnh 3." width="" height="" data-original="https://genknews.genkcdn.vn/2019/6/16/photo-2-15606918440302127591989.jpg" /></a></div>
+<div class="PhotoCMS_Caption">&nbsp;</div>
+</div>
+<p>Veigar kị nhất l&agrave; gặp tướng cơ động v&agrave; s&aacute;t thủ. Ở k&egrave;o h&ograve;a đường, c&agrave;ng đ&aacute;nh vị tướng n&agrave;y sẽ c&agrave;ng khỏe. Nhưng với c&aacute;c tướng cơ động, Veigar sẽ dễ bị lừa mất&nbsp;<strong>Bẻ Cong Kh&ocirc;ng Gian (E)</strong><strong>&nbsp;</strong>rồi trở th&agrave;nh miếng mồi ngon trong thời gian kỹ năng n&agrave;y chưa hồi. Do đ&oacute; người sử dụng Veigar cần phải c&oacute; c&aacute;i đầu b&igrave;nh tĩnh hoặc được chăm s&oacute;c tận t&igrave;nh từ người đi rừng. Ngậm đắng nuốt cay trong giai đoạn đầu trận l&agrave; ổn nhất v&igrave; c&agrave;ng đ&aacute;nh, Veigar sẽ c&agrave;ng khỏe.</p>
+<p><strong>Kai&rsquo;Sa</strong></p>
+<p>Như đ&atilde; n&oacute;i ở tr&ecirc;n, Kai&rsquo;Sa sẽ l&agrave; một trong hai nguồn s&aacute;t thương ch&iacute;nh của đội h&igrave;nh "đ&oacute;ng lồng" b&ecirc;n cạnh Veigar. C&oacute; một thứ m&agrave; Kai&rsquo;Sa rất th&iacute;ch, đ&oacute; ch&iacute;nh l&agrave; đồng đội c&oacute; hiệu ứng khống chế do n&oacute; gi&uacute;p c&ocirc; n&agrave;ng n&agrave;y c&oacute; thể thoải m&aacute;i bay nhảy trong giao tranh với chi&ecirc;u cuối của m&igrave;nh. Hoặc đơn giản l&agrave; l&agrave;m c&aacute;c pha gank bất ngờ bằng chi&ecirc;u cuối. Đi c&ugrave;ng với Zyra, Kai&rsquo;Sa sẽ c&oacute; thể đ&aacute;nh rất hổ b&aacute;o nhờ khả năng kiểm so&aacute;t đường của Gai Nổi Loạn. Bộ đ&ocirc;i n&agrave;y sẽ gần như kh&ocirc;ng phải ngại k&egrave;o n&agrave;o v&agrave; c&oacute; thể đi từ h&ograve;a đến thắng nếu c&oacute; sự trợ gi&uacute;p từ rừng.</p>
+<div class="VCSortableInPreviewMode active noCaption">
+<div><a class="detail-img-lightbox" title="" href="https://genknews.genkcdn.vn/2019/6/16/photo-3-1560691844031243601479.jpg" target="_blank" data-fancybox-group="img-lightbox"><img id="img_f24cc090-903a-11e9-b3ee-d9422bf87fe7" class="lightbox-content gif-content" title="LMHT: Đội h&igrave;nh full đ&oacute;ng lồng cực thốn trong Li&ecirc;n Minh Huyền Thoại - Ảnh 4." src="https://genknews.genkcdn.vn/thumb_w/640/2019/6/16/photo-3-1560691844031243601479.jpg" alt="LMHT: Đội h&igrave;nh full đ&oacute;ng lồng cực thốn trong Li&ecirc;n Minh Huyền Thoại - Ảnh 4." width="" height="" data-original="https://genknews.genkcdn.vn/2019/6/16/photo-3-1560691844031243601479.jpg" /></a></div>
+<div class="PhotoCMS_Caption">&nbsp;</div>
+</div>
+<p>Trong trường hợp gặp đội h&igrave;nh nhiều s&aacute;t thủ, đấu sĩ lao v&agrave;o, Kai&rsquo;Sa cũng sẽ kh&ocirc;ng phải sợ v&igrave; lượng khống chế từ đội h&igrave;nh n&agrave;y l&agrave; qu&aacute; đủ để giữ c&ocirc; n&agrave;ng bắn từ đầu đến cuối giao tranh.</p>
+<p><strong>Zyra</strong></p>
+<p>Tại sao lại chọn Zyra v&agrave;o trong đội h&igrave;nh n&agrave;y? đ&oacute; ch&iacute;nh l&agrave; v&igrave; khả năng dồn khống chế diện rộng của c&ocirc; n&agrave;ng. Với&nbsp;Tối Hậu Thư (R), Đại Địa Chấn (R)&nbsp;v&agrave;&nbsp;Bẻ Cong Kh&ocirc;ng Gian (E),&nbsp;Rễ C&acirc;y Tr&oacute;i Buộc (E)&nbsp;của Zyra sẽ c&oacute; thể tr&uacute;ng nhiều mục ti&ecirc;u hơn. Mở đường cho&nbsp;Bụi Gai Kỳ Dị (R)&nbsp;c&oacute; thể hất tung v&ocirc; số người. Đ&atilde; vậy, tầm t&aacute;c dụng của&nbsp;Bụi Gai Kỳ Dị (R)&nbsp;lại c&ograve;n to hơn cả&nbsp;Tối Hậu Thư (R)&nbsp;n&ecirc;n mỗi lần combo cả hai, sẽ chẳng kh&aacute;c g&igrave; bộ đ&ocirc;i Camille-Galio nổi tiếng cả, thậm ch&iacute; n&oacute; c&ograve;n khủng khiếp v&agrave; nhiều s&aacute;t thương hơn.</p>
+<div class="VCSortableInPreviewMode active noCaption">
+<div><a class="detail-img-lightbox" title="" href="https://genknews.genkcdn.vn/2019/6/16/photo-4-15606918440322131050150.jpg" target="_blank" data-fancybox-group="img-lightbox"><img id="img_f2a6ee80-903a-11e9-a850-f119d3f9e9bd" class="lightbox-content gif-content" title="LMHT: Đội h&igrave;nh full đ&oacute;ng lồng cực thốn trong Li&ecirc;n Minh Huyền Thoại - Ảnh 5." src="https://genknews.genkcdn.vn/thumb_w/640/2019/6/16/photo-4-15606918440322131050150.jpg" alt="LMHT: Đội h&igrave;nh full đ&oacute;ng lồng cực thốn trong Li&ecirc;n Minh Huyền Thoại - Ảnh 5." width="" height="" data-original="https://genknews.genkcdn.vn/2019/6/16/photo-4-15606918440322131050150.jpg" /></a></div>
+<div class="PhotoCMS_Caption">&nbsp;</div>
+</div>
+<p>Nếu gặp k&egrave;o bất lợi hoặc giao tranh sai lầm th&igrave; bộ đ&ocirc;i Kai&rsquo;Sa-Zyra cũng kh&oacute; bị &eacute;p trụ hơn do khả năng dọn l&iacute;nh của cả hai. B&ecirc;n cạnh đ&oacute;, nhỡ m&agrave; gặp c&aacute;c tướng k&eacute;o th&igrave; c&aacute;c mầm c&acirc;y của Zyra sẽ c&oacute; thể thoải m&aacute;i chắn ch&uacute;ng. Bất lợi nhất c&oacute; lẽ l&agrave; khi gặp c&aacute;c k&egrave;o dồn hiệu ứng khống chế từ xa hoặc dồn thẳng v&agrave;o đầu. Trong trường hợp n&agrave;y th&igrave; cần nhờ đến Jarvan IV rồi.</p>
+</div>', 2); 
 insert comment(id_art, date_comment,image_reader,name_reader,content)
 value(1, '2019-05-25','/images/avatar.jpg','Sơn Hứa','Bài viết khá hay!');	
 
@@ -277,6 +317,7 @@ value(1, '2019-05-25','/images/avatar.jpg','Sơn Hứa','Bài viết khá hay!')
 -- drop table article;
 -- drop table category2;
 -- drop table category;
--- drop table status; 
+-- drop table status;
+-- drop table account;
 
 
