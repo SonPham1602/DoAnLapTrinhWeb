@@ -5,6 +5,23 @@
 	<title>DashboardAdmin</title>
 	<link rel="stylesheet" type="text/css" href="/public/css/DashboardAdmin.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=ezd73nxbzc7bu6e86g2l82jbbffke0mwevwrnyvc5q8h89j6"></script>
+	<script>
+  	$(function () {
+      tinymce.init({
+      selector: '#NoiDungBaiDang',
+      height: 600,
+      menubar: false,
+      plugins: 'paste image link autolink lists table media',
+      toolbar: [
+        'undo redo | bold italic underline strikethrough | numlist bullist | alignleft aligncenter alignright',
+        'forecolor backcolor',
+        'table link image media',
+      ],
+    });
+  })
+</script>
 </head>
 <body>
 	<div class="container">
@@ -49,7 +66,10 @@
 							<i class="fas fa-angle-down icon"></i>
 							<ul>
 								<li id="li-quan-ly-bai-viet">
-									<a href="#">Quản lý bài viết</a>
+									<a href="#">Quản lý bài viết</a>			
+								</li>
+								<li id="li-bai-viet-moi">
+									<a href="#">Viết bài mới</a>	
 								</li>
 								<li id="li-quan-ly-nhan">
 									<a href="#">Quản lí nhãn</a>
@@ -164,61 +184,8 @@
 				</ul>
 			</div>
 			<!-- Trang chu -->
-			<div class="TrangChuDashboard panel">
-				<p class="TieuDeTrang">Trang chủ</p>
-				<div>
-					<article id="so-luong-bai-viet-da-xuat-ban">
-						<p class="tieu-de">Bài viết đã xuất bản</p>
-						<p class="number">10</p>
-					</article>
-					<article  id="so-luong-bai-viet-tu-choi">
-						<p class="tieu-de">Bài viết bị từ chối</p>
-						<p class="number">2</p>
-					</article>
-					<article  id="so-luong-bai-viet-da-viet">
-						<p class="tieu-de">Số lượng bài viết đã viết</p>
-						<p class="number">12</p>
-					</article>
-					<article  id="so-luot-like">
-						<p class="tieu-de">Số lượt like</p>
-						<p class="number">56</p>
-					</article>
-					<article id="so-luot-chia-se">
-						<p class="tieu-de">Số lượng chia sẽ</p>
-						<p class="number">10</p>
-					</article>
-
-
-				</div>
-				<p class="TieuDeTrang">Danh sách các chuyên đề đã viết</p>
-				<article id="danh-sach-cac-bai-viet-chuyen-de">
-
-					<ul>
-						<li>
-							<label>Xã hội:</label>
-							5
-						</li>
-						<li>
-							<label>Giải trí:</label>
-							5
-						</li>
-						<li>
-							<label>Sức khoẻ:</label>
-							5
-						</li>
-						<li>
-							<label>Kinh doanh:</label>
-							5
-						</li>
-						<li>
-							<label>Công nghệ:</label>
-							5
-						</li>
-					</ul>
-				</article>
-			</div>
-			<div class="DanhSachBaiVietDashboard panel">
-				  
+			
+			<div class="DanhSachBaiVietDashboard panel">	  
 				
 			</div>
 
@@ -227,84 +194,54 @@
 				<p class="TieuDeTrang">Danh sách phóng viên</p>
 					<div class="data-table">
 					<table border="1px" class="table-danh-sach-bai-viet">
-						<tr id="header-table">
-							<td>STT</td>
-							<td>Tên độc giả</td>
+						<tr id="header-table">							
+							<td>Tên phóng viên</td>
 							<td>Email</td>
 							<td>Chức năng</td>
-						</tr>		
+						</tr>
+						{{#each users3}}
 						<tr>
-							<td>1</td>
-							<td>Nguyễn Hoàng Sang</td>
-							<td>nguyenhoangsang@gmail.com</td>
+							<td>{{name}}</td>
+							<td>{{email}}</td>
 							<td>
-								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
-								
+								<button class="btn-xem-bai-viet" onclick="window.location.href='/admin/1/user/{{id}}/edit'">Chỉnh sửa</button>
+								<button class="btn-xem-bai-viet" onclick="window.location.href='/admin/1/user/{{id}}/delete'">
+									<i class="far fa-trash-alt"></i> &nbsp Xoá
+								</button>							
 							</td>
 						</tr>
-						<tr>
-							<td>2</td>
-							<td>Phạm Tú Uyên</td>
-							<td>phamtuuyen@gmail.com</td>
-							<td>
-								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
-								
-							</td>
-						</tr>
-
-						<tr>
-							<td>3</td>
-							<td>NguyenThiAnh</td>
-							<td>nguyenthianh@gmail.com</td>
-							<td>
-								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
-								
-							</td>
-						</tr>					
+						{{/each}}				
 					</table>
+					<button  onclick="window.location.href='/admin/1/user/add/{{id_type3}}'" class="btn-chuc-nang m-auto" style="margin-left: 240px; width:50px; margin-bottom: 20px; padding-left: 10px"> 
+					<i class="fas fa-plus"></i> &nbsp</button>
 				</div>
 			</div>
 
-				<!-- 	Quản lý độc giả prmium-->
+				<!-- 	Quản lý độc giả premium-->
 			<div class="QuanLyDocGiaPremium panel">
 				<p class="TieuDeTrang">Danh sách độc giả Premium</p>
 				<div class="data-table">
 					<table border="1px" class="table-danh-sach-bai-viet">
 						<tr id="header-table">
-							<td>STT</td>
 							<td>Tên độc giả</td>
 							<td>Email</td>
 							<td>Chức năng</td>
-						</tr>		
+						</tr>
+						{{#each users1}}	
 						<tr>
-							<td>1</td>
-							<td>Nguyễn Hoàng Sang</td>
-							<td>nguyenhoangsang@gmail.com</td>
-							<td>
-								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+							<td>{{name}}</td>
+							<td>{{email}}</td>
+							<td>							
+								<button class="btn-xem-bai-viet" onclick="window.location.href='/admin/1/user/{{id}}/delete'"><i class="far fa-trash-alt">
+									</i> &nbsp Xoá
+								</button>
 								<button class="btn-chuc-nang"><i class="fas fa-money-check-alt"></i> &nbsp Gia hạn</button>
 							</td>
 						</tr>
-						<tr>
-							<td>2</td>
-							<td>Phạm Tú Uyên</td>
-							<td>phamtuuyen@gmail.com</td>
-							<td>
-								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
-								<button class="btn-chuc-nang"><i class="fas fa-money-check-alt"></i> &nbsp Gia hạn</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>3</td>
-							<td>NguyenThiAnh</td>
-							<td>nguyenthianh@gmail.com</td>
-							<td>
-								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
-								<button class="btn-chuc-nang"><i class="fas fa-money-check-alt"></i> &nbsp Gia hạn</button>
-							</td>
-						</tr>					
+						{{/each}}		
 					</table>
+					<button  onclick="window.location.href='/admin/1/user/add/{{id_type2}}'+ '/premium'" class="btn-chuc-nang m-auto" style="margin-left: 190px; width:50px; margin-bottom: 20px; padding-left: 10px"> 
+					<i class="fas fa-plus"></i> &nbsp</button>
 				</div>
 			</div>
 
@@ -314,47 +251,25 @@
 				<div class="data-table">
 					<table border="1px" class="table-danh-sach-bai-viet">
 						<tr id="header-table">
-							<td>STT</td>
 							<td>Tên độc giả</td>
 							<td>Email</td>
 							<td>Chức năng</td>
-						</tr>		
+						</tr>
+						{{#each users2}}	
 						<tr>
-							<td>1</td>
-							<td>Nguyễn Hoàng Sang</td>
-							<td>nguyenhoangsang@gmail.com</td>
+							<td>{{name}}</td>
+							<td>{{email}}</td>
 							<td>
-								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
+								<button class="btn-xem-bai-viet" onclick="window.location.href='/admin/1/user/{{id}}/edit'">Chỉnh sửa</button>
+								<button class="btn-xem-bai-viet" onclick="window.location.href='/admin/1/user/{{id}}/delete'">
+									<i class="far fa-trash-alt"></i> &nbsp Xoá
+							</button>
 							</td>
 						</tr>
-
-						<tr>
-							<td>2</td>
-							<td>Trần Phú Sý</td>
-							<td>tranphusy@gmail.com</td>
-							<td>
-								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>3</td>
-							<td>Phạm Tú Uyên</td>
-							<td>phamtuuyen@gmail.com</td>
-							<td>
-								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>4</td>
-							<td>NguyenThiAnh</td>
-							<td>nguyenthianh@gmail.com</td>
-							<td>
-								<button class="btn-chuc-nang"><i class="fas fa-edit"></i> &nbsp Xoá</button>
-							</td>
-						</tr>					
+						{{/each}}									
 					</table>
+					<button  onclick="window.location.href='/admin/1/user/add/{{id_type2}}'" class="btn-chuc-nang m-auto" style="margin-left: 210px; width:50px; margin-bottom: 20px; padding-left: 10px"> 
+					<i class="fas fa-plus"></i> &nbsp</button>
 				</div>
 			</div>
 			<!-- 	Quản lý bài viết -->
@@ -366,189 +281,120 @@
 							<td>STT</td>
 							<td>Tên bài viết</td>
 							<td>Chuyên mục</td>
-							<td>Nguời kiểm duyệt</td>
-							<td>Ngày kiểm duyệt</td>
+							<td>Ngày đăng</td>
 							<td>Trạng thái</td>
-							<td>Xuất bản</td>
-						</tr>		
+							<td>Chi tiết</td>
+							<td>Xóa</td>
+						</tr>
+						{{#each articles}}		
 						<tr>
-							<td>1</td>
-							<td>Firefox chặn Add-on dùng kỹ thuật che giấu mã nguồn</td>
-							<td>Công nghệ</td>
-							<td>Hứa Thanh Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							<td>Đã xuất bản</td>
+							<td>{{id}}</td>
+							<td>{{title}}</td>
+							<td>{{cname}}</td>
+							<td>{{format date_post}}</td>
+							<td>{{sname}}</td>
 							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
+								<button class="btn-xem-bai-viet" onclick="window.location.href='/admin/1/{{id}}'">Xem & chỉnh sửa</button>
+							</td>
+							<td>
+								<button type="submit" class="btn-tu-choi" onclick="window.location.href='/admin/1/{{id}}/delete'">
+									<i class="fas fa-times"></i>
+								</button>
 							</td>
 						</tr>
-
-						<tr>
-							<td>2</td>
-							<td>Xem xét kỷ luật nguyên Phó Thủ tướng Vũ Văn Ninh</td>
-							<td>Thời sự</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							<td>Chưa được duyệt</td>
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>3</td>
-							<td>'Thánh nữ mì gõ' Phi Huyền Trang nổi tiếng ra sao?</td>
-							<td>Giải trí</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							<td>Bị từ chối</td>
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>4</td>
-							<td>Từ kẻ nghiện ngập, ‘Người sắt’ Robert Downey Jr. vươn lên thành tài tử triệu đô</td>
-							<td>Giải trí</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							<td>Đã xuất bản</td>
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>Google Maps làm nổi bật hình ảnh các món ăn phổ biến nhất của nhà hàng</td>
-							<td>Công nghệ</td>
-							<td>Nguyễm Công Sơn</td>
-							<td>08:24, 04/05/2019 </td>
-							<td>Chờ xuất bản</td>
-							<td>
-								<button class="btn-xem-bai-viet">Xem bài viết</button>
-							</td>
-						</tr>
-						
+						{{/each}}					
 					</table>
 				</div>
 
 			</div>
-		
+			
+			<!-- Viết bài mới -->
+			<form method="POST">
+			<div class="VietBaiDashboard panel">
+				<p class="TieuDeTrang">Viết bài</p>
+				<p>Tiêu đề bài viết</p>
+				<input type="text" name="title" placeholder="Nhập Tiêu Đề Bài Viết" id="tieu-de-bai-viet" style="width: 500px" >
+				<p>Tóm tắt</p>
+				<textarea id="TomTatBaiDang" name="abstract" style="width: 100%; height: 150px"></textarea>
+				<p>Ngày đăng:</p> 
+				<input type="date" name="datepost">
+				<br>
+				<p>Ảnh đại diện</p>
+				<input id="HinhMoTa" type="text" name="img" size="55"><br>
+				<img id="ImageMoTa" src="http://liststories.com/wp-content/uploads/2014/10/default-img.gif" width="400px" height="auto" >
+				<p>Nội dung bài viết</p>
+				<textarea name="content" id="NoiDungBaiDang" name="NoiDungBaiDang">{{article.content}}</textarea>
+				<p>Chuyên mục</p>
+				<select id="chuyen-de-bai-viet" name="namecat">
+					<option>Xã hội</option>
+					<option>Giải trí</option>
+					<option>Sức khoẻ</option>
+					<option>Kinh doanh</option>
+					<option>Công nghệ</option>
+				</select><br>
+				<!-- <p>Tag</p>
+				<input type="text" name="tag" placeholder="Thêm tag" id="them-tag"><br> -->
+				<button type="submit" id="btn-xuat-ban-bai-viet">
+					<i class="fas fa-file-export"></i>					
+					Xuất bản bài viết
+				</button>
+			</div>
+			</form>
+
 			<!-- Quản lý chuyên mục -->
 			<div class="QuanLyChuyenMuc panel">
 				<p class="TieuDeTrang">Danh sách chuyên mục</p>
-
-				<div>
-					
-					<button  class="btn-chuc-nang m-auto"> <i class="fas fa-plus"></i> &nbsp Thêm chuyên mục</button>
+				<div>					
+					<button  onclick="window.location.href='/admin/1/category/add'" class="btn-chuc-nang m-auto"> 
+						<i class="fas fa-plus"></i> &nbsp Thêm chuyên mục</button>
 				</div>
 				<!-- chỗ này m dùng dung for để đổ dữ liệu dô nha.mỗi cái data-table là một cái chuyên mục á  -->
 
 				<!-- Tin Xa hoi -->
+				{{#each categorys}}
 				<div class="data-table ChuyenMucDiv">
-					<h4 class="TenChuyenMuc">Xã Hội</h4>
+					<h4 class="TenChuyenMuc">{{name}}</h4>
 					<div class="align-item-center">
-						<button class="btn-chuc-nang m-auto"> <i class="far fa-trash-alt"></i> &nbspXoá chuyên mục</button>
-						<button  class="btn-chuc-nang m-auto"> <i class="fas fa-edit"></i> &nbsp Sửa tên chuyên mục</button>
+						<button class="btn-chuc-nang m-auto" onclick="window.location.href='/admin/1/category/{{id}}/delete'"> 
+							<i class="far fa-trash-alt"></i> &nbspXoá chuyên mục
+						</button>
+						<button  class="btn-chuc-nang m-auto" onclick="window.location.href='/admin/1/category/{{id}}/edit'"> 
+							<i class="fas fa-edit"></i> &nbsp Sửa tên chuyên mục
+						</button>
 					</div>
 					
 					<table border="1px" class="table-danh-sach-bai-viet table-hover m-5">
-						<tr id="header-table">
-							<td>STT</td>
+						<tr id="header-table">					
 							<td>Tên chuyên mục</td>
 							<td>Chức năng</td>
-						</tr>		
+						</tr>
+						{{#each ../categorys2}}	
+						{{#if_equal id_cat  ../id}}				
 						<tr>
-							<td>1</td>
-							<td>Thời sự</td>
+							<td>{{name}}</td>
 							<td>
-								<button class="btn-xem-bai-viet"><i class="far fa-trash-alt"></i> &nbsp Xoá</button>
-								<button class="btn-xem-bai-viet">  <i class="fas fa-edit"></i> &nbsp  Chỉnh sửa</button>
+								<button class="btn-xem-bai-viet" onclick="window.location.href='/admin/1/category2/{{id}}/delete'">
+									<i class="far fa-trash-alt"></i> &nbsp Xoá
+								</button>
+								<button class="btn-xem-bai-viet" onclick="window.location.href='/admin/1/category2/{{id}}/edit'">
+								  <i class="fas fa-edit"></i> &nbsp  Chỉnh sửa
+								</button>
 							</td>
 						</tr>
-
-						<tr>
-							<td>2</td>
-							<td>Pháp luật</td>
-							<td>
-								<button class="btn-xem-bai-viet">Xoá</button>
-								<button class="btn-xem-bai-viet">Chỉnh sửa</button>
-							</td>
-						</tr>					
+						{{/if_equal}}
+						{{/each}}	
 					</table>
+					<div>					
+						<button  onclick="window.location.href='/admin/1/category2/add/{{id}}'" class="btn-chuc-nang m-auto" style="margin-left: 320px; width:50px; margin-bottom: 20px; padding-left: 10px"> 
+							<i class="fas fa-plus"></i> &nbsp</button>
+						</div>
 				</div>
-				<!-- Tin Giai Tri -->
-				<div class="data-table ChuyenMucDiv">
-					<h4 class="TenChuyenMuc">Giải trí</h4>
-					<div class="align-item-center">
-						<button class="btn-chuc-nang m-auto"> <i class="far fa-trash-alt"></i> &nbsp Xoá chuyên mục</button>
-						<button  class="btn-chuc-nang m-auto"> <i class="fas fa-edit"></i> &nbspSửa tên chuyên mục</button>
-					</div>
-					
-					<table border="1px" class="table-danh-sach-bai-viet table-hover m-5">
-						<tr id="header-table">
-							<td>STT</td>
-							<td>Tên chuyên mục</td>
-							<td>Chức năng</td>
-						</tr>		
-						<tr>
-							<td>1</td>
-							<td>Ngôi sao</td>
-							<td>
-								<button class="btn-xem-bai-viet"> <i class="far fa-trash-alt"></i> &nbsp Xoá</button>
-								<button class="btn-xem-bai-viet"> 
-									<i class="fas fa-edit"></i> &nbsp Chỉnh sửa</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>2</td>
-							<td>Điện ảnh</td>
-							<td>
-								<button class="btn-xem-bai-viet">  <i class="far fa-trash-alt"></i> &nbspXoá</button>
-								<button class="btn-xem-bai-viet"> <i class="fas fa-edit"></i> &nbsp Chỉnh sửa</button>
-							</td>
-						</tr>					
-					</table>
-				</div>
-				<div class="data-table ChuyenMucDiv">
-					<h4 class="TenChuyenMuc">Kinh Doanh</h4>
-					<div class="align-item-center">
-						<button class="btn-chuc-nang m-auto"> <i class="far fa-trash-alt"></i> &nbsp Xoá chuyên mục</button>
-						<button  class="btn-chuc-nang m-auto"><i class="fas fa-edit"></i> &nbsp Sửa tên chuyên mục</button>
-					</div>
-					
-					<table border="1px" class="table-danh-sach-bai-viet table-hover m-5">
-						<tr id="header-table">
-							<td>STT</td>
-							<td>Tên chuyên mục</td>
-							<td>Chức năng</td>
-						</tr>		
-						<tr>
-							<td>1</td>
-							<td>Nông sản</td>
-							<td>
-								<button class="btn-xem-bai-viet"> <i class="far fa-trash-alt"></i> &nbsp  Xoá</button>
-								<button class="btn-xem-bai-viet"><i class="fas fa-edit"></i> &nbsp Chỉnh sửa</button>
-							</td>
-						</tr>
-
-						<tr>
-							<td>2</td>
-							<td>Hải sản</td>
-							<td>
-								<button class="btn-xem-bai-viet">   <i class="far fa-trash-alt"></i> &nbsp  Xoá</button>
-								<button class="btn-xem-bai-viet"><i class="fas fa-edit"></i> &nbsp Chỉnh sửa</button>
-							</td>
-						</tr>					
-					</table>
-				</div>
+				{{/each}}			
 			</div>
 			
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script type="text/javascript" src="/public/js/DashboardAdmin.js"></script>
+	<script type="text/javascript" src="/public/js/GetImage.js"></script>
 </body>
 </html>

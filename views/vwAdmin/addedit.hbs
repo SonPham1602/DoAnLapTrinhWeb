@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- view thêm sửa của chuyên mục-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DashboardAmin</title>
+	<link rel="stylesheet" type="text/css" href="/public/css/DashboardWriter.css">
+</head>
+<body>
+	<div class="container">
+			<form method="POST">
+			<div class="VietBaiDashboard">
+				<p>Tên chuyên mục</p>
+				<br>
+				<textarea name="namecat" style="padding-top: 5px; padding-left: 10px; font-size: 15px; height: 25px">{{cname}}</textarea>
+				<button type="submit" id="btn-xuat-ban-bai-viet" >
+					<i class="fas fa-file-export"></i>					
+					Nhập
+				</button>
+			</div>
+			</form>
+			<button id="btn-luu-bai-viet" style="margin-left: 15px">							
+					<a href="/admin/1">Back</a>
+			</button>
+	</div>
+</body>

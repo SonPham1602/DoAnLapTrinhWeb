@@ -14,5 +14,14 @@ module.exports = {
 		return db.load(
 			`select id from category where name = '${name}'`
 			)
+	},
+	delete: id => {
+    	return db.delete('category', 'id', id);
+  	},
+  	add: entity => {
+		return db.add('category', entity);	
+	},
+	update: entity => {
+		return db.update('category', 'id', entity)
 	}
 }

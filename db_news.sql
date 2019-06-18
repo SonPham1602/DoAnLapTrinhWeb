@@ -17,6 +17,12 @@ create table tag(
     primary key (id)
 );
 
+create table status(
+	id  mediumint not null auto_increment,
+    name varchar(50),
+    primary key (id)
+);
+
 create table article(
 	id mediumint not null auto_increment,
 	id_cat	mediumint not null,
@@ -28,18 +34,20 @@ create table article(
     abstract varchar(500),
     content text,
     id_writer mediumint,
-    status int check (status = 1 or status = 2 or status = 3 or status = 4),
+    status mediumint check (status = 1 or status = 2 or status = 3 or status = 4),
     -- status 1: Đã được duyệt, chờ xuất bản
     -- status 2: Đã xuất bản
     -- status 3: Bị từ chối
     -- status 4: Chưa được duyệt
     
     view int default 0,
-    premium int default 0 check (premium = 0 or premium = 1),  
+    premium int default 0 check (premium = 0 or premium = 1), 
 	primary key (id),
 	foreign key (id_cat) references category(id),
-    foreign key(id_cat2) references category2(id)
+    foreign key(id_cat2) references category2(id),
+    foreign key (status) references status(id)
 );
+
 
 create table tag_article(
 	id_tag mediumint not null,
@@ -64,41 +72,84 @@ create table comment(
 create table usertype(
 	id mediumint not null auto_increment,
     name varchar(50),
-    
     primary key(id)
 );
 
-create table account(
-	id mediumint not null auto_increment,
-    name_account varchar(50),
-    password varchar(50),
-    time_expired date,
-    
-    primary key(id)
-);
+-- create table account(
+-- 	id mediumint not null auto_increment,
+--     name_account varchar(50),
+--     password varchar(50),
+--     time_expired date,
+--     
+--     primary key(id)
+-- );
 
 create table user(
 	id mediumint not null auto_increment,
-    id_account mediumint not null unique,
     id_type mediumint not null,
+    -- id_account mediumint not null unique,
     name varchar(50),
     email varchar(100),
     birthday date,
+    premium int default 0 check (premium = 0 or premium = 1), 
 	
     primary key(id),
-	foreign key(id_type) references usertype(id),
-    foreign key(id_account) references account(id)
+	foreign key(id_type) references usertype(id)
+   --  foreign key(id_account) references account(id)
 );
 
 -- table bang writer luu but danh quan he 1 - 1 voi bang user qua id
 create table writer(
 	-- but danh
+    id_user mediumint,
 	name_writer varchar(50),
-    id_user mediumint unique,
     
     primary key(name_writer),
     foreign key(id_user) references user(id)
 );
+-- table editor phan quyen editor
+create table editor(
+	id_user mediumint,
+    category mediumint,
+    primary key (id_user),
+	foreign key(id_user) references user(id),
+    foreign key(category) references category(id)
+);
+insert into usertype(name) value ('Admin');
+insert into usertype(name) value ('Độc giả');
+insert into usertype(name) value ('Phóng viên');
+insert into usertype(name) value ('Biên tập viên');
+
+-- insert into account (name_account, password) value ('huathanhson','1');
+-- insert into account (name_account, password) value ('phamngocson','2');
+-- insert into account (name_account, password) value ('nguyenhoangsang','3');
+-- insert into account (name_account, password) value ('tranphusy','4');
+-- insert into account (name_account, password) value ('phamtuuyen','5');
+-- insert into account (name_account, password) value ('nguyenthianh','6');
+-- insert into account (name_account, password) value ('dangtuangoc','7');
+-- insert into account (name_account, password) value ('thanhthieu','8');
+-- insert into account (name_account, password) value ('phamhuuthang','9');
+-- insert into account (name_account, password) value ('vodongtrieu','10');
+-- insert into account (name_account, password) value ('buithanhdat','11');
+
+
+insert into user(id_type, name, email) value (1,'Hứa Thanh Sơn', 'huason@gmail.com');
+insert into user(id_type, name, email) value (1,'Phạm Ngọc Sơn', 'ngocson.cla@gmail.com');
+insert into user(id_type, name, email, premium) value (2,'Nguyễn Hoàng Sang', 'nguyenhoangsang@gmail.com', 1);
+insert into user(id_type, name, email) value (2,'Trần Phú Sý', 'tranphusy@gmail.com');
+insert into user(id_type, name, email, premium) value (2,'Phạm Tú Uyên', 'phamtuuyen@gmail.com', 1);
+insert into user(id_type, name, email) value (2,'Nguyễn Thi Anh', 'nguyenthianh@gmail.com');
+insert into user(id_type, name, email) value (3,'Đặng Tuấn Ngọc', 'dangtuangoc@gmail.com');
+insert into user(id_type, name, email) value (3,'Thành Thiếu', 'thanhthieu@gmail.com');
+insert into user(id_type, name, email) value (4,'Phạm Hữu Thắng', 'phamhuuthang@gmail.com');
+insert into user(id_type, name, email) value (4,'Võ Đông Triều', 'vodongtrieu@gmail.com');
+insert into user(id_type, name, email) value (3,'Bùi Thành Đạt', 'buithanhdat@gmail.com');
+
+
+
+
+
+
 
 
 insert into category(name) values('Xã hội');
@@ -116,8 +167,13 @@ insert into category2(id_cat, name) values('4', 'Hải sản ');
 insert into category2(id_cat, name) values('5', 'Game');
 insert into category2(id_cat, name) values('5', 'Thiết bị');
 
+insert into status(name) values('Chờ xuất bản');
+insert into status(name) values('Đã xuất bản');
+insert into status(name) values('Bị từ chối');
+insert into status(name) values('Chưa được duyệt');
 
-insert article(id_cat, id_cat2, title, date_post, image, image2, abstract, content) 
+
+insert article(id_cat, id_cat2, title, date_post, image, image2, abstract, content, status) 
 value(5, null, 'Apple bị tố "chèn ép" các ứng dụng theo dõi màn hình','2019-04-29','/images/CongNghe/hinh5.jpg','/images/CongNghe/hinh5/1.jpg',
 'Dftimeime và App Control đã trở thành những nạn nhân mới nhất của Apple, sau khi công ty này đưa tính năng Screen Time đến với iOS 12.',
 '<p>
@@ -137,41 +193,41 @@ value(5, null, 'Apple bị tố "chèn ép" các ứng dụng theo dõi màn hì
 </p>
 <p>
 	Apple đã bị đưa ra tòa trước khi có các hành vi chống cạnh tranh trong App Store và thậm chí còn có một vụ kiện đang chờ Tòa án Tối cao Mỹ tuyên bố liên quan đến việc kiểm soát App Store của Apple thể hiện sự độc quyền.
-</p>');
+</p>', 2);
 
-insert article(id_cat, id_cat2, title, date_post, image, abstract) 
+insert article(id_cat, id_cat2, title, date_post, image, abstract, status) 
 value(5, 8, 'Huawei - Qualcom: Đối thủ trong cuộc chiến chip modem 5G cho smartphone?','2019-02-15','/images/CongNghe/hinh6.jpg',
-'Việc Apple và Qualcomm “đình chiến” trong tháng này đã vẽ lại bản đồ chiến trận ở thị trường chip 5G, giữa lúc các nhà sản xuất smartphone và nhà mạng rục rịch triển khai thử nghiệm thế hệ mạng di động mới.');
+'Việc Apple và Qualcomm “đình chiến” trong tháng này đã vẽ lại bản đồ chiến trận ở thị trường chip 5G, giữa lúc các nhà sản xuất smartphone và nhà mạng rục rịch triển khai thử nghiệm thế hệ mạng di động mới.', 2);
 
-insert article(id_cat, id_cat2, title, date_post, image, abstract) 
+insert article(id_cat, id_cat2, title, date_post, image, abstract, status) 
 value(5, null, 'Docker Hub bị tấn công, 190.000 người dùng bị ảnh hưởng','2019-01-01','/images/CongNghe/hinh7.jpg',
-'Dịch vụ Docker Hub mới đây đã thông báo bị tin tặc tấn công lộ tên đăng nhập, mật khẩu và các token truy cập GitHub và Bitbucker.');
+'Dịch vụ Docker Hub mới đây đã thông báo bị tin tặc tấn công lộ tên đăng nhập, mật khẩu và các token truy cập GitHub và Bitbucker.', 2);
 
-insert article(id_cat, id_cat2, title, date_post, image, abstract) 
+insert article(id_cat, id_cat2, title, date_post, image, abstract, status) 
 value(5, 8, 'Sony xuất xưởng lượng smartphone thấp kỷ lục','2019-05-01','/images/CongNghe/hinh8.jpg',
-'Sản lượng smartphone mà Sony bán ra trong năm tài chính 2018 thấp hơn rất nhiều so với ước tính đưa ra cách đây 1 năm, mặc dù công ty đã nhiều lần phải điều chỉnh hạ giá bán sản phẩm.');
+'Sản lượng smartphone mà Sony bán ra trong năm tài chính 2018 thấp hơn rất nhiều so với ước tính đưa ra cách đây 1 năm, mặc dù công ty đã nhiều lần phải điều chỉnh hạ giá bán sản phẩm.', 2);
 
-insert article(id_cat, id_cat2, title, date_post, image, abstract) 
+insert article(id_cat, id_cat2, title, date_post, image, abstract, status) 
 value(5, null, 'Tính năng thẻ mới của Windows 10 biến mất','2019-02-02','/images/CongNghe/hinh9.jpg',
-'Microsoft đã hủy kế hoạch giới thiệu tính năng ứng dụng dạng thẻ mới trong hệ điều hành Windows 10 được đặt tên là Sets.');
+'Microsoft đã hủy kế hoạch giới thiệu tính năng ứng dụng dạng thẻ mới trong hệ điều hành Windows 10 được đặt tên là Sets.', 2);
 
-insert article(id_cat, id_cat2, title, date_post, image, abstract) 
+insert article(id_cat, id_cat2, title, date_post, image, abstract, status) 
 value(5, null, 'Google mở rộng tính năng gọi nhóm Google Duo','2018-12-20','/images/CongNghe/hinh11.jpg',
-'Google Duo được cho là câu trả lời của Google đối với FaceTime, và hiện đã bắt đầu triển khai tính năng cuộc gọi nhóm đến với một số thị trường nhất định.');
+'Google Duo được cho là câu trả lời của Google đối với FaceTime, và hiện đã bắt đầu triển khai tính năng cuộc gọi nhóm đến với một số thị trường nhất định.', 2);
 
-insert article(id_cat, id_cat2, title, date_post, image, abstract) 
+insert article(id_cat, id_cat2, title, date_post, image, abstract, status) 
 value(5, 7, 'Nvidia công bố card màn hình mới','2019-04-29','/images/CongNghe/hinh12.jpg',
-'Nvidia vừa chính thức ra mắt dòng card đồ họa mới với tên gọi Geforce GTX 1660 Ti và GTX 1650, dựa trên kiến trúc Turing dành cho các laptop chơi game.');
+'Nvidia vừa chính thức ra mắt dòng card đồ họa mới với tên gọi Geforce GTX 1660 Ti và GTX 1650, dựa trên kiến trúc Turing dành cho các laptop chơi game.', 2);
 
-insert article(id_cat, id_cat2, title, date_post, image, abstract) 
+insert article(id_cat, id_cat2, title, date_post, image, abstract, status) 
 value(5, 7, 'Muốn mua PlayStation 5, hãy chờ hơn một năm nữa','2018-12-01','/images/CongNghe/hinh13.jpg',
-'Bình luận về tương lai của PlayStation, bộ phận Interactive Entertainment (SIE) của Sony cho biết phiên bản kế nhiệm của PlayStation 4 sẽ không lên kệ các cửa hàng trước tháng 5.2020.');
+'Bình luận về tương lai của PlayStation, bộ phận Interactive Entertainment (SIE) của Sony cho biết phiên bản kế nhiệm của PlayStation 4 sẽ không lên kệ các cửa hàng trước tháng 5.2020.', 2);
 
-insert article(id_cat, id_cat2, title, date_post, image, abstract) 
+insert article(id_cat, id_cat2, title, date_post, image, abstract, status) 
 value(5, null, 'iOS 13 sẽ giúp iPad kết nối được với chuột máy tính','2019-11-18','/images/CongNghe/hinh14.jpg',
-'Thiếu hỗ trợ chuột là một trong những điểm yếu của iPad, khiến máy không được đánh giá tốt như máy tính xách tay. Tuy nhiên mọi thứ có thể sớm thay đổi.');
+'Thiếu hỗ trợ chuột là một trong những điểm yếu của iPad, khiến máy không được đánh giá tốt như máy tính xách tay. Tuy nhiên mọi thứ có thể sớm thay đổi.', 2);
 
-insert article(id_cat, id_cat2, title, date_post, image, image2, abstract, content)
+insert article(id_cat, id_cat2, title, date_post, image, image2, abstract, content, status)
 value(5,7,'Khám phá các tính năng vui vẻ, tiện ích của ColorOS 6 trên Realme 3','2019-04-21','/images/CongNghe/hinh15.jpg','/images/CongNghe/hinh15/1.jpg',
 'Với phiên bản ColorOS 6 mới nhất từ OPPO, Realme 3 được thừa hưởng những tiện ích, tính năng thông minh giúp mang lại những trải nghiệm hoàn hảo, tiện lợi hơn.',
 			'<p>
@@ -205,22 +261,22 @@ value(5,7,'Khám phá các tính năng vui vẻ, tiện ích của ColorOS 6 tr�
 			</p>
 			<p class="border-bot">
 				Như vậy, có thể thấy, với một smartphone chỉ 3,99 triệu, nhưng Realme rất chăm chút cho từng tính năng trên Realme 3, để đảm bảo trải nghiệm người dùng thoải mái, tiện lợi nhất.
-			</p>');
+			</p>', 2);
 
 insert comment(id_art, date_comment,image_reader,name_reader,content)
-value(1, '2019-05-25','/images/avatar.jpg','Sơn Hứa','Bài viết khá hay!');
--- insert into tag_article(idtag, id_art)
--- select tag.id, article.id from tag, article
+value(1, '2019-05-25','/images/avatar.jpg','Sơn Hứa','Bài viết khá hay!');	
+
 
 -- drop table tag_article;
 -- drop table tag;
 -- drop table writer;
+-- drop table editor;
 -- drop table user;
--- drop table account;
 -- drop table comment;
 -- drop table usertype;
 -- drop table article;
 -- drop table category2;
--- drop table category; 
+-- drop table category;
+-- drop table status; 
 
 

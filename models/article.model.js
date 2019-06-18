@@ -2,7 +2,7 @@ var db = require('../utils/db');
 
 module.exports = {
 	all: () => {
-		return db.load('select * from article');
+		return db.load('select a.*, c.name as cname, s.name as sname from article a, category c, status s where a.id_cat = c.id and a.status = s.id');
 	},
 	single: id => {
 		return db.load(`select * from article where id = ${id}`)
@@ -98,6 +98,9 @@ module.exports = {
 
 	add: entity => {
 		return db.add('article', entity);	
-	}
+	},
 
+	delete: id => {
+    	return db.delete('article', 'id', id);
+  	}
 }
