@@ -6,12 +6,18 @@
 	<div class="TinNoiBatDiv"> 
 		{{#each top3}}
 		<article class="TinNoiBat{{stt}}">
-			<a href="/article/{{id}}" class="post-cat ts-orange-bg">{{cname}}</a>
-			<img src="{{image2}}" alt="">
+			<a class="CategoryName">{{cname}}</a>
+			
+				<img src="{{image2}}" alt="">
+			</a>
+			
 			<div>
-				<p>
+				<a href="/article/{{id}}">
+					<p>
 					{{title}}
 				</p>
+				</a>
+				
 				<time>
 					<i class="fa fa-clock"></i>
 					{{format date_post}}    &emsp;
@@ -40,273 +46,56 @@
 				<div class="carousel-inner">
 					<!-- 4 tin dau tien -->
 					<div class="carousel-item active" data-interval="10000">
-						<!--  Bai viet xem nhieu nhat 1-->
+						{{#each top4v1}}
 						<article>
-							<a href="#">
-								<img src="images/hinh4.jpg">
+							<a href="article/{{id}}">
+								<img src="{{image}}">
 								<div class="ovrly"></div>
 							</a>
-							<a href="#">
+							<a href="article/{{id}}">
 								<div >
-									<p>Huawei giới thiệu phần cứng 5G đầu tiên trên thế giới cho xe hơi
-									</p>
-									<time class="ThongTinGioDang">
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0 &emsp;</span>
-										<i class="fas fa-eye"></i>
-										<span>12161</span>
-									</time>
-								</div>
-
-							</a>
-
-						</article>
-						<!--  Bai viet xem nhieu nhat 2-->
-						<article>
-							<a href="#">
-								<img src="images/hinh5.jpg">
-								<div class="ovrly"></div>
-							</a>
-							<a href="#">
-								<div>
-									<p>Apple sẽ phát hành iPhone 5G vào năm 2020
-									</p>
-									<time>
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0 &emsp;</span>
-										<i class="fas fa-eye"></i>
-										<span>22241</span>
-									</time>
+									<p>{{title}}
+									</p>									
 								</div>
 							</a>
-
 						</article>
-						<!--  Bai viet xem nhieu nhat 3-->
-						<article>
-							<a href="#">
-								<img src="images/hinh6.jpg">
-								<div class="ovrly"></div>
-							</a>
-							<a href="#">
-								<div>
-									<p>Hệ thống máy ảnh iPhone 2019 có gì mới?
-									</p>
-									<time>
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0 &emsp;</span>
-										<i class="fas fa-eye"></i>
-										<span>4252</span>
-									</time>
-								</div>
-							</a>
-
-						</article>
-						<!--  Bai viet xem nhieu nhat 4-->
-						<article>
-							<a href="#">
-								<img src="images/hinh7.jpg">
-								<div class="ovrly"></div>
-							</a>
-							<a href="#">
-								<div>
-									<p>Singapore nỗ lực thu hút các hãng xe điện
-									</p>
-									<time>
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0</span>
-									</time>
-								</div>
-							</a>
-
-						</article>
+						{{/each}}					
 					</div>
 					<!-- 4 tin tiep theo -->
 					<div class="carousel-item" data-interval="10000">
 						<!--  Bai viet xem nhieu nhat 5-->
+						{{#each top4v2}}
 						<article>
-							<a href="#">
-								<img src="images/hinh4.jpg">
+							<a href="article/{{id}}">
+								<img src="{{image}}">
 								<div class="ovrly"></div>
 							</a>
-							<a href="#">
+							<a href="article/{{id}}">
 								<div >
-									<p>Huawei giới thiệu phần cứng 5G đầu tiên trên thế giới cho xe hơi
-									</p>
-									<time class="ThongTinGioDang">
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0 &emsp;</span>
-										<i class="fas fa-eye"></i>
-										<span>12161</span>
-									</time>
-								</div>
-
-							</a>
-
-						</article>
-
-						<article>
-							<a href="#">
-								<img src="images/hinh5.jpg">
-								<div class="ovrly"></div>
-							</a>
-							<a href="#">
-								<div>
-									<p>Apple sẽ phát hành iPhone 5G vào năm 2020
-									</p>
-									<time>
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0 &emsp;</span>
-										<i class="fas fa-eye"></i>
-										<span>22241</span>
-									</time>
+									<p>{{title}}
+									</p>									
 								</div>
 							</a>
-
 						</article>
-
-						<article>
-							<a href="#">
-								<img src="images/hinh6.jpg">
-								<div class="ovrly"></div>
-							</a>
-							<a href="#">
-								<div>
-									<p>Hệ thống máy ảnh iPhone 2019 có gì mới?
-									</p>
-									<time>
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0 &emsp;</span>
-										<i class="fas fa-eye"></i>
-										<span>4252</span>
-									</time>
-								</div>
-							</a>
-
-						</article>
-
-						<article>
-							<a href="#">
-								<img src="images/hinh7.jpg">
-								<div class="ovrly"></div>
-							</a>
-							<a href="#">
-								<div>
-									<p>Singapore nỗ lực thu hút các hãng xe điện
-									</p>
-									<time>
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0</span>
-									</time>
-								</div>
-							</a>
-
-						</article>
+						{{/each}}		
 					</div>
 					<!-- 4 tin cuoi cung -->
 					<div class="carousel-item" data-interval="10000">
 						<!--  Bai viet xem nhieu nhat 5-->
+						{{#each top4v3}}
 						<article>
-							<a href="#">
-								<img src="images/hinh4.jpg">
+							<a href="article/{{id}}">
+								<img src="{{image}}">
 								<div class="ovrly"></div>
 							</a>
-							<a href="#">
+							<a href="article/{{id}}">
 								<div >
-									<p>Huawei giới thiệu phần cứng 5G đầu tiên trên thế giới cho xe hơi
-									</p>
-									<time class="ThongTinGioDang">
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0 &emsp;</span>
-										<i class="fas fa-eye"></i>
-										<span>12161</span>
-									</time>
-								</div>
-
-							</a>
-
-						</article>
-
-						<article>
-							<a href="#">
-								<img src="images/hinh5.jpg">
-								<div class="ovrly"></div>
-							</a>
-							<a href="#">
-								<div>
-									<p>Apple sẽ phát hành iPhone 5G vào năm 2020
-									</p>
-									<time>
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0 &emsp;</span>
-										<i class="fas fa-eye"></i>
-										<span>22241</span>
-									</time>
+									<p>{{title}}
+									</p>									
 								</div>
 							</a>
-
 						</article>
-
-						<article>
-							<a href="#">
-								<img src="images/hinh6.jpg">
-								<div class="ovrly"></div>
-							</a>
-							<a href="#">
-								<div>
-									<p>Hệ thống máy ảnh iPhone 2019 có gì mới?
-									</p>
-									<time>
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0 &emsp;</span>
-										<i class="fas fa-eye"></i>
-										<span>4252</span>
-									</time>
-								</div>
-							</a>
-
-						</article>
-
-						<article>
-							<a href="#">
-								<img src="images/hinh7.jpg">
-								<div class="ovrly"></div>
-							</a>
-							<a href="#">
-								<div>
-									<p>Singapore nỗ lực thu hút các hãng xe điện
-									</p>
-									<time>
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0</span>
-									</time>
-								</div>
-							</a>
-
-						</article>
+						{{/each}}		
 					</div>
 				</div>
 			</div>
@@ -334,184 +123,65 @@
 			<div id="carouselTopChuyenMuc" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
 					<div class="carousel-item active" data-interval="10000">
+						{{#each top4n1}}
 						<article>
-							<a href="#" class="CongNgheColorTag">Công nghệ</a>
-							<a href="#">
-								<img src="images/TopTinChuyenMuc/hinh1.jpg">
+							<a>{{cname}}</a>
+							<a href="article/{{id}}">
+								<img src="{{image}}">
 								<div class="ovrly"></div>
 							</a>
-							<a href="#">
+							<a href="article/{{id}}">
 								<div >
-									<p>Huawei giới thiệu phần cứng 5G đầu tiên trên thế giới cho xe hơi
-									</p>
-									<time class="ThongTinGioDang">
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0</span>
-									</time>
+									<p>{{title}}
+									</p>								
 								</div>
 							</a>
 
 						</article>
-
-						<article>
-							<a href="#" class="KinhTeColorTag">Kinh tế</a>
-							<a href="#">
-								<img src="images/TopTinChuyenMuc/hinh4.jpg">
-								<div class="ovrly"></div>
-							</a>
-							<a href="#">
-								<div>
-									<p>Giá điện lũy kế tăng gần 75%?
-									</p>
-									<time>
-										<i class="fa fa-clock"></i>
-										1 giờ trước   &emsp;
-										<i class="far fa-comment"></i>
-										<span>0</span>
-									</time>
-								</div>
-							</a>
-
-						</article>
-
-						<article>
-							<a href="#" class="XaHoiColorTag">Xã Hội</a>
-							<a href="#">
-								<a href="#">
-									<img src="images/TopTinChuyenMuc/hinh2.jpg">
-									<div class="ovrly"></div>
-								</a>
-								<a href="#">
-									<div>
-										<p>Tổng bí thư, Chủ tịch nước làm trưởng ban lễ tang Đại tướng Lê Đức Anh
-										</p>
-										<time>
-											<i class="fa fa-clock"></i>
-											1 giờ trước   &emsp;
-											<i class="far fa-comment"></i>
-											<span>0</span>
-										</time>
-									</div>
-								</a>
-
-							</article>
-
-							<article>
-								<a href="#" class="GiaiTriColorTag">Giải trí</a>
-								<a href="#">
-									<img src="images/TopTinChuyenMuc/hinh3.jpg">
-									<div class="ovrly"></div>
-								</a>
-								<a href="#">
-									<div>
-										<p>'Avengers: Endgame' thu hơn 30 tỉ đồng ngày đầu chiếu ở Việt Nam
-										</p>
-										<time>
-											<i class="fa fa-clock"></i>
-											1 giờ trước   &emsp;
-											<i class="far fa-comment"></i>
-											<span>0</span>
-										</time>
-									</div>
-								</a>
-
-							</article>
-						</div>
-
-						<div class="carousel-item" data-interval="10000">
-							<article>
-								<a href="#" class="CongNgheColorTag">Công nghệ</a>
-								<a href="#">
-									<img src="images/TopTinChuyenMuc/hinh1.jpg">
-									<div class="ovrly"></div>
-								</a>
-								<a href="#">
-									<div >
-										<p>Huawei giới thiệu phần cứng 5G đầu tiên trên thế giới cho xe hơi
-										</p>
-										<time class="ThongTinGioDang">
-											<i class="fa fa-clock"></i>
-											1 giờ trước   &emsp;
-											<i class="far fa-comment"></i>
-											<span>0</span>
-										</time>
-									</div>
-								</a>
-
-							</article>
-
-							<article>
-								<a href="#" class="KinhTeColorTag">Kinh tế</a>
-								<a href="#">
-									<img src="images/TopTinChuyenMuc/hinh4.jpg">
-									<div class="ovrly"></div>
-								</a>
-								<a href="#">
-									<div>
-										<p>Giá điện lũy kế tăng gần 75%?
-										</p>
-										<time>
-											<i class="fa fa-clock"></i>
-											1 giờ trước   &emsp;
-											<i class="far fa-comment"></i>
-											<span>0</span>
-										</time>
-									</div>
-								</a>
-
-							</article>
-
-							<article>
-								<a href="#" class="XaHoiColorTag">Xã Hội</a>
-								<a href="#">
-									<a href="#">
-										<img src="images/TopTinChuyenMuc/hinh2.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>Tổng bí thư, Chủ tịch nước làm trưởng ban lễ tang Đại tướng Lê Đức Anh
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-
-								<article>
-									<a href="#" class="GiaiTriColorTag">Giải trí</a>
-									<a href="#">
-										<img src="images/TopTinChuyenMuc/hinh3.jpg">
-										<div class="ovrly"></div>
-									</a>
-									<a href="#">
-										<div>
-											<p>'Avengers: Endgame' thu hơn 30 tỉ đồng ngày đầu chiếu ở Việt Nam
-											</p>
-											<time>
-												<i class="fa fa-clock"></i>
-												1 giờ trước   &emsp;
-												<i class="far fa-comment"></i>
-												<span>0</span>
-											</time>
-										</div>
-									</a>
-
-								</article>
-							</div>
-
-						</div>
+						{{/each}}
 					</div>
 
+					<div class="carousel-item" data-interval="10000">
+						{{#each top4n2}}
+						<article>
+							<a>{{cname}}</a>
+							<a href="article/{{id}}">
+								<img src="{{image}}">
+								<div class="ovrly"></div>
+							</a>
+							<a href="article/{{id}}">
+								<div >
+									<p>{{title}}
+									</p>								
+								</div>
+							</a>
+
+						</article>
+						{{/each}}
+					</div>
+
+					<div class="carousel-item" data-interval="10000">
+						{{#each top4n3}}
+						<article>
+							<a>{{cname}}</a>
+							<a href="article/{{id}}">
+								<img src="{{image}}">
+								<div class="ovrly"></div>
+							</a>
+							<a href="article/{{id}}">
+								<div >
+									<p>{{title}}
+									</p>								
+								</div>
+							</a>
+
+						</article>
+						{{/each}}
+					</div>
 
 				</div>
+			</div>
+		</div>
 			</div>
 			<div class="TinMoiNhat">
 				<!-- 	Tin Moi Nhat Cua Xa Hoi -->
