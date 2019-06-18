@@ -109,11 +109,11 @@ create table writer(
 );
 -- table editor phan quyen editor
 create table editor(
-	id_user mediumint,
-    category mediumint,
-    primary key (id_user),
-	foreign key(id_user) references user(id),
-    foreign key(category) references category(id)
+	id mediumint,
+    id_cat mediumint,
+    primary key (id),
+	foreign key(id) references user(id),
+    foreign key(id_cat) references category(id)
 );
 insert into usertype(name) value ('Admin');
 insert into usertype(name) value ('Độc giả');
@@ -145,8 +145,8 @@ insert into user(id_type, name, email) value (4,'Phạm Hữu Thắng', 'phamhuu
 insert into user(id_type, name, email) value (4,'Võ Đông Triều', 'vodongtrieu@gmail.com');
 insert into user(id_type, name, email) value (3,'Bùi Thành Đạt', 'buithanhdat@gmail.com');
 
-
-
+insert into editor(id, id_cat) value (9, 1);
+insert into editor(id, id_cat) value (10, 2);
 
 
 

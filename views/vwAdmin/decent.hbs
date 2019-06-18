@@ -13,16 +13,16 @@
 	<div class="container">
 			<form method="POST">
 			<div class="VietBaiDashboard panel">
-				<p>Tên người dùng</p>
-				<textarea name="name">{{users.name}}</textarea>
-				<p>Email</p>
-				<textarea  name="email">{{users.email}}</textarea><br>
-				<br>		
-				<select id="chuyen-de-bai-viet" name="nametype">
-					<option selected hidden>{{nametype}}</option>
-					<option>Độc giả</option>
-					<option>Phóng viên</option>
-					<option>Biên tập viên</option>			
+				<p>Tên biên tập viên</p>
+				<textarea style="padding-left: 20px; padding-top: 5px; height: 20px" name="name">{{user.name}}</textarea>
+				<p>Phân quyền chuyên mục</p>			
+				<select id="chuyen-de-bai-viet" name="cname">
+					<option selected hidden>{{cname.name}}</option>
+					<option>Xã hội</option>
+					<option>Giải trí</option>
+					<option>Sức khỏe</option>
+					<option>Kinh doanh</option>	
+					<option>Công nghệ</option>				
 				</select><br>
 				<br><button type="submit" id="btn-xuat-ban-bai-viet" >
 					<i class="fas fa-file-export"></i>					

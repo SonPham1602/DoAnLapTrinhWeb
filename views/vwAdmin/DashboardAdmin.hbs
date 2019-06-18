@@ -57,8 +57,12 @@
 							</ul>
 						</li>
 						<li id="li-quan-ly-phong-vien">
-							<i class="far fa-edit icon"></i>
+							<i class="far fa-file-alt icon"></i>
 							<a href="#">Danh sách phóng viên</a>					
+						</li>
+						<li id="li-quan-ly-bien-tap-vien">
+							<i class="far fa-file-alt icon"></i>
+							<a href="#">Danh sách biên tập viên</a>					
 						</li>
 						<li>
 							<i class="far fa-edit icon"></i>
@@ -213,6 +217,35 @@
 						{{/each}}				
 					</table>
 					<button  onclick="window.location.href='/admin/1/user/add/{{id_type3}}'" class="btn-chuc-nang m-auto" style="margin-left: 240px; width:50px; margin-bottom: 20px; padding-left: 10px"> 
+					<i class="fas fa-plus"></i> &nbsp</button>
+				</div>
+			</div>
+
+			<!-- Quản lý biên tập viên -->
+			<div class="QuanlyBienTapVien panel">
+				<p class="TieuDeTrang">Danh sách biên tập viên</p>
+					<div class="data-table">
+					<table border="1px" class="table-danh-sach-bai-viet">
+						<tr id="header-table">							
+							<td>Tên biên tập viên</td>
+							<td>Email</td>
+							<td>Chức năng</td>
+						</tr>
+						{{#each users4}}
+						<tr>
+							<td>{{name}}</td>
+							<td>{{email}}</td>
+							<td>
+								<button class="btn-xem-bai-viet" onclick="window.location.href='/admin/1/user/{{id}}/edit'">Chỉnh sửa</button>
+								<button class="btn-xem-bai-viet" Onclick="window.location.href='/admin/1/user/{{id}}/category'">Phân quyền</button>
+								<button class="btn-xem-bai-viet" onclick="window.location.href='/admin/1/user/{{id}}/delete'">
+									<i class="far fa-trash-alt"></i> &nbsp Xoá
+								</button>							
+							</td>
+						</tr>
+						{{/each}}				
+					</table>
+					<button  onclick="window.location.href='/admin/1/user/add/{{id_type4}}'" class="btn-chuc-nang m-auto" style="margin-left: 170px; width:50px; margin-bottom: 20px; padding-left: 10px"> 
 					<i class="fas fa-plus"></i> &nbsp</button>
 				</div>
 			</div>

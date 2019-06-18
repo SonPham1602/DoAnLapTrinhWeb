@@ -4,12 +4,38 @@ var category = require('../models/category.model');
 var category2 = require('../models/category2.model');
 var user = require('../models/user.model');
 var usertype = require('../models/usertype.model');
-
+var editor = require('../models/editor.model')
 var router = express.Router();
 
 //load tất cả bài viết
 router.get('/:idad',(req, res, next) => {
 	var id_admin = req.params.idad;
+
+	//cập nhật dữ liệu vô bảng editor nếu dữ liệu thêm vào thuộc id_type = 4 (editor)
+	user.all()
+	.then(rows => {
+		var last = rows.length - 1;
+		if (rows[last].id_type == 4)
+		{
+			editor.single(rows[last].id)
+			.then(editors => {
+				if(editors[0] === undefined){
+					var entity = {
+					id: rows[last].id
+					}
+					editor.add(entity)
+					.catch(err => {
+						console.log(err);
+					})
+				}
+			})
+			.catch(err => {
+			 	console.log(err);
+			})	
+		}
+	})
+
+	//load toàn bộ trang admin
 	Promise.all([
 		articleModel.all(),
 		category.all(),
@@ -294,9 +320,9 @@ router.get('/:idad/user/:iduser/edit',(req, res) => {
 //thêm user
 router.post('/:idad/user/add/:idtype',(req, res) => {
 	var id_ad = req.params.idad;
+	var id_type = req.params.idtype;
 	usertype.findId(req.body.nametype)
 	.then(idtype => {
-		console.log(idtype);
 		var entity = {
 			name: req.body.name,
 			email: req.body.email,
@@ -312,7 +338,7 @@ router.post('/:idad/user/add/:idtype',(req, res) => {
 	})
 	.catch(err => {
 			console.log(err);
-		})
+	})
 })
 
 router.post('/:idad/user/add/:idtype/premium',(req, res) => {
@@ -339,7 +365,7 @@ router.post('/:idad/user/add/:idtype/premium',(req, res) => {
 		})
 })
 
-//sửa user
+//update user
 router.post('/:idad/user/:iduser/edit',(req, res) => {
 	var id_ad = req.params.idad;
 	var id_user = req.params.iduser;
@@ -351,13 +377,31 @@ router.post('/:idad/user/:iduser/edit',(req, res) => {
 			email: req.body.email,
 			id_type: idtype[0].id
 		}
-		user.update(entity)
-		.then(
+		if(idtype[0].id == 4) {
+			var entity2 = {
+				id: id_user
+			}
+			Promise.all([
+				editor.add(entity2),
+				user.update(entity)
+			])
+			.then(
 			res.redirect('/admin/' + id_ad)
-		)
-		.catch(err => {
-			console.log(err);
-		})
+			)
+			.catch(err => {
+				console.log(err);
+			})
+		} 
+		else
+		{
+			user.update(entity)
+			.then(
+				res.redirect('/admin/' + id_ad)
+			)
+			.catch(err => {
+				console.log(err);
+			})
+		}
 	})
 	.catch(err => {
 			console.log(err);
@@ -369,15 +413,77 @@ router.post('/:idad/user/:iduser/edit',(req, res) => {
 router.get('/:idad/user/:iduser/delete',(req, res) => {
 	var id_ad = req.params.idad;
 	var id_user = req.params.iduser;
-	user.delete(id_user)
-	.then(
-		res.redirect('/admin/' + id_ad)
-	)
+	user.single(id_user)
+	.then(rows => {
+		if (rows[0].id_type == 4) { //nếu xóa editor phải xóa thuộc bản editor trước
+			Promise.all([
+				editor.delete(id_user),
+				user.delete(id_user)
+			])
+			.then(
+				res.redirect('/admin/' + id_ad)
+			)
+			.catch(err => {
+				console.log(err);
+			})
+		}
+		else {			
+			user.delete(id_user)
+			.then(
+				res.redirect('/admin/' + id_ad)
+			)
+			.catch(err => {
+				console.log(err);
+			})			
+		}
+	})
+})
+
+// chuyển đến phân quyền chuyên mục cho editor 
+router.get('/:idad/user/:iduser/category',(req, res) => {
+	var id_ad = req.params.idad;
+	var id_user = req.params.iduser;
+	Promise.all([
+		editor.single(id_user),
+		user.single(id_user)
+	])
+	.then(([editors, users]) => {
+		category.findName(editors[0].id_cat)
+		.then(cname => {
+			res.render('vwAdmin/decent', {
+				layout: false,
+				user: users[0],
+				cname: cname[0]
+			})
+		})
+		.catch(err => {
+			console.log(err);
+		})
+	})
 	.catch(err => {
 		console.log(err);
 	})
 })
 
-
+router.post('/:idad/user/:iduser/category',(req, res) => {
+	var id_ad = req.params.idad;
+	category.findId(req.body.cname)
+	.then(categorys => {
+			var entity = {
+			id: req.params.iduser,
+			id_cat: categorys[0].id
+		}
+		editor.update(entity)
+		.then(
+			res.redirect('/admin/' + id_ad)
+		)
+		.catch(err => {
+			console.log(err);
+		})
+	})
+	.catch(err => {
+		console.log(err);
+	})
+})
 
 module.exports = router;
