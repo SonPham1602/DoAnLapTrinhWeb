@@ -4,56 +4,56 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script type="text/javascript" src="/public/js/NoiDung.js"></script>
 <div class="container">
-		<div class="content">
-			<img src="{{article.image2}}" alt="">
-			<h2>
-				{{article.title}}
-			</h2>
-			<br>
-			<h4 style="color: red; font-style: italic;">
-				Chuyên mục: {{cname}}
-			</h4>
-			<br>
-			<div class="ThongTinbaiViet border-top border-bot">
-				<i class="far fa-clock"></i>
-				{{format article.date_post}}
-			</div>
-			{{{article.content}}}
-			Bạn có thích bài viết này?
-			<br>
-			<button>
-				<button class="btnFacebook">
-					<i class="fab fa-facebook-f"></i>
-					Chia sẻ facebook
-				</button>
-				<button  class="btnGoogle">
-					<i class="fab fa-google" id="iconbtnGoogle"></i>
-					Chia sẻ google
-				</button>
-			</button>
+	<div class="content">
+		<img src="{{article.image2}}" alt="">
+		<h2>
+			{{article.title}}
+		</h2>
+		<br>
+		<h4 style="color: red; font-style: italic;">
+			Chuyên mục: {{cname}}
+		</h4>
+		<br>
+		<div class="ThongTinbaiViet border-top border-bot">
+			<i class="far fa-clock"></i>
+			{{format article.date_post}}
 		</div>
-		<!-- Box Binh Luan Bai Viet -->
-		<div class="BinhLuanBox">
-			<form method="POST">
-				<h4>
-					Bình luận
-				</h4>
-				<textarea name="content" class="NoiDungBinhLuan"></textarea>
-				<input type="submit" class="btnGuiBinhLuan" value="Gửi bình luận">
-				</input>
-			</form>
-			<div class="DanhSachBinhLuan">
+		{{{article.content}}}
+		Bạn có thích bài viết này?
+		<br>
+		<button>
+			<button class="btnFacebook">
+				<i class="fab fa-facebook-f"></i>
+				Chia sẻ facebook
+			</button>
+			<button  class="btnGoogle">
+				<i class="fab fa-google" id="iconbtnGoogle"></i>
+				Chia sẻ google
+			</button>
+		</button>
+	</div>
+	<!-- Box Binh Luan Bai Viet -->
+	<div class="BinhLuanBox">
+		<form method="POST">
+			<h4>
+				Bình luận
+			</h4>
+			<textarea name="content" class="NoiDungBinhLuan"></textarea>
+			<input type="submit" class="btnGuiBinhLuan" value="Gửi bình luận">
+		</input>
+	</form>
+	<div class="DanhSachBinhLuan">
 			<!-- 	<button id="btn-reload-comment">
 					<a href="">load</a> 
 				</button> -->
 				{{#each comments}}
-					<div class="avatar">
-						<img src="{{image_reader}}" >
-					</div>
-					<div class="data-comment">
-						<p class="name">{{name_reader}}&ensp;{{format date_comment}}</p>
-						<p class="noidung">{{content}}</p>
-					</div>
+				<div class="avatar">
+					<img src="{{image_reader}}" >
+				</div>
+				<div class="data-comment">
+					<p class="name">{{name_reader}}&ensp;{{format date_comment}}</p>
+					<p class="noidung">{{content}}</p>
+				</div>
 				
 				{{/each}}
 			</div>
@@ -62,9 +62,16 @@
 		<div class="BaiVietKhac">
 			<div class="BaiVietLienQuan">
 				<article class="border-bot">
-					<img src="">
-					
+					<img src="{{image}}" alt="" style="width: 190px; height: 130px">
+					<a href="/article/{{id}}">
+						<p class="TieuDeBaiViet">{{title}}</p>
+					</a>
+					<div class="ThoigianBinhLuanChiase">
+						<i class="far fa-clock"></i>
+						{{format date_post}}			
+					</div>
+					<p class="MoTaBaiViet">{{abstract}}</p>
 				</article>
 			</div>
 		</div>
-</div>
+	</div>
