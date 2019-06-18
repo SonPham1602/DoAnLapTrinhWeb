@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DashboardAdmin</title>
+	<link rel="stylesheet" type="text/css" href="/public/css/DashboardWriter.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+			<form method="POST">
+			<div class="VietBaiDashboard panel">
+				<p>Tên biên tập viên</p>
+				<textarea style="padding-left: 20px; padding-top: 5px; height: 20px" name="name">{{user.name}}</textarea>
+				<p>Phân quyền chuyên mục</p>			
+				<select id="chuyen-de-bai-viet" name="cname">
+					<option selected hidden>{{cname.name}}</option>
+					<option>Xã hội</option>
+					<option>Giải trí</option>
+					<option>Sức khỏe</option>
+					<option>Kinh doanh</option>	
+					<option>Công nghệ</option>				
+				</select><br>
+				<br><button type="submit" id="btn-xuat-ban-bai-viet" >
+					<i class="fas fa-file-export"></i>					
+					Xác nhận
+				</button>	
+			</div>
+			</form>
+		<button id="btn-luu-bai-viet" style="margin-left: 15px">							
+				<a href="/admin/1">Back</a>
+		</button>
+	</div>
+
+</body>
+</html>

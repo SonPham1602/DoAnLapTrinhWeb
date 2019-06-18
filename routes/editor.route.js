@@ -48,7 +48,7 @@ router.get('/:idcat',(req, res) => {
 	})
 })
 
-//xử lí hiệu chỉnh & duyệt bài viết trên editor
+//xử lí xem bài viết trên editor
 router.get('/:idcat/:idart',(req, res) => {
 	var id_art = req.params.idart;
 	articleModel.single(id_art)

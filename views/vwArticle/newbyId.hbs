@@ -59,9 +59,10 @@
 				{{/each}}
 			</div>
 		</div>
-		
+		<h3>Bài viết liên quan</h3>
 		<div class="BaiVietKhac">
 			<div class="BaiVietLienQuan">
+				{{#each five}}
 				<article class="border-bot">
 					<img src="{{image}}" alt="" style="width: 190px; height: 130px">
 					<a href="/article/{{id}}">
@@ -73,6 +74,7 @@
 					</div>
 					<p class="MoTaBaiViet">{{abstract}}</p>
 				</article>
+				{{/each}}
 			</div>
 		</div>
 	</div>

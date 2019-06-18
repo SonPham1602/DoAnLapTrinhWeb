@@ -58,6 +58,10 @@
  		$(".panel").hide();
  		$(".QuanlyPhongVien").fadeIn(200);
  	});
+ 	$("#li-quan-ly-bien-tap-vien").click(function(event) {
+ 		$(".panel").hide();
+ 		$(".QuanlyBienTapVien").fadeIn(200);
+ 	});
 
 
  });
