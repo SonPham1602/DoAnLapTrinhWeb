@@ -268,6 +268,9 @@ div.navigation nav ul li:hover  > ul{
 	width: 300px;
 	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
 }
+.panel{
+	padding: 60px 20px 20px;
+}
 #them-tag{
 	margin-bottom: 5px;
 	font-size: 17px;
@@ -328,7 +331,7 @@ div.navigation nav ul li:hover  > ul{
 }
 .btn-xem-bai-viet{
 
-	width: 100px;
+	width: 120px;
 	height:30px;
 	border: none;
 	border-radius: 5px;
@@ -343,6 +346,7 @@ div.navigation nav ul li:hover  > ul{
 	box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.5);
 
 }
+
 .DanhSachBaiVietDashboard{
 	padding: 60px 20px 20px;
 }
@@ -352,6 +356,7 @@ div.navigation nav ul li:hover  > ul{
 }
 /*Bang du lieu danh sach bai viet da xuat ban*/
 .table-danh-sach-bai-viet{
+	margin-bottom: 20px;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
@@ -475,4 +480,37 @@ div.navigation nav ul li:hover  > ul{
 	list-style: none;
 	height: 99px;
 	border-bottom: 1px solid #95a5a6;
+}
+.table-hover tr:hover{
+	cursor: pointer;
+	background-color: #BDC3C7;
+	color: white;
+}
+.TenChuyenMuc{
+	font-size: 20px;
+	text-align: center;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.ChuyenMucDiv{
+	margin: 20px;
+	background-color: rgba(0,0,0,0.05);
+	border:1px solid black;
+	box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.5);
+}
+.btn-chuc-nang{
+	margin-right: auto;
+	margin-left: auto;
+	width: 160px;
+	height:30px;
+	border: none;
+	border-radius: 5px;
+	color:white;
+	background-color: #34495e;
+	box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.25);
+}
+.align-item-center{
+	display: flex;
+	align-items: center;
+
 }

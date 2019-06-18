@@ -38,4 +38,26 @@
  	});
 
 
+ 	$("#li-quan-ly-bai-viet").click(function(event) {
+ 		$(".panel").hide();
+ 		$(".QuanLyBaiViet").fadeIn(200);
+ 	});
+ 	$("#li-quan-ly-chuyen-muc").click(function(event) {
+ 		$(".panel").hide();
+ 		$(".QuanLyChuyenMuc").fadeIn(200);
+ 	});
+ 	$("#li-quan-ly-doc-gia").click(function(event) {
+ 		$(".panel").hide();
+ 		$(".QuanLyDocGia").fadeIn(200);
+ 	});
+ 	$("#li-quan-ly-premium").click(function(event) {
+ 		$(".panel").hide();
+ 		$(".QuanLyDocGiaPremium").fadeIn(200);
+ 	});
+ 	$("#li-quan-ly-phong-vien").click(function(event) {
+ 		$(".panel").hide();
+ 		$(".QuanlyPhongVien").fadeIn(200);
+ 	});
+
+
  });
